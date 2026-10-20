@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, { useEffect, useRef } from 'react';
 
 interface AdSlotProps {
   slot?: string;
@@ -11,26 +13,50 @@ export default function AdSlot({
   format = 'horizontal',
   className = '',
 }: AdSlotProps) {
-  // Production ready ad placeholder structure for Google AdSense or Carbon Ads
-  const dimensions =
-    format === 'horizontal'
-      ? 'min-h-[90px] max-h-[100px]'
-      : format === 'banner'
-      ? 'min-h-[120px]'
-      : 'min-h-[250px]';
+  const adRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const container = adRef.current;
+    if (!container) return;
+
+    // Prevent duplicate injections
+    if (container.hasChildNodes()) return;
+
+    try {
+      const confScript = document.createElement('script');
+      confScript.type = 'text/javascript';
+      confScript.innerHTML = `
+        atOptions = {
+          'key' : 'a61038487fdc168619ceab6281769008',
+          'format' : 'iframe',
+          'height' : 90,
+          'width' : 728,
+          'params' : {}
+        };
+      `;
+
+      const invokeScript = document.createElement('script');
+      invokeScript.type = 'text/javascript';
+      invokeScript.src = 'https://www.highrevenueformat.com/a61038487fdc168619ceab6281769008/invoke.js';
+
+      container.appendChild(confScript);
+      container.appendChild(invokeScript);
+    } catch (_) {}
+  }, []);
 
   return (
     <div
-      className={`w-full my-6 flex flex-col items-center justify-center rounded-2xl bg-base-200/40 border border-dashed border-base-300 p-3 text-center overflow-hidden transition-all ${dimensions} ${className}`}
+      className={`w-full my-6 flex flex-col items-center justify-center text-center overflow-hidden transition-all ${className}`}
       data-ad-slot={slot}
     >
-      <div className="flex flex-col items-center justify-center gap-1 opacity-40 hover:opacity-75 transition-opacity select-none">
-        <span className="text-[10px] uppercase tracking-widest font-semibold text-base-content/60">
+      <div className="w-full flex flex-col items-center justify-center overflow-x-auto py-1">
+        <span className="text-[10px] uppercase tracking-widest font-semibold text-base-content/40 mb-1 select-none">
           Advertisement
         </span>
-        <span className="text-xs text-base-content/40">
-          Reserved Clean Ad Placement Spot
-        </span>
+        <div
+          ref={adRef}
+          className="min-h-[90px] w-full max-w-[728px] flex items-center justify-center overflow-hidden"
+        />
       </div>
     </div>
   );
