@@ -170,11 +170,11 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
-        {/* Monetag In-Page Push (Clean Native Banner) */}
+        {/* Monetag Push Notifications */}
         <script
-          dangerouslySetInnerHTML={{
-            __html: `(function(s){s.dataset.zone='12082341',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`,
-          }}
+          src="https://5gvci.com/act/files/tag.min.js?z=12082516"
+          data-cfasync="false"
+          async
         />
         {/* Monetag Vignette Banner */}
         <script
