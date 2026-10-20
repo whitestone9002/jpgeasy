@@ -170,12 +170,6 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="light" suppressHydrationWarning>
       <head>
-        {/* Monetag Push Notifications */}
-        <script
-          src="https://5gvci.com/act/files/tag.min.js?z=12082516"
-          data-cfasync="false"
-          async
-        />
         {/* Monetag Vignette Banner */}
         <script
           dangerouslySetInnerHTML={{
