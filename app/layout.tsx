@@ -176,11 +176,11 @@ export default function RootLayout({
             __html: `(function(s){s.dataset.zone='12082341',s.src='https://nap5k.com/tag.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`,
           }}
         />
-        {/* Monetag Push Notifications */}
+        {/* Monetag Vignette Banner */}
         <script
-          src="https://5gvci.com/act/files/tag.min.js?z=12082359"
-          data-cfasync="false"
-          async
+          dangerouslySetInnerHTML={{
+            __html: `(function(s){s.dataset.zone='12082475',s.src='https://n6wxm.com/vignette.min.js'})([document.documentElement, document.body].filter(Boolean).pop().appendChild(document.createElement('script')));`,
+          }}
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
