@@ -143,7 +143,7 @@ export default function HomePage() {
   return (
     <div className="w-full space-y-12 pb-16">
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-12 sm:pt-20 pb-12 px-4 sm:px-6 lg:px-8 border-b border-base-300 bg-gradient-to-b from-base-100 to-base-200/40">
+      <section className="relative z-20 pt-12 sm:pt-20 pb-12 px-4 sm:px-6 lg:px-8 border-b border-base-300 bg-gradient-to-b from-base-100 to-base-200/40">
         <div className="max-w-4xl mx-auto text-center space-y-6">
           {/* Tagline Badge */}
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-primary/10 text-primary text-xs font-bold border border-primary/20 shadow-sm animate-in fade-in duration-300">
@@ -274,7 +274,7 @@ export default function HomePage() {
       </section>
 
       {/* Main Tools Showcase Section */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      <section className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Mobile: Category Dropdown (left-aligned sleek filter pill) */}
         <div className="sm:hidden relative flex justify-start z-20" ref={categoryDropdownRef}>
           <button
