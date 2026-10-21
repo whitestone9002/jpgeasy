@@ -28,7 +28,7 @@ import {
 import { ToolMeta } from '@/lib/config/tools';
 import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 
-const ICON_MAP: Record<string, React.ReactNode> = {
+export const ICON_MAP: Record<string, React.ReactNode> = {
   Minimize2: <Minimize2 className="w-5 h-5 text-blue-500" />,
   Sparkles: <Sparkles className="w-5 h-5 text-amber-500" />,
   SlidersHorizontal: <Minimize2 className="w-5 h-5 text-indigo-500" />,

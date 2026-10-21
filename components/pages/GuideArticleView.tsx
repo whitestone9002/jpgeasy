@@ -276,9 +276,18 @@ export default function GuideArticleView({
       {/* Related Guides Section */}
       {relatedGuides.length > 0 && (
         <div className="pt-12 border-t border-base-300 space-y-6">
-          <h3 className="text-xl sm:text-2xl font-bold text-base-content">
-            {t('relatedGuidesTitle', 'Related Guides & Tutorials')}
-          </h3>
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4">
+            <h3 className="text-lg sm:text-2xl font-bold text-base-content">
+              {t('relatedGuidesTitle', 'Related Guides & Tutorials')}
+            </h3>
+            <Link
+              href="/guides"
+              className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 self-start sm:self-auto shrink-0 transition-colors"
+            >
+              <span>{t('viewAllGuides', 'View all guides')}</span>
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
+          </div>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
             {relatedGuides.map((rel) => (
               <Link

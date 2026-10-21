@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import {
   Sparkles,
   Search,
@@ -21,16 +22,19 @@ import {
   RefreshCw,
 } from 'lucide-react';
 import { TOOLS, CATEGORIES, ToolMeta } from '@/lib/config/tools';
-import ToolCard from '@/components/ui/ToolCard';
+import ToolCard, { ICON_MAP } from '@/components/ui/ToolCard';
 import AdSlot from '@/components/ui/AdSlot';
-import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 
 export default function HomePage() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [isCategoryDropdownOpen, setIsCategoryDropdownOpen] = useState<boolean>(false);
+  const [isSearchDropdownOpen, setIsSearchDropdownOpen] = useState<boolean>(false);
   const categoryDropdownRef = useRef<HTMLDivElement>(null);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent | TouchEvent) => {
@@ -40,17 +44,21 @@ export default function HomePage() {
       ) {
         setIsCategoryDropdownOpen(false);
       }
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target as Node)
+      ) {
+        setIsSearchDropdownOpen(false);
+      }
     };
 
-    if (isCategoryDropdownOpen) {
-      document.addEventListener('mousedown', handleClickOutside);
-      document.addEventListener('touchstart', handleClickOutside);
-    }
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('touchstart', handleClickOutside);
     };
-  }, [isCategoryDropdownOpen]);
+  }, []);
 
   const getCategoryIcon = (catId: string) => {
     switch (catId) {
@@ -107,6 +115,31 @@ export default function HomePage() {
 
   const popularTools = TOOLS.filter((t) => t.popular);
 
+  const normalizedSearch = searchQuery.toLowerCase().trim();
+  const matchingSearchTools = useMemo(() => {
+    if (!normalizedSearch) return [];
+    return TOOLS.filter((tool) => {
+      return (
+        tool.name.toLowerCase().includes(normalizedSearch) ||
+        tool.description.toLowerCase().includes(normalizedSearch) ||
+        tool.slug.toLowerCase().includes(normalizedSearch) ||
+        (tool.shortName && tool.shortName.toLowerCase().includes(normalizedSearch)) ||
+        tool.category.toLowerCase().includes(normalizedSearch) ||
+        tool.keywords.some((k) => k.toLowerCase().includes(normalizedSearch))
+      );
+    });
+  }, [normalizedSearch]);
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter' && matchingSearchTools.length > 0) {
+      e.preventDefault();
+      setIsSearchDropdownOpen(false);
+      router.push(`/${matchingSearchTools[0].slug}`);
+    } else if (e.key === 'Escape') {
+      setIsSearchDropdownOpen(false);
+    }
+  };
+
   return (
     <div className="w-full space-y-12 pb-16">
       {/* Hero Section */}
@@ -127,26 +160,92 @@ export default function HomePage() {
           </p>
 
           {/* Quick Hero Search Input */}
-          <div className="max-w-xl mx-auto pt-2">
-            <div className="relative flex items-center shadow-lg rounded-2xl bg-base-100 border border-base-300 overflow-hidden focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+          <div className="max-w-xl mx-auto pt-2 relative z-30" ref={searchContainerRef}>
+            <div className="relative flex items-center shadow-lg rounded-2xl bg-base-100 border border-base-300 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
               <Search className="w-5 h-5 text-base-content/40 ml-4 shrink-0" />
               <input
                 type="text"
                 value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
+                onChange={(e) => {
+                  setSearchQuery(e.target.value);
+                  setIsSearchDropdownOpen(true);
+                }}
+                onFocus={() => {
+                  if (searchQuery.trim()) setIsSearchDropdownOpen(true);
+                }}
+                onKeyDown={handleSearchKeyDown}
                 placeholder={t('heroSearchPlaceholder', 'Search any tool (e.g. 10KB, compress, PNG to JPG, PDF merge)...')}
-                className="w-full px-4 py-3.5 bg-transparent border-none outline-none text-sm sm:text-base text-base-content placeholder:text-base-content/40"
+                className="w-full px-4 py-3.5 bg-transparent border-none outline-none text-sm sm:text-base text-base-content placeholder:text-base-content/40 rounded-2xl"
               />
               {searchQuery && (
                 <button
                   type="button"
-                  onClick={() => setSearchQuery('')}
+                  onClick={() => {
+                    setSearchQuery('');
+                    setIsSearchDropdownOpen(false);
+                  }}
                   className="btn btn-ghost btn-xs btn-circle mr-3"
                 >
                   ✕
                 </button>
               )}
             </div>
+
+            {/* Live Search Instant Dropdown */}
+            {isSearchDropdownOpen && normalizedSearch.length > 0 && (
+              <div className="absolute left-0 right-0 top-full mt-2 bg-base-100 border border-base-300 rounded-2xl shadow-2xl overflow-hidden z-50 text-left max-h-[60vh] sm:max-h-[420px] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
+                <div className="p-2 divide-y divide-base-200">
+                  {matchingSearchTools.length > 0 ? (
+                    matchingSearchTools.slice(0, 8).map((tool) => {
+                      const toolKey = getToolTranslationKey(tool.slug);
+                      const toolName = t(toolKey, tool.name);
+                      const toolDesc = t(`${toolKey}Desc`, tool.description);
+                      return (
+                        <Link
+                          key={tool.id}
+                          href={`/${tool.slug}`}
+                          onClick={() => setIsSearchDropdownOpen(false)}
+                          className="flex items-center justify-between p-3 rounded-xl hover:bg-base-200/80 transition-colors group cursor-pointer"
+                        >
+                          <div className="flex items-center gap-3 min-w-0">
+                            <div className="w-9 h-9 rounded-lg bg-base-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                              {ICON_MAP[tool.icon] || <FileText className="w-4 h-4 text-primary" />}
+                            </div>
+                            <div className="min-w-0">
+                              <div className="flex items-center gap-2">
+                                <span className="font-semibold text-sm text-base-content group-hover:text-primary transition-colors truncate">
+                                  {toolName}
+                                </span>
+                                {tool.badge && (
+                                  <span className="badge badge-xs badge-primary font-medium shrink-0">
+                                    {tool.badge === 'Popular' ? t('badgePopular', 'Popular') : tool.badge}
+                                  </span>
+                                )}
+                              </div>
+                              <p className="text-xs text-base-content/60 line-clamp-1">
+                                {toolDesc}
+                              </p>
+                            </div>
+                          </div>
+                          <ArrowRight className="w-4 h-4 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                        </Link>
+                      );
+                    })
+                  ) : (
+                    <div className="py-8 text-center text-base-content/50">
+                      <p className="text-sm font-medium">{t('noToolsMatching', 'No tools found matching')} &quot;{searchQuery}&quot;</p>
+                      <p className="text-xs mt-1">{t('trySearchSuggestions', 'Try searching for "compress", "pdf", "convert", or "10kb".')}</p>
+                    </div>
+                  )}
+                </div>
+                {matchingSearchTools.length > 0 && (
+                  <div className="px-4 py-2 bg-base-200/50 border-t border-base-300 flex items-center justify-between text-xs text-base-content/50">
+                    <span>{matchingSearchTools.length} {t('toolsFound', 'tools found')}</span>
+                    <span className="text-[11px] font-medium text-primary">{t('clickToOpen', 'Click to open tool')}</span>
+                  </div>
+                )}
+              </div>
+            )}
           </div>
 
           {/* Popular Search Shortcuts */}
@@ -192,7 +291,7 @@ export default function HomePage() {
               <span className="font-bold text-xs whitespace-nowrap">
                 {activeCategoryName}
               </span>
-              <span className="text-[10px] font-bold px-1.5 py-0.5 rounded-full bg-base-200 text-base-content/70">
+              <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-primary text-white shadow-xs">
                 {activeCategory.count}
               </span>
             </div>
@@ -231,10 +330,10 @@ export default function HomePage() {
                       </span>
                       <span>{catName}</span>
                       <span
-                        className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${
+                        className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
                           isSelected
                             ? 'bg-white/20 text-white'
-                            : 'bg-base-200 text-base-content/60'
+                            : 'bg-primary/15 text-primary'
                         }`}
                       >
                         {cat.count}

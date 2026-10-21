@@ -217,14 +217,14 @@ export default function ToolLayout({ tool, children, isWide = false, noCardWrapp
         {/* Helpful Guides & Tutorials */}
         {relatedGuides.length > 0 && (
           <div className="pt-8 border-t border-base-300 space-y-4">
-            <div className="flex items-center justify-between">
-              <h3 className="text-lg font-bold text-base-content flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-primary" />
-                <span>{t('helpfulGuides', 'Helpful Guides & Tutorials')}</span>
+            <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4">
+              <h3 className="text-base sm:text-lg font-bold text-base-content flex items-center gap-2">
+                <BookOpen className="w-4 h-4 sm:w-5 sm:h-5 text-primary shrink-0" />
+                <span className="leading-snug">{t('helpfulGuides', 'Helpful Guides & Tutorials')}</span>
               </h3>
               <Link
                 href="/guides"
-                className="text-xs font-semibold text-primary hover:underline flex items-center gap-1"
+                className="text-xs font-semibold text-primary hover:underline inline-flex items-center gap-1 self-start sm:self-auto shrink-0 transition-colors"
               >
                 <span>{t('viewAllGuides', 'View all guides')}</span>
                 <ArrowRight className="w-3.5 h-3.5" />

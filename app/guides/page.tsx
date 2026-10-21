@@ -1,15 +1,83 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 import { Search, BookOpen, ArrowRight, Sparkles, Image, FileText, PenTool, FileSpreadsheet, Clock, ArrowUpRight } from 'lucide-react';
 import { GUIDES, GuideCategory, GUIDE_CATEGORIES } from '@/lib/config/guides';
-import { useLanguage } from '@/lib/i18n/LanguageContext';
+import { TOOLS } from '@/lib/config/tools';
+import { ICON_MAP } from '@/components/ui/ToolCard';
+import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 
 export default function GuidesIndexPage() {
   const { t } = useLanguage();
+  const router = useRouter();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<GuideCategory | 'all'>('all');
+  const [isSearchDropdownOpen, setIsSearchDropdownOpen] = useState(false);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
+      if (
+        searchContainerRef.current &&
+        !searchContainerRef.current.contains(event.target as Node)
+      ) {
+        setIsSearchDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    document.addEventListener('touchstart', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('touchstart', handleClickOutside);
+    };
+  }, []);
+
+  const normalizedQuery = searchQuery.toLowerCase().trim();
+
+  const matchingTools = useMemo(() => {
+    if (!normalizedQuery) return [];
+    return TOOLS.filter((tool) => {
+      return (
+        tool.name.toLowerCase().includes(normalizedQuery) ||
+        tool.description.toLowerCase().includes(normalizedQuery) ||
+        tool.slug.toLowerCase().includes(normalizedQuery) ||
+        (tool.shortName && tool.shortName.toLowerCase().includes(normalizedQuery)) ||
+        tool.category.toLowerCase().includes(normalizedQuery) ||
+        tool.keywords.some((k) => k.toLowerCase().includes(normalizedQuery))
+      );
+    });
+  }, [normalizedQuery]);
+
+  const matchingGuides = useMemo(() => {
+    if (!normalizedQuery) return [];
+    return GUIDES.filter((guide) => {
+      return (
+        guide.title.toLowerCase().includes(normalizedQuery) ||
+        guide.shortDescription.toLowerCase().includes(normalizedQuery) ||
+        guide.categoryLabel.toLowerCase().includes(normalizedQuery) ||
+        guide.slug.toLowerCase().includes(normalizedQuery)
+      );
+    });
+  }, [normalizedQuery]);
+
+  const handleSearchKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (e.key === 'Enter') {
+      if (matchingTools.length > 0) {
+        e.preventDefault();
+        setIsSearchDropdownOpen(false);
+        router.push(`/${matchingTools[0].slug}`);
+      } else if (matchingGuides.length > 0) {
+        e.preventDefault();
+        setIsSearchDropdownOpen(false);
+        router.push(`/guides/${matchingGuides[0].slug}`);
+      }
+    } else if (e.key === 'Escape') {
+      setIsSearchDropdownOpen(false);
+    }
+  };
 
   const filteredGuides = useMemo(() => {
     return GUIDES.filter((guide) => {
@@ -60,26 +128,150 @@ export default function GuidesIndexPage() {
           {t('guidesSubtitle', 'Learn how to compress, convert, edit, and optimize your images, PDFs, and documents with step-by-step tutorials, technical insights, and pro tips.')}
         </p>
 
-        {/* Live Search Input */}
-        <div className="pt-4 max-w-xl mx-auto relative">
-          <div className="relative flex items-center">
-            <Search className="w-5 h-5 absolute left-4 text-base-content/40 pointer-events-none" />
+        {/* Live Search Input with Instant Tool & Guide Dropdown */}
+        <div className="pt-4 max-w-xl mx-auto relative z-30" ref={searchContainerRef}>
+          <div className="relative flex items-center shadow-lg rounded-2xl bg-base-100 border border-base-300 focus-within:border-primary focus-within:ring-2 focus-within:ring-primary/20 transition-all">
+            <Search className="w-5 h-5 text-base-content/40 ml-4 shrink-0" />
             <input
               type="text"
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={t('searchGuidesPlaceholder', 'Search guides (e.g. compress jpg, merge pdf, eSign)...')}
-              className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-base-100 border border-base-300 shadow-sm text-sm text-base-content placeholder:text-base-content/40 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setIsSearchDropdownOpen(true);
+              }}
+              onFocus={() => {
+                if (searchQuery.trim()) setIsSearchDropdownOpen(true);
+              }}
+              onKeyDown={handleSearchKeyDown}
+              placeholder={t('searchGuidesAndTools', 'Search tools and guides (e.g. compress, merge pdf, convert)...')}
+              className="w-full px-4 py-3.5 bg-transparent border-none outline-none text-sm sm:text-base text-base-content placeholder:text-base-content/40 rounded-2xl"
             />
             {searchQuery && (
               <button
-                onClick={() => setSearchQuery('')}
-                className="absolute right-3 px-2 py-1 text-xs text-base-content/50 hover:text-base-content"
+                type="button"
+                onClick={() => {
+                  setSearchQuery('');
+                  setIsSearchDropdownOpen(false);
+                }}
+                className="btn btn-ghost btn-xs btn-circle mr-3"
               >
-                {t('clear', 'Clear')}
+                ✕
               </button>
             )}
           </div>
+
+          {/* Instant Search Results Dropdown */}
+          {isSearchDropdownOpen && normalizedQuery.length > 0 && (
+            <div className="absolute left-0 right-0 top-full mt-2 bg-base-100 border border-base-300 rounded-2xl shadow-2xl overflow-hidden z-50 text-left max-h-[60vh] sm:max-h-[460px] overflow-y-auto animate-in fade-in zoom-in-95 duration-150">
+              {matchingTools.length === 0 && matchingGuides.length === 0 ? (
+                <div className="py-8 text-center text-base-content/50">
+                  <p className="text-sm font-medium">{t('noResultsMatching', 'No tools or guides found matching')} &quot;{searchQuery}&quot;</p>
+                  <p className="text-xs mt-1">{t('trySearchGuidesSuggestions', 'Try searching for "compress", "pdf", "jpg", or "convert".')}</p>
+                </div>
+              ) : (
+                <div className="p-2 space-y-3">
+                  {/* Matching Tools Section */}
+                  {matchingTools.length > 0 && (
+                    <div>
+                      <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/50 flex items-center justify-between">
+                        <span>{t('toolsSection', 'Tools & Utilities')}</span>
+                        <span className="badge badge-xs badge-primary font-medium">{matchingTools.length}</span>
+                      </div>
+                      <div className="divide-y divide-base-200">
+                        {matchingTools.slice(0, 5).map((tool) => {
+                          const toolKey = getToolTranslationKey(tool.slug);
+                          const toolName = t(toolKey, tool.name);
+                          const toolDesc = t(`${toolKey}Desc`, tool.description);
+                          return (
+                            <Link
+                              key={tool.id}
+                              href={`/${tool.slug}`}
+                              onClick={() => setIsSearchDropdownOpen(false)}
+                              className="flex items-center justify-between p-2.5 rounded-xl hover:bg-base-200/80 transition-colors group cursor-pointer"
+                            >
+                              <div className="flex items-center gap-3 min-w-0">
+                                <div className="w-8 h-8 rounded-lg bg-base-200 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                                  {ICON_MAP[tool.icon] || <FileText className="w-4 h-4 text-primary" />}
+                                </div>
+                                <div className="min-w-0">
+                                  <div className="flex items-center gap-2">
+                                    <span className="font-semibold text-xs sm:text-sm text-base-content group-hover:text-primary transition-colors truncate">
+                                      {toolName}
+                                    </span>
+                                    {tool.badge && (
+                                      <span className="badge badge-xs badge-primary font-medium shrink-0">
+                                        {tool.badge === 'Popular' ? t('badgePopular', 'Popular') : tool.badge}
+                                      </span>
+                                    )}
+                                  </div>
+                                  <p className="text-[11px] sm:text-xs text-base-content/60 line-clamp-1">
+                                    {toolDesc}
+                                  </p>
+                                </div>
+                              </div>
+                              <ArrowRight className="w-3.5 h-3.5 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                            </Link>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Matching Guides Section */}
+                  {matchingGuides.length > 0 && (
+                    <div>
+                      <div className="px-3 py-1.5 text-[11px] font-bold uppercase tracking-wider text-base-content/50 flex items-center justify-between">
+                        <span>{t('guidesSection', 'Guides & Articles')}</span>
+                        <span className="badge badge-xs badge-secondary font-medium">{matchingGuides.length}</span>
+                      </div>
+                      <div className="divide-y divide-base-200">
+                        {matchingGuides.slice(0, 5).map((guide) => (
+                          <Link
+                            key={guide.slug}
+                            href={`/guides/${guide.slug}`}
+                            onClick={() => setIsSearchDropdownOpen(false)}
+                            className="flex items-center justify-between p-2.5 rounded-xl hover:bg-base-200/80 transition-colors group cursor-pointer"
+                          >
+                            <div className="flex items-center gap-3 min-w-0">
+                              <div className="w-8 h-8 rounded-lg bg-secondary/10 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+                                <BookOpen className="w-4 h-4 text-secondary" />
+                              </div>
+                              <div className="min-w-0">
+                                <div className="flex items-center gap-2">
+                                  <span className="font-semibold text-xs sm:text-sm text-base-content group-hover:text-primary transition-colors truncate">
+                                    {t(guide.slug, guide.title)}
+                                  </span>
+                                  <span className="text-[9px] font-bold uppercase px-1.5 py-0.5 rounded bg-base-200 text-base-content/60 shrink-0">
+                                    {t(`guideCat_${guide.category}`, guide.categoryLabel)}
+                                  </span>
+                                </div>
+                                <p className="text-[11px] sm:text-xs text-base-content/60 line-clamp-1">
+                                  {t(`${guide.slug}_desc`, guide.shortDescription)}
+                                </p>
+                              </div>
+                            </div>
+                            <ArrowRight className="w-3.5 h-3.5 text-base-content/30 group-hover:text-primary group-hover:translate-x-0.5 transition-all shrink-0 ml-2" />
+                          </Link>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Footer summary */}
+              {(matchingTools.length > 0 || matchingGuides.length > 0) && (
+                <div className="px-4 py-2 bg-base-200/50 border-t border-base-300 flex items-center justify-between text-xs text-base-content/50">
+                  <span>
+                    {matchingTools.length + matchingGuides.length} {t('totalResultsFound', 'results found')} ({matchingTools.length} {t('toolsCount', 'tools')}, {matchingGuides.length} {t('guidesCount', 'guides')})
+                  </span>
+                  <span className="text-[11px] font-medium text-primary">
+                    {t('clickToNavigate', 'Click to open')}
+                  </span>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
 
