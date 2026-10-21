@@ -125,13 +125,13 @@ export default function Header() {
                 href="/guides"
                 className="hidden xl:inline-flex btn btn-ghost btn-sm font-medium text-base-content/80 hover:text-base-content whitespace-nowrap px-2"
               >
-                {t('guides', 'Guides')}
+                {t('navGuides', 'Guides')}
               </Link>
               <Link
                 href="/tools"
                 className="hidden 2xl:inline-flex btn btn-ghost btn-sm font-medium text-base-content/80 hover:text-base-content whitespace-nowrap px-2"
               >
-                {t('toolsResources', 'All Tools')}
+                {t('navTools', 'Tools')}
               </Link>
             </nav>
           </div>
@@ -204,14 +204,14 @@ export default function Header() {
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn btn-outline btn-sm flex-1"
               >
-                {t('guides', 'Guides')}
+                {t('navGuides', 'Guides')}
               </Link>
               <Link
                 href="/tools"
                 onClick={() => setIsMobileMenuOpen(false)}
                 className="btn btn-primary btn-sm flex-1"
               >
-                {t('toolsResources', 'All Tools')}
+                {t('navTools', 'Tools')}
               </Link>
             </div>
           </div>

@@ -75,6 +75,8 @@ export const TRANSLATIONS: Record<string, TranslationDictionary> = {
     convertPdf: 'Convert PDF',
     toolsResources: 'Tools & Resources',
     guides: 'Guides & Tutorials',
+    navGuides: 'Guides',
+    navTools: 'Tools',
     searchPlaceholder: 'Search tools...',
     privacyTitle: '100% Privacy Focused',
     privacyDesc: 'Files processed in memory and never saved to disk or database.',

@@ -168,7 +168,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" data-theme="light" suppressHydrationWarning>
+    <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
         {/* Monetag Vignette Banner */}
         <script
@@ -193,7 +193,7 @@ export default function RootLayout({
                   }).catch(function() {});
                 }
                 var savedTheme = localStorage.getItem('theme');
-                document.documentElement.setAttribute('data-theme', savedTheme === 'dark' ? 'dark' : 'light');
+                document.documentElement.setAttribute('data-theme', savedTheme === 'light' ? 'light' : 'dark');
                 var savedLang = localStorage.getItem('jpgeasy_lang') || localStorage.getItem('snapdoc_lang');
                 if (savedLang) {
                   document.documentElement.setAttribute('lang', savedLang);
