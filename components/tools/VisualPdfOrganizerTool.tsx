@@ -139,7 +139,7 @@ export default function VisualPdfOrganizerTool({
   // Split settings
   const [splitEveryN, setSplitEveryN] = useState(1);
   const [splitCustomCuts, setSplitCustomCuts] = useState<Set<number>>(new Set());
-  const [splitAfterEveryEnabled, setSplitAfterEveryEnabled] = useState(true);
+  const [splitAfterEveryEnabled, setSplitAfterEveryEnabled] = useState(false);
 
   // Extract settings
   const [separatePdfs, setSeparatePdfs] = useState(false);
@@ -203,7 +203,7 @@ export default function VisualPdfOrganizerTool({
             dataUrl: '',
             originalDataUrl: '',
             rotation: 0,
-            selected: initialMode === 'delete' || initialMode === 'extract' ? false : true,
+            selected: false,
             aspectRatio: 1 / 1.414,
             originalAspectRatio: 1 / 1.414,
             docName: selectedFile.name,
@@ -274,7 +274,7 @@ export default function VisualPdfOrganizerTool({
             dataUrl: '',
             originalDataUrl: '',
             rotation: 0,
-            selected: initialMode === 'delete' || initialMode === 'extract' ? false : true,
+            selected: false,
             aspectRatio: 1 / 1.414,
             originalAspectRatio: 1 / 1.414,
             docName: newFile.name,
@@ -563,7 +563,11 @@ export default function VisualPdfOrganizerTool({
   const calculatedSplitCount = toolTab === 'split'
     ? splitAfterEveryEnabled
       ? Math.ceil(pages.length / Math.max(1, splitEveryN))
-      : splitCustomCuts.size + 1
+      : splitCustomCuts.size > 0
+      ? splitCustomCuts.size + 1
+      : selectedCount > 0
+      ? selectedCount
+      : 0
     : 1;
 
   // Execute processing
@@ -575,7 +579,12 @@ export default function VisualPdfOrganizerTool({
 
     try {
       const pagesToInclude = pages
-        .filter((p) => (initialMode === 'delete' ? !p.selected : p.selected))
+        .filter((p) => {
+          if (initialMode === 'delete') return !p.selected;
+          if ((initialMode === 'organize' || initialMode === 'rotate') && selectedCount === 0) return true;
+          if (toolTab === 'split' && splitAfterEveryEnabled && selectedCount === 0) return true;
+          return p.selected;
+        })
         .map((p) => ({
           fileIndex: p.fileIndex ?? 0,
           pageIndex: p.originalIndex,
@@ -963,7 +972,13 @@ export default function VisualPdfOrganizerTool({
               <button
                 type="button"
                 onClick={handleProcess}
-                disabled={processing || pages.length === 0 || (initialMode === 'extract' && selectedCount === 0)}
+                disabled={
+                  processing ||
+                  pages.length === 0 ||
+                  (initialMode === 'extract' && selectedCount === 0) ||
+                  (initialMode === 'delete' && selectedCount === 0) ||
+                  (toolTab === 'split' && selectedCount === 0 && !splitAfterEveryEnabled && splitCustomCuts.size === 0)
+                }
                 className="btn btn-primary btn-sm px-3.5 sm:px-4 lg:px-5 font-bold shadow-md shadow-primary/20 rounded-xl gap-1.5 sm:gap-2 hover:scale-[1.02] active:scale-95 transition-all disabled:opacity-50 text-xs sm:text-sm shrink-0 h-auto min-h-[2rem] sm:min-h-[2.25rem] py-1.5 leading-snug flex items-center justify-center"
               >
                 {processing ? (
@@ -975,12 +990,16 @@ export default function VisualPdfOrganizerTool({
                   <>
                     <span>
                       {toolTab === 'split'
-                        ? `${t('split', 'Split')} (${calculatedSplitCount} ${calculatedSplitCount > 1 ? t('separatePdfs', 'PDFs') : 'PDF'})`
+                        ? selectedCount === 0 && !splitAfterEveryEnabled && splitCustomCuts.size === 0
+                          ? t('selectPagesToSplit', 'Select Pages to Split')
+                          : `${t('split', 'Split')} (${calculatedSplitCount} ${calculatedSplitCount > 1 ? t('separatePdfs', 'PDFs') : 'PDF'})`
                         : initialMode === 'extract' && selectedCount === 0
                         ? t('selectPagesToExtract', 'Select Pages to Extract')
+                        : initialMode === 'delete' && selectedCount === 0
+                        ? t('selectPagesToDelete', 'Select Pages to Delete')
                         : initialMode === 'delete'
                         ? `${t('delete', 'Delete')} (${selectedCount} ${selectedCount > 1 ? t('pages', 'Pages') : t('page', 'Page')})`
-                        : `${t('finish', 'Finish')} (${selectedCount} ${selectedCount > 1 ? t('pages', 'Pages') : t('page', 'Page')})`}
+                        : `${t('finish', 'Finish')} (${selectedCount > 0 ? `${selectedCount} ${selectedCount > 1 ? t('pages', 'Pages') : t('page', 'Page')}` : `${pages.length} ${pages.length > 1 ? t('pages', 'Pages') : t('page', 'Page')}`})`}
                     </span>
                     <ArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                   </>
