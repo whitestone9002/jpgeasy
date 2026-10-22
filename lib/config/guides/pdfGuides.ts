@@ -3,6 +3,8 @@ import { GuideArticle } from "./types";
 export const PDF_GUIDES: GuideArticle[] = [
   {
     "slug": "how-to-compress-a-pdf",
+    "coverImage": "/guides/how-to-compress-a-pdf.webp",
+    "imageAlt": "Step-by-step visual workflow to compress PDF document file size online with stream optimization",
     "title": "How to Compress a PDF File Online",
     "metaTitle": "How to Compress a PDF File Online (Reduce File Size Safely)",
     "metaDescription": "Learn how to compress large PDF documents for email attachments, job applications, and online portals without losing text clarity or sharpness.",
@@ -122,6 +124,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-merge-pdf-files",
+    "coverImage": "/guides/how-to-merge-pdf-files.webp",
+    "imageAlt": "Visual step-by-step tutorial on combining multiple PDF documents, statements, and receipts into one file",
     "title": "How to Merge Multiple PDF Files into One",
     "metaTitle": "How to Merge PDF Files Online Free (Combine PDFs)",
     "metaDescription": "Combine multiple PDF documents into one organized file. Learn how to arrange page sequences, preserve bookmarks, and merge PDFs in seconds.",
@@ -244,6 +248,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-split-a-pdf",
+    "coverImage": "/guides/how-to-split-a-pdf.webp",
+    "imageAlt": "Step-by-step visual guide to extract specific pages or split multi-page PDF documents",
     "title": "How to Split a PDF: Extract Pages or Cut into Separate Files",
     "metaTitle": "How to Split a PDF Online (Extract Pages or Separate Files)",
     "metaDescription": "Learn how to split large PDF files into separate pages or extract specific custom page ranges (e.g. 1-3, 5, 8-10) with complete accuracy.",
@@ -369,6 +375,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-rotate-pdf-pages",
+    "coverImage": "/guides/how-to-rotate-pdf-pages.webp",
+    "imageAlt": "Step-by-step visual workflow to permanently rotate upside-down or sideways PDF pages online",
     "title": "How to Rotate PDF Pages Permanently Online",
     "metaTitle": "How to Rotate PDF Pages Permanently (Clockwise & 180\u00b0)",
     "metaDescription": "Fix sideways and upside-down PDF pages permanently. Learn how to rotate specific pages or entire documents 90\u00b0, 180\u00b0, or 270\u00b0 online.",
@@ -490,6 +498,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-remove-pages-from-a-pdf",
+    "coverImage": "/guides/how-to-remove-pages-from-a-pdf.webp",
+    "imageAlt": "Visual tutorial on deleting unwanted, sensitive, or blank pages from a PDF file",
     "title": "How to Remove Pages from a PDF File",
     "metaTitle": "How to Delete Pages from a PDF Online (Fast & Easy)",
     "metaDescription": "Delete unwanted, blank, or sensitive pages from your PDF document. Learn how to remove single or multiple pages with visual thumbnail previews.",
@@ -610,6 +620,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-add-a-watermark-to-a-pdf",
+    "coverImage": "/guides/how-to-add-a-watermark-to-a-pdf.webp",
+    "imageAlt": "Step-by-step visual guide to stamp custom text or logo watermarks across every PDF page",
     "title": "How to Add a Watermark to a PDF Online",
     "metaTitle": "How to Add a Watermark to a PDF Online (Text & Image Logos)",
     "metaDescription": "Protect intellectual property and mark documents as CONFIDENTIAL or DRAFT. Learn how to add text stamps and logo watermarks to PDF files.",
@@ -733,6 +745,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-add-page-numbers-to-a-pdf",
+    "coverImage": "/guides/how-to-add-page-numbers-to-a-pdf.webp",
+    "imageAlt": "Visual workflow for inserting clean header and footer page numbers into a PDF document",
     "title": "How to Add Page Numbers to a PDF Document",
     "metaTitle": "How to Add Page Numbers to a PDF Online (Custom Pagination)",
     "metaDescription": "Add clean page numbers to PDF documents with custom positioning, numbering formats (Page 1 of N), starting offsets, and cover page skips.",
@@ -857,6 +871,8 @@ export const PDF_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "what-is-pdf-ocr",
+    "coverImage": "/guides/what-is-pdf-ocr.webp",
+    "imageAlt": "Optical Character Recognition workflow diagram explaining how OCR extracts text from scanned PDF documents",
     "title": "What is PDF OCR? How Optical Character Recognition Works",
     "metaTitle": "What is PDF OCR? Optical Character Recognition Explained",
     "metaDescription": "Discover how PDF OCR transforms scanned documents and flat images into searchable, selectable, and editable text. Learn how OCR technology works.",

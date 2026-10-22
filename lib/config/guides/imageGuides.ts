@@ -3,6 +3,8 @@ import { GuideArticle } from "./types";
 export const IMAGE_GUIDES: GuideArticle[] = [
   {
     "slug": "how-to-compress-jpg-without-losing-quality",
+    "coverImage": "/guides/how-to-compress-jpg-without-losing-quality.webp",
+    "imageAlt": "Complete workflow guide for compressing JPG and JPEG photos up to 80% without visible quality loss",
     "title": "How to Compress JPG Without Losing Quality",
     "metaTitle": "How to Compress JPG Without Losing Quality (Web, Shopify & Photos)",
     "metaDescription": "Learn how to compress JPG images without visible quality loss for Shopify, Amazon, photography portfolios, and websites. Master perceptually lossless compression.",
@@ -132,6 +134,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-compress-jpg-to-10kb",
+    "coverImage": "/guides/how-to-compress-jpg-to-10kb.webp",
+    "imageAlt": "Step-by-step visual tutorial on how to compress JPG images to 10KB or less for online forms and signatures",
     "title": "How to Compress JPG to 10KB (For Digital Signatures & Exam Portals)",
     "metaTitle": "How to Compress JPG to 10KB (For Digital Signatures & Exam Portals)",
     "metaDescription": "Compress JPG images and digital signatures to under 10KB for GRE, GMAT, TOEFL, IELTS, exam registrations, and official portal uploads. Fast, free in-browser compression.",
@@ -255,6 +259,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-compress-jpg-to-20kb",
+    "coverImage": "/guides/how-to-compress-jpg-to-20kb.webp",
+    "imageAlt": "Step-by-step visual guide to compress JPG photos to 20KB for university applications and ID cards",
     "title": "How to Compress JPG to 20KB (For ID Cards & University Applications)",
     "metaTitle": "How to Compress JPG to 20KB (For ID Cards & University Applications)",
     "metaDescription": "Compress JPG photos to under 20KB for university applications, student ID cards, and official verification forms without visible blur or distortion.",
@@ -380,6 +386,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-compress-jpg-to-50kb",
+    "coverImage": "/guides/how-to-compress-jpg-to-50kb.webp",
+    "imageAlt": "Visual workflow tutorial showing how to compress JPG to 50KB for passport, visa, and government portals",
     "title": "How to Compress JPG to 50KB (For US Visa, Schengen & Passport Portals)",
     "metaTitle": "How to Compress JPG to 50KB (For US Visa, Schengen & Passport Portals)",
     "metaDescription": "Compress JPG photos to under 50KB for US Visa (DS-160), Schengen Visa, Canadian IRCC, and passport applications while meeting biometric quality guidelines.",
@@ -507,6 +515,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-compress-jpg-to-100kb",
+    "coverImage": "/guides/how-to-compress-jpg-to-100kb.webp",
+    "imageAlt": "Step-by-step instructions to reduce JPG image file size to 100KB while preserving high visual quality",
     "title": "How to Compress JPG to 100KB (For Resumes, ATS Portals & Web Publishing)",
     "metaTitle": "How to Compress JPG to 100KB (For Resumes, ATS Portals & Web Publishing)",
     "metaDescription": "Shrink JPG images to under 100KB for Workday ATS, resume headshots, Europass CVs, and web publishing with crystal-clear sharpness and zero blur.",
@@ -623,6 +633,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-reduce-jpg-file-size",
+    "coverImage": "/guides/how-to-reduce-jpg-file-size.webp",
+    "imageAlt": "Visual infographic showing 5 proven techniques to reduce JPG, PNG, and WebP image file sizes",
     "title": "How to Reduce JPG File Size: 5 Proven Techniques",
     "metaTitle": "How to Reduce JPG File Size: 5 Proven Methods (2026)",
     "metaDescription": "Discover the 5 most effective ways to reduce JPG file size. From metadata stripping and dimension resizing to WebP conversion and selective compression.",
@@ -738,6 +750,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-resize-an-image-without-losing-quality",
+    "coverImage": "/guides/how-to-resize-an-image-without-losing-quality.webp",
+    "imageAlt": "Step-by-step visual tutorial on scaling and resizing images to exact dimensions without distortion",
     "title": "How to Resize an Image Without Losing Quality",
     "metaTitle": "How to Resize an Image Without Losing Quality (Step-by-Step)",
     "metaDescription": "Learn how to resize images for Instagram, YouTube thumbnails, passport portals, and websites without blur, stretching, or pixelation.",
@@ -860,6 +874,8 @@ export const IMAGE_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "jpg-vs-png",
+    "coverImage": "/guides/jpg-vs-png.webp",
+    "imageAlt": "Comprehensive visual comparison and conversion guide between JPG and PNG image formats",
     "title": "JPG vs PNG: Which Image Format Should You Use?",
     "metaTitle": "JPG vs PNG: Full Comparison Guide (When to Use Which)",
     "metaDescription": "Understand the differences between JPG and PNG. Learn when to choose lossy JPG compression versus lossless PNG transparency for web, print, and logos.",

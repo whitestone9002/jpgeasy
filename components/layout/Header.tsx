@@ -30,18 +30,19 @@ export default function Header() {
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0">
               {/* Image Tools Dropdown */}
-              <div className="dropdown dropdown-hover">
-                <label
+              <div className="dropdown dropdown-hover dropdown-bottom">
+                <div
+                  role="button"
                   tabIndex={0}
                   className="btn btn-ghost btn-sm font-medium gap-1 text-base-content/80 hover:text-base-content cursor-pointer whitespace-nowrap flex-nowrap shrink-0 px-2 xl:px-3"
                 >
                   <Image className="w-4 h-4 text-blue-500 shrink-0" />
                   <span className="whitespace-nowrap">{t('imageTools', 'Image Tools')}</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
-                </label>
+                </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300"
+                  className="dropdown-content z-50 menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
                   <li><Link href="/compress-jpg" className="text-xs font-medium py-1.5">{t('compressJpg', 'Compress JPG / JPEG')}</Link></li>
                   <li><Link href="/compress-jpg-to-10kb" className="text-xs font-medium py-1.5 text-primary font-semibold">{t('compressJpg10kb', 'Compress JPG to 10KB')}</Link></li>
@@ -56,18 +57,19 @@ export default function Header() {
               </div>
 
               {/* Merged PDF Tools Dropdown (Organize + Convert) */}
-              <div className="dropdown dropdown-hover">
-                <label
+              <div className="dropdown dropdown-hover dropdown-bottom">
+                <div
+                  role="button"
                   tabIndex={0}
                   className="btn btn-ghost btn-sm font-medium gap-1 text-base-content/80 hover:text-base-content cursor-pointer whitespace-nowrap flex-nowrap shrink-0 px-2 xl:px-3"
                 >
                   <FileText className="w-4 h-4 text-purple-500 shrink-0" />
                   <span className="whitespace-nowrap">{t('pdfTools', 'PDF Tools')}</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
-                </label>
+                </div>
                 <div
                   tabIndex={0}
-                  className="dropdown-content z-[1] p-4 shadow-2xl bg-base-100 rounded-2xl w-[480px] border border-base-300 grid grid-cols-2 gap-4"
+                  className="dropdown-content z-50 p-4 shadow-2xl bg-base-100 rounded-2xl w-[480px] border border-base-300 grid grid-cols-2 gap-4 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
                   {/* Column 1: Organize & Manage */}
                   <div>
@@ -100,18 +102,19 @@ export default function Header() {
               </div>
 
               {/* Edit PDF Dropdown */}
-              <div className="dropdown dropdown-hover">
-                <label
+              <div className="dropdown dropdown-hover dropdown-bottom">
+                <div
+                  role="button"
                   tabIndex={0}
                   className="btn btn-ghost btn-sm font-medium gap-1 text-base-content/80 hover:text-base-content cursor-pointer whitespace-nowrap flex-nowrap shrink-0 px-2 xl:px-3"
                 >
                   <Sparkles className="w-4 h-4 text-amber-500 shrink-0" />
                   <span className="whitespace-nowrap">{t('editPdf', 'Edit PDF')}</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
-                </label>
+                </div>
                 <ul
                   tabIndex={0}
-                  className="dropdown-content z-[1] menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300"
+                  className="dropdown-content z-50 menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
                   <li><Link href="/sign-pdf" className="text-xs font-semibold py-1.5 text-primary">{t('signPdf', 'Sign PDF (eSign)')}</Link></li>
                   <li><Link href="/add-page-numbers-to-pdf" className="text-xs font-medium py-1.5">{t('pageNumbers', 'Page Numbers')}</Link></li>
@@ -126,12 +129,6 @@ export default function Header() {
                 className="hidden xl:inline-flex btn btn-ghost btn-sm font-medium text-base-content/80 hover:text-base-content whitespace-nowrap px-2"
               >
                 {t('navGuides', 'Guides')}
-              </Link>
-              <Link
-                href="/tools"
-                className="hidden 2xl:inline-flex btn btn-ghost btn-sm font-medium text-base-content/80 hover:text-base-content whitespace-nowrap px-2"
-              >
-                {t('navTools', 'Tools')}
               </Link>
             </nav>
           </div>

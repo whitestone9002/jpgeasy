@@ -98,6 +98,26 @@ export default function GuideArticleView({
         </p>
       </header>
 
+      {/* Visual Guide Banner */}
+      {guide.coverImage && (
+        <figure className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-lg">
+          <img
+            src={guide.coverImage}
+            alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+            title={guide.title}
+            width={1360}
+            height={850}
+            className="w-full h-auto object-cover block aspect-[16/10]"
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+          />
+          <figcaption className="sr-only">
+            {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+          </figcaption>
+        </figure>
+      )}
+
       {/* In-Content Primary Tool Callout Banner */}
       <div className="p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-6 min-w-0 max-w-full overflow-hidden">
         <div className="space-y-1 sm:space-y-1.5 max-w-xl min-w-0 flex-1">
@@ -187,7 +207,24 @@ export default function GuideArticleView({
 
               {/* Optional Step-by-Step Cards */}
               {section.steps && section.steps.length > 0 && (
-                <div className="space-y-3 pt-2 min-w-0 max-w-full">
+                <div className="space-y-4 pt-2 min-w-0 max-w-full">
+                  {guide.coverImage && (
+                    <figure className="w-full rounded-2xl overflow-hidden border border-base-300 bg-base-100/60 shadow-md">
+                      <img
+                        src={guide.coverImage}
+                        alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+                        title={guide.title}
+                        width={1360}
+                        height={850}
+                        className="w-full h-auto object-cover block aspect-[16/10]"
+                        loading="lazy"
+                        decoding="async"
+                      />
+                      <figcaption className="text-center text-xs text-base-content/60 py-2.5 bg-base-200/50 border-t border-base-200">
+                        {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+                      </figcaption>
+                    </figure>
+                  )}
                   {section.steps.map((step) => (
                     <div
                       key={step.number}

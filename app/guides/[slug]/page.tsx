@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
 
   const canonicalUrl = `https://jpgeasy.com/guides/${guide.slug}`;
+  const baseUrl = 'https://jpgeasy.com';
 
   return {
     title: guide.metaTitle,
@@ -47,11 +48,23 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       type: 'article',
       publishedTime: guide.publishedAt,
       modifiedTime: guide.updatedAt,
+      images: guide.coverImage
+        ? [
+            {
+              url: `${baseUrl}${guide.coverImage}`,
+              width: 1360,
+              height: 850,
+              alt: guide.imageAlt || guide.title,
+              type: 'image/webp',
+            },
+          ]
+        : undefined,
     },
     twitter: {
       card: 'summary_large_image',
       title: guide.metaTitle,
       description: guide.metaDescription,
+      images: guide.coverImage ? [`${baseUrl}${guide.coverImage}`] : undefined,
     },
   };
 }
@@ -87,6 +100,15 @@ export default async function GuideArticlePage({ params }: PageProps) {
       name: 'JPGEASY',
       url: baseUrl,
     },
+    image: guide.coverImage
+      ? {
+          '@type': 'ImageObject',
+          url: `${baseUrl}${guide.coverImage}`,
+          width: 1360,
+          height: 850,
+          caption: guide.imageAlt || guide.title,
+        }
+      : `${baseUrl}/logo.png`,
     publisher: {
       '@type': 'Organization',
       name: 'JPGEASY',
@@ -98,6 +120,14 @@ export default async function GuideArticlePage({ params }: PageProps) {
     mainEntityOfPage: {
       '@type': 'WebPage',
       '@id': guideUrl,
+      primaryImageOfPage: guide.coverImage
+        ? {
+            '@type': 'ImageObject',
+            url: `${baseUrl}${guide.coverImage}`,
+            width: 1360,
+            height: 850,
+          }
+        : undefined,
     },
   };
 

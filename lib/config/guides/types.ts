@@ -1,4 +1,4 @@
-﻿export type GuideCategory = 'image' | 'pdf' | 'document' | 'esign';
+export type GuideCategory = 'image' | 'pdf' | 'document' | 'esign';
 
 export interface GuideSection {
   id: string;
@@ -34,6 +34,8 @@ export interface GuideArticle {
   publishedAt: string;
   updatedAt: string;
   featured?: boolean;
+  coverImage?: string;
+  imageAlt?: string;
   primaryToolSlug: string;
   primaryToolName: string;
   primaryToolCtaText: string;

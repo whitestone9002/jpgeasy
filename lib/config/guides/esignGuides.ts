@@ -3,6 +3,8 @@ import { GuideArticle } from "./types";
 export const ESIGN_GUIDES: GuideArticle[] = [
   {
     "slug": "how-to-sign-a-pdf-online",
+    "coverImage": "/guides/how-to-sign-a-pdf-online.webp",
+    "imageAlt": "Step-by-step visual guide to draw, type, or upload legally binding electronic signatures on PDF files",
     "title": "How to Sign a PDF Online (Quick & Legally Binding)",
     "metaTitle": "How to Sign a PDF Online (Electronic Signature Guide)",
     "metaDescription": "Learn how to sign PDF documents online for free. Draw, type, or upload your electronic signature securely without printing or scanning.",
@@ -139,6 +141,8 @@ export const ESIGN_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "what-is-a-digital-seal",
+    "coverImage": "/guides/what-is-a-digital-seal.webp",
+    "imageAlt": "Official corporate digital seal and verification stamp workflow diagram for electronic documents",
     "title": "What is a Digital Seal? Electronic Document Verification Explained",
     "metaTitle": "What is a Digital Seal? Electronic Verification Guide (2026)",
     "metaDescription": "What is a digital seal? Learn how electronic seals differ from digital signatures, how legal entity verification works, and when to use them.",
