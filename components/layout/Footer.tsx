@@ -80,82 +80,85 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* PDF Organize & Edit */}
-          <div className="space-y-3">
-            <h5 className="font-semibold text-xs text-base-content/90 uppercase tracking-wider">
-              {t('organizeEdit', 'Organize & Edit')}
-            </h5>
-            <ul className="space-y-2 text-xs text-base-content/70">
-              <li>
-                <Link href="/organize-pdf" className="hover:text-primary transition-colors text-primary font-medium">
-                  {t('organizePdf', 'Organize PDF')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/extract-pdf-pages" className="hover:text-primary transition-colors">
-                  {t('extractPages', 'Extract Pages')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/delete-pdf-pages" className="hover:text-primary transition-colors">
-                  {t('deletePages', 'Delete Pages')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/rotate-pdf" className="hover:text-primary transition-colors">
-                  {t('rotatePdf', 'Rotate PDF')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/sign-pdf" className="hover:text-primary transition-colors">
-                  {t('signPdf', 'Sign PDF (eSign)')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/add-page-numbers-to-pdf" className="hover:text-primary transition-colors">
-                  {t('pageNumbers', 'Page Numbers')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/watermark-pdf" className="hover:text-primary transition-colors">
-                  {t('watermarkPdf', 'Watermark PDF')}
-                </Link>
-              </li>
-            </ul>
-          </div>
+          {/* PDF Tools Grouped into 2 columns on mobile */}
+          <div className="col-span-1 sm:col-span-2 md:col-span-2 grid grid-cols-2 gap-4 sm:gap-8 min-w-0">
+            {/* PDF Organize & Edit */}
+            <div className="space-y-3 min-w-0">
+              <h5 className="font-semibold text-xs text-base-content/90 uppercase tracking-wider">
+                {t('organizeEdit', 'Organize & Edit')}
+              </h5>
+              <ul className="space-y-2 text-xs text-base-content/70">
+                <li>
+                  <Link href="/organize-pdf" className="hover:text-primary transition-colors text-primary font-medium">
+                    {t('organizePdf', 'Organize PDF')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/extract-pdf-pages" className="hover:text-primary transition-colors">
+                    {t('extractPages', 'Extract Pages')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/delete-pdf-pages" className="hover:text-primary transition-colors">
+                    {t('deletePages', 'Delete Pages')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/rotate-pdf" className="hover:text-primary transition-colors">
+                    {t('rotatePdf', 'Rotate PDF')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/sign-pdf" className="hover:text-primary transition-colors">
+                    {t('signPdf', 'Sign PDF (eSign)')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/add-page-numbers-to-pdf" className="hover:text-primary transition-colors">
+                    {t('pageNumbers', 'Page Numbers')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/watermark-pdf" className="hover:text-primary transition-colors">
+                    {t('watermarkPdf', 'Watermark PDF')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
 
-          {/* Convert & Office */}
-          <div className="space-y-3">
-            <h5 className="font-semibold text-xs text-base-content/90 uppercase tracking-wider">
-              {t('convertPdf', 'Convert PDF')}
-            </h5>
-            <ul className="space-y-2 text-xs text-base-content/70">
-              <li>
-                <Link href="/pdf-to-jpg" className="hover:text-primary transition-colors">
-                  {t('pdfToJpg', 'PDF to JPG')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/pdf-to-png" className="hover:text-primary transition-colors">
-                  {t('pdfToPng', 'PDF to PNG')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/html-to-pdf" className="hover:text-primary transition-colors">
-                  {t('htmlToPdf', 'HTML to PDF')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/pdf-ocr" className="hover:text-primary transition-colors">
-                  {t('pdfOcr', 'OCR Text Extractor')}
-                </Link>
-              </li>
-              <li>
-                <Link href="/txt-to-pdf" className="hover:text-primary transition-colors">
-                  {t('txtToPdf', 'TXT to PDF')}
-                </Link>
-              </li>
-            </ul>
+            {/* Convert & Office */}
+            <div className="space-y-3 min-w-0">
+              <h5 className="font-semibold text-xs text-base-content/90 uppercase tracking-wider">
+                {t('convertPdf', 'Convert PDF')}
+              </h5>
+              <ul className="space-y-2 text-xs text-base-content/70">
+                <li>
+                  <Link href="/pdf-to-jpg" className="hover:text-primary transition-colors">
+                    {t('pdfToJpg', 'PDF to JPG')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pdf-to-png" className="hover:text-primary transition-colors">
+                    {t('pdfToPng', 'PDF to PNG')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/html-to-pdf" className="hover:text-primary transition-colors">
+                    {t('htmlToPdf', 'HTML to PDF')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/pdf-ocr" className="hover:text-primary transition-colors">
+                    {t('pdfOcr', 'OCR Text Extractor')}
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/txt-to-pdf" className="hover:text-primary transition-colors">
+                    {t('txtToPdf', 'TXT to PDF')}
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* More Tools & Links */}
