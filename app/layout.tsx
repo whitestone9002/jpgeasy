@@ -217,13 +217,13 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
       </head>
-      <body className="bg-base-200/30 text-base-content antialiased flex flex-col min-h-screen selection:bg-primary selection:text-white">
+      <body className="bg-base-200/30 text-base-content antialiased flex flex-col min-h-screen selection:bg-primary selection:text-white max-w-full overflow-x-hidden">
         <LanguageProvider>
-          <div className="sticky top-0 z-50 w-full flex flex-col">
+          <div className="sticky top-0 z-50 w-full flex flex-col max-w-full overflow-hidden">
             <ConnectionStatusBanner />
             <Header />
           </div>
-          <main className="flex-1">
+          <main className="flex-1 w-full max-w-full min-w-0 overflow-x-hidden">
             {children}
           </main>
           <Footer />

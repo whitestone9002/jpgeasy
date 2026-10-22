@@ -61,7 +61,7 @@ export default function GuideArticleView({
   };
 
   return (
-    <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-14 space-y-8 sm:space-y-10 min-w-0 break-words">
+    <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-14 space-y-8 sm:space-y-10 min-w-0 max-w-full overflow-x-hidden break-words">
       {/* Back Link */}
       <div>
         <Link
@@ -74,7 +74,7 @@ export default function GuideArticleView({
       </div>
 
       {/* Article Header */}
-      <header className="max-w-4xl space-y-3 sm:space-y-4 min-w-0">
+      <header className="max-w-4xl space-y-3 sm:space-y-4 min-w-0 max-w-full">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="badge badge-primary badge-sm font-semibold text-[11px] sm:text-xs">
             {t(guide.category, guide.categoryLabel)}
@@ -99,7 +99,7 @@ export default function GuideArticleView({
       </header>
 
       {/* In-Content Primary Tool Callout Banner */}
-      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-6 min-w-0">
+      <div className="p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-6 min-w-0 max-w-full overflow-hidden">
         <div className="space-y-1 sm:space-y-1.5 max-w-xl min-w-0 flex-1">
           <span className="text-[10px] sm:text-[11px] uppercase font-bold tracking-wider text-primary">
             {t('recommendedTool', 'Recommended Free Online Tool')}
@@ -114,33 +114,33 @@ export default function GuideArticleView({
 
         <Link
           href={`/${guide.primaryToolSlug}`}
-          className="btn btn-primary btn-md gap-2 font-semibold shadow-lg shadow-primary/25 w-full sm:w-auto shrink-0 justify-center text-center"
+          className="btn btn-primary btn-md gap-2 font-semibold shadow-lg shadow-primary/25 w-full sm:w-auto shrink-0 justify-center text-center whitespace-normal h-auto min-h-[2.75rem] py-2.5 px-4 max-w-full"
         >
-          <span>{t(getToolTranslationKey(guide.primaryToolSlug), guide.primaryToolCtaText)}</span>
+          <span className="break-words text-center leading-snug">{t(getToolTranslationKey(guide.primaryToolSlug), guide.primaryToolCtaText)}</span>
           <ArrowRight className="w-4 h-4 shrink-0" />
         </Link>
       </div>
 
       {/* Mobile Table of Contents Accordion (visible on < lg screens) */}
       {guide.tableOfContents && guide.tableOfContents.length > 0 && (
-        <div className="block lg:hidden rounded-2xl bg-base-100 border border-base-300 shadow-xs overflow-hidden min-w-0">
+        <div className="block lg:hidden rounded-2xl bg-base-100 border border-base-300 shadow-xs overflow-hidden min-w-0 max-w-full">
           <details className="group">
             <summary className="p-4 flex items-center justify-between cursor-pointer list-none font-bold text-xs uppercase tracking-wider text-base-content/80 hover:text-primary transition-colors select-none">
-              <span className="flex items-center gap-2">
+              <span className="flex items-center gap-2 min-w-0">
                 <BookOpen className="w-4 h-4 text-primary shrink-0" />
-                <span>{t('tableOfContents', 'Table of Contents')} ({guide.tableOfContents.length})</span>
+                <span className="truncate">{t('tableOfContents', 'Table of Contents')} ({guide.tableOfContents.length})</span>
               </span>
-              <ChevronDown className="w-4 h-4 text-base-content/50 group-open:rotate-180 transition-transform duration-200 shrink-0" />
+              <ChevronDown className="w-4 h-4 text-base-content/50 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-2" />
             </summary>
             <nav className="px-4 pb-4 pt-1 space-y-1.5 border-t border-base-200/80">
               {guide.tableOfContents.map((item, idx) => (
                 <a
                   key={item.id}
                   href={`#${item.id}`}
-                  className="flex items-start gap-2 text-xs text-base-content/75 hover:text-primary transition-colors py-1 leading-snug"
+                  className="flex items-start gap-2 text-xs text-base-content/75 hover:text-primary transition-colors py-1 leading-snug min-w-0"
                 >
                   <span className="text-primary font-semibold shrink-0">{idx + 1}.</span>
-                  <span className="break-words">{item.text}</span>
+                  <span className="break-words min-w-0 flex-1">{item.text}</span>
                 </a>
               ))}
             </nav>
@@ -149,11 +149,11 @@ export default function GuideArticleView({
       )}
 
       {/* Main Content Grid: Article Sections + Sticky Table of Contents */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 min-w-0">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 min-w-0 max-w-full">
         {/* Article Body (8 cols on desktop) */}
-        <div className="lg:col-span-8 space-y-8 sm:space-y-12 min-w-0">
+        <div className="lg:col-span-8 space-y-8 sm:space-y-12 min-w-0 max-w-full">
           {guide.sections.map((section) => (
-            <section key={section.id} id={section.id} className="scroll-mt-24 space-y-3 sm:space-y-4 min-w-0">
+            <section key={section.id} id={section.id} className="scroll-mt-24 space-y-3 sm:space-y-4 min-w-0 max-w-full overflow-hidden">
               <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-base-content break-words">
                 {section.title}
               </h2>
@@ -167,7 +167,7 @@ export default function GuideArticleView({
               {/* Optional Callout Box */}
               {section.callout && (
                 <div
-                  className={`p-4 sm:p-5 rounded-xl sm:rounded-2xl border flex items-start gap-3 sm:gap-3.5 my-4 min-w-0 ${renderCalloutStyle(
+                  className={`p-4 sm:p-5 rounded-xl sm:rounded-2xl border flex items-start gap-3 sm:gap-3.5 my-4 min-w-0 max-w-full overflow-hidden ${renderCalloutStyle(
                     section.callout.type
                   )}`}
                 >
@@ -187,11 +187,11 @@ export default function GuideArticleView({
 
               {/* Optional Step-by-Step Cards */}
               {section.steps && section.steps.length > 0 && (
-                <div className="space-y-3 pt-2">
+                <div className="space-y-3 pt-2 min-w-0 max-w-full">
                   {section.steps.map((step) => (
                     <div
                       key={step.number}
-                      className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 flex items-start gap-3 sm:gap-4 shadow-xs min-w-0"
+                      className="p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 flex items-start gap-3 sm:gap-4 shadow-xs min-w-0 max-w-full overflow-hidden"
                     >
                       <span className="w-7 h-7 sm:w-8 sm:h-8 rounded-lg sm:rounded-xl bg-primary text-primary-content font-bold text-xs sm:text-sm flex items-center justify-center shrink-0 mt-0.5">
                         {step.number}
@@ -211,7 +211,7 @@ export default function GuideArticleView({
 
               {/* Optional Bullet Points */}
               {section.bulletPoints && section.bulletPoints.length > 0 && (
-                <ul className="space-y-2 pt-2">
+                <ul className="space-y-2 pt-2 min-w-0 max-w-full">
                   {section.bulletPoints.map((bp, idx) => (
                     <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-base-content/80 min-w-0">
                       <CheckCircle className="w-4 h-4 text-emerald-500 shrink-0 mt-0.5" />
@@ -225,7 +225,7 @@ export default function GuideArticleView({
 
           {/* Frequently Asked Questions */}
           {guide.faqs && guide.faqs.length > 0 && (
-            <div id="frequently-asked-questions" className="scroll-mt-24 pt-6 border-t border-base-300 min-w-0">
+            <div id="frequently-asked-questions" className="scroll-mt-24 pt-6 border-t border-base-300 min-w-0 max-w-full overflow-hidden">
               <div className="flex items-center gap-2 mb-4 sm:mb-6">
                 <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
                 <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-base-content break-words">
@@ -237,7 +237,7 @@ export default function GuideArticleView({
           )}
 
           {/* Secondary In-Content CTA */}
-          <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-base-200/60 border border-base-300 text-center space-y-3 sm:space-y-4 min-w-0">
+          <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-base-200/60 border border-base-300 text-center space-y-3 sm:space-y-4 min-w-0 max-w-full overflow-hidden">
             <h3 className="text-lg sm:text-xl font-bold text-base-content break-words">
               {t('readyToOptimize', 'Ready to optimize your documents?')}
             </h3>
@@ -246,9 +246,9 @@ export default function GuideArticleView({
             </p>
             <Link
               href={`/${guide.primaryToolSlug}`}
-              className="btn btn-primary btn-md gap-2 font-semibold w-full sm:w-auto justify-center inline-flex shadow-md shadow-primary/20"
+              className="btn btn-primary btn-md gap-2 font-semibold w-full sm:w-auto justify-center inline-flex shadow-md shadow-primary/20 whitespace-normal h-auto min-h-[2.75rem] py-2.5 px-4 max-w-full text-center"
             >
-              <span className="truncate">{guide.primaryToolCtaText || `${t('openTool', 'Use Tool')} - ${guide.primaryToolName}`}</span>
+              <span className="break-words text-center leading-snug">{guide.primaryToolCtaText || `${t('openTool', 'Use Tool')} - ${guide.primaryToolName}`}</span>
               <ArrowRight className="w-4 h-4 shrink-0" />
             </Link>
           </div>
@@ -303,9 +303,9 @@ export default function GuideArticleView({
 
       {/* Related Guides Section */}
       {relatedGuides.length > 0 && (
-        <div className="pt-8 sm:pt-12 border-t border-base-300 space-y-5 sm:space-y-6 min-w-0">
-          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4">
-            <h3 className="text-lg sm:text-2xl font-bold text-base-content">
+        <div className="pt-8 sm:pt-12 border-t border-base-300 space-y-5 sm:space-y-6 min-w-0 max-w-full">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 min-w-0">
+            <h3 className="text-lg sm:text-2xl font-bold text-base-content break-words">
               {t('relatedGuidesTitle', 'Related Guides & Tutorials')}
             </h3>
             <Link
@@ -316,12 +316,12 @@ export default function GuideArticleView({
               <ArrowRight className="w-3.5 h-3.5" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 min-w-0 max-w-full">
             {relatedGuides.map((rel) => (
               <Link
                 key={rel.slug}
                 href={`/guides/${rel.slug}`}
-                className="group p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 hover:border-primary/40 shadow-xs hover:shadow-md transition-all flex flex-col justify-between min-w-0"
+                className="group p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 hover:border-primary/40 shadow-xs hover:shadow-md transition-all flex flex-col justify-between min-w-0 max-w-full overflow-hidden"
               >
                 <div className="space-y-2 min-w-0">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-base-content/50">
@@ -346,11 +346,11 @@ export default function GuideArticleView({
 
       {/* Related Tools Section */}
       {relatedTools.length > 0 && (
-        <div className="pt-6 sm:pt-8 border-t border-base-300 space-y-4 sm:space-y-6 min-w-0">
-          <h3 className="text-lg sm:text-2xl font-bold text-base-content">
+        <div className="pt-6 sm:pt-8 border-t border-base-300 space-y-4 sm:space-y-6 min-w-0 max-w-full">
+          <h3 className="text-lg sm:text-2xl font-bold text-base-content break-words">
             {t('helpfulToolsMentioned', 'Helpful Tools Mentioned in This Guide')}
           </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 min-w-0 max-w-full">
             {relatedTools.map((tool) => (
               <ToolCard key={tool.id} tool={tool} />
             ))}

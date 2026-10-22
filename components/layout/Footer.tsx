@@ -12,38 +12,38 @@ export default function Footer() {
     <footer className="mt-auto border-t border-base-300 bg-base-200/50 text-base-content transition-colors">
       {/* Privacy & Trust Bar */}
       <div className="border-b border-base-300 py-6 bg-base-100/50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-          <div className="flex items-center justify-start gap-3 text-left">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-6 text-left min-w-0">
+          <div className="flex items-center justify-start gap-3 text-left min-w-0">
             <div className="w-10 h-10 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <div className="text-left">
-              <h4 className="font-semibold text-sm text-left">{t('privacyTitle', '100% Privacy Focused')}</h4>
-              <p className="text-xs text-base-content/60 text-left">
+            <div className="text-left min-w-0 flex-1">
+              <h4 className="font-semibold text-sm text-left break-words">{t('privacyTitle', '100% Privacy Focused')}</h4>
+              <p className="text-xs text-base-content/60 text-left break-words">
                 {t('privacyDesc', 'Files processed in memory and never saved to disk or database.')}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center justify-start gap-3 text-left">
+          <div className="flex items-center justify-start gap-3 text-left min-w-0">
             <div className="w-10 h-10 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
               <Zap className="w-5 h-5" />
             </div>
-            <div className="text-left">
-              <h4 className="font-semibold text-sm text-left">{t('fastTitle', 'Lightning Fast')}</h4>
-              <p className="text-xs text-base-content/60 text-left">
+            <div className="text-left min-w-0 flex-1">
+              <h4 className="font-semibold text-sm text-left break-words">{t('fastTitle', 'Lightning Fast')}</h4>
+              <p className="text-xs text-base-content/60 text-left break-words">
                 {t('fastDesc', 'Engineered with high-speed performance architecture.')}
               </p>
             </div>
           </div>
 
-          <div className="flex items-center justify-start gap-3 text-left">
+          <div className="flex items-center justify-start gap-3 text-left min-w-0">
             <div className="w-10 h-10 rounded-xl bg-violet-500/10 text-violet-600 dark:text-violet-400 flex items-center justify-center shrink-0">
               <Lock className="w-5 h-5" />
             </div>
-            <div className="text-left">
-              <h4 className="font-semibold text-sm text-left">{t('freeTitle', 'Free Forever & No Signup')}</h4>
-              <p className="text-xs text-base-content/60 text-left">
+            <div className="text-left min-w-0 flex-1">
+              <h4 className="font-semibold text-sm text-left break-words">{t('freeTitle', 'Free Forever & No Signup')}</h4>
+              <p className="text-xs text-base-content/60 text-left break-words">
                 {t('freeDesc', 'No account required, no watermark, no hidden subscription traps.')}
               </p>
             </div>
@@ -53,9 +53,9 @@ export default function Footer() {
 
       {/* Main Footer Links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-6 sm:gap-8 min-w-0">
           {/* Brand Info */}
-          <div className="col-span-2 space-y-4">
+          <div className="col-span-1 sm:col-span-2 space-y-4 min-w-0">
             <Link href="/" className="flex items-center shrink-0" aria-label="JPGEasy Home">
               <div className="h-[20px] w-auto flex items-center shrink-0">
                 {/* eslint-disable-next-line @next/next/no-img-element */}

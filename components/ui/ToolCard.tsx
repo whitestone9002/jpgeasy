@@ -64,24 +64,24 @@ export default function ToolCard({ tool }: { tool: ToolMeta }) {
   return (
     <Link
       href={`/${tool.slug}`}
-      className="group relative flex flex-col justify-between p-5 rounded-2xl bg-base-100 border border-base-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200"
+      className="group relative flex flex-col justify-between p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 hover:border-primary/50 hover:shadow-lg hover:shadow-primary/5 transition-all duration-200 min-w-0 max-w-full overflow-hidden"
     >
-      <div>
+      <div className="min-w-0">
         <div className="flex items-start justify-between gap-3 mb-3">
-          <div className="w-11 h-11 rounded-xl bg-base-200 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all">
+          <div className="w-11 h-11 rounded-xl bg-base-200 flex items-center justify-center group-hover:scale-110 group-hover:bg-primary/10 transition-all shrink-0">
             {ICON_MAP[tool.icon] || <FileText className="w-5 h-5 text-primary" />}
           </div>
           {tool.badge && (
-            <span className="badge badge-sm badge-primary font-medium text-[11px] px-2">
+            <span className="badge badge-sm badge-primary font-medium text-[11px] px-2 shrink-0">
               {tool.badge === 'Popular' ? t('badgePopular', 'Popular') : tool.badge}
             </span>
           )}
         </div>
 
-        <h3 className="font-semibold text-base text-base-content group-hover:text-primary transition-colors flex items-center gap-1.5">
+        <h3 className="font-semibold text-sm sm:text-base text-base-content group-hover:text-primary transition-colors break-words leading-snug">
           {toolName}
         </h3>
-        <p className="text-xs text-base-content/65 mt-1.5 line-clamp-2 leading-relaxed">
+        <p className="text-xs text-base-content/65 mt-1.5 line-clamp-2 leading-relaxed break-words">
           {toolDescription}
         </p>
       </div>
