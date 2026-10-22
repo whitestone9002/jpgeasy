@@ -208,16 +208,16 @@ body {
 }
 
 /* Prevent header buttons and navigation items from breaking or wrapping on language change */
-header,
-header nav,
-header .dropdown label,
-header .btn {
+header.select-none,
+header.select-none nav,
+header.select-none .dropdown label,
+header.select-none .btn {
   white-space: nowrap !important;
   flex-wrap: nowrap !important;
 }
 
-header .btn span,
-header label span {
+header.select-none .btn span,
+header.select-none label span {
   white-space: nowrap !important;
 }
 

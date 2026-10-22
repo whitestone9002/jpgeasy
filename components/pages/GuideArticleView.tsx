@@ -74,7 +74,7 @@ export default function GuideArticleView({
       </div>
 
       {/* Article Header */}
-      <header className="space-y-3 sm:space-y-4 min-w-0 max-w-full">
+      <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full whitespace-normal">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="badge badge-primary badge-sm font-semibold text-[11px] sm:text-xs">
             {t(guide.category, guide.categoryLabel)}
@@ -89,26 +89,26 @@ export default function GuideArticleView({
           </div>
         </div>
 
-        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-base-content leading-tight break-words">
+        <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold tracking-tight text-base-content leading-snug sm:leading-tight break-words whitespace-normal">
           {t(`${guide.slug}_title`, guide.title)}
         </h1>
 
-        <p className="text-sm sm:text-base text-base-content/75 leading-relaxed font-normal pt-1 break-words">
+        <p className="text-xs sm:text-sm md:text-base text-base-content/75 leading-relaxed font-normal pt-1 break-words whitespace-normal">
           {t(`${guide.slug}_desc`, guide.introduction)}
         </p>
-      </header>
+      </div>
 
       {/* Visual Guide Banner */}
       {guide.coverImage && (
         <div className="flex justify-center w-full my-1 sm:my-3">
-          <figure className="w-full max-w-lg md:max-w-xl rounded-2xl overflow-hidden border border-base-300 bg-base-100/60 shadow-md">
+          <figure className="w-full max-w-3xl lg:max-w-4xl rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-lg">
             <img
               src={guide.coverImage}
               alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
               title={guide.title}
               width={1360}
               height={850}
-              className="w-full h-auto object-contain block aspect-[16/10]"
+              className="w-full h-auto object-cover block aspect-[16/10]"
               loading="eager"
               fetchPriority="high"
               decoding="async"
@@ -176,7 +176,7 @@ export default function GuideArticleView({
         <div className="lg:col-span-8 space-y-8 sm:space-y-12 min-w-0 max-w-full">
           {guide.sections.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-24 space-y-3 sm:space-y-4 min-w-0 max-w-full overflow-hidden">
-              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-base-content break-words">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-base-content break-words whitespace-normal">
                 {section.title}
               </h2>
 
@@ -250,7 +250,7 @@ export default function GuideArticleView({
             <div id="frequently-asked-questions" className="scroll-mt-24 pt-6 border-t border-base-300 min-w-0 max-w-full overflow-hidden">
               <div className="flex items-center gap-2 mb-4 sm:mb-6">
                 <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
-                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-base-content break-words">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-base-content break-words whitespace-normal">
                   {t('faqTitle', 'Frequently Asked Questions')}
                 </h2>
               </div>
