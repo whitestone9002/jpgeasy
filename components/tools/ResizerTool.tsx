@@ -16,6 +16,7 @@ import {
   Unlock,
   Check,
   Scaling,
+  ChevronDown,
 } from 'lucide-react';
 import UploadZone from '@/components/ui/UploadZone';
 import ComparisonViewer from '@/components/ui/ComparisonViewer';
@@ -721,16 +722,19 @@ export default function ResizerTool() {
             )}
 
             {/* Collapsible Social Presets */}
-            <details className="collapse collapse-arrow bg-base-200/40 rounded-xl border border-base-300/70">
-              <summary className="collapse-title text-xs font-bold text-base-content/80 py-2.5 min-h-0 flex items-center justify-between">
-                <span>{t('popularSocialPresets', 'Popular Social Presets')}</span>
-                {selectedPreset && (
-                  <span className="badge badge-xs badge-primary font-normal mr-6">
-                    {selectedPreset}
-                  </span>
-                )}
+            <details className="group bg-base-200/40 rounded-xl border border-base-300/70 overflow-hidden">
+              <summary className="px-3.5 py-2.5 text-xs font-bold text-base-content/80 flex items-center justify-between cursor-pointer list-none [&::-webkit-details-marker]:hidden select-none hover:text-primary transition-colors">
+                <div className="flex items-center gap-2 min-w-0">
+                  <span>{t('popularSocialPresets', 'Popular Social Presets')}</span>
+                  {selectedPreset && (
+                    <span className="badge badge-xs badge-primary font-normal">
+                      {selectedPreset}
+                    </span>
+                  )}
+                </div>
+                <ChevronDown className="w-4 h-4 text-base-content/60 group-open:rotate-180 transition-transform duration-200 shrink-0 ml-2" />
               </summary>
-              <div className="collapse-content space-y-1.5 pt-1">
+              <div className="px-3 pb-3 pt-1.5 space-y-1.5 border-t border-base-300/40">
                 {/* Default / No Preset Option */}
                 <button
                   type="button"
