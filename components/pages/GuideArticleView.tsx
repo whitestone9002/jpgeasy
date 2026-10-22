@@ -61,7 +61,7 @@ export default function GuideArticleView({
   };
 
   return (
-    <article className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-14 space-y-8 sm:space-y-10 min-w-0 max-w-full overflow-x-hidden break-words">
+    <article className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 space-y-8 sm:space-y-10 min-w-0 max-w-full overflow-x-hidden break-words">
       {/* Back Link */}
       <div>
         <Link
@@ -74,7 +74,7 @@ export default function GuideArticleView({
       </div>
 
       {/* Article Header */}
-      <header className="max-w-4xl space-y-3 sm:space-y-4 min-w-0 max-w-full">
+      <header className="space-y-3 sm:space-y-4 min-w-0 max-w-full">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="badge badge-primary badge-sm font-semibold text-[11px] sm:text-xs">
             {t(guide.category, guide.categoryLabel)}
@@ -89,11 +89,11 @@ export default function GuideArticleView({
           </div>
         </div>
 
-        <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-base-content leading-tight sm:leading-tight break-words">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-base-content leading-tight break-words">
           {t(`${guide.slug}_title`, guide.title)}
         </h1>
 
-        <p className="text-sm sm:text-lg text-base-content/80 leading-relaxed font-normal pt-1 sm:pt-2 break-words">
+        <p className="text-sm sm:text-base text-base-content/75 leading-relaxed font-normal pt-1 break-words">
           {t(`${guide.slug}_desc`, guide.introduction)}
         </p>
       </header>
@@ -176,7 +176,7 @@ export default function GuideArticleView({
         <div className="lg:col-span-8 space-y-8 sm:space-y-12 min-w-0 max-w-full">
           {guide.sections.map((section) => (
             <section key={section.id} id={section.id} className="scroll-mt-24 space-y-3 sm:space-y-4 min-w-0 max-w-full overflow-hidden">
-              <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold tracking-tight text-base-content break-words">
+              <h2 className="text-lg sm:text-xl lg:text-2xl font-bold tracking-tight text-base-content break-words">
                 {section.title}
               </h2>
 
@@ -250,7 +250,7 @@ export default function GuideArticleView({
             <div id="frequently-asked-questions" className="scroll-mt-24 pt-6 border-t border-base-300 min-w-0 max-w-full overflow-hidden">
               <div className="flex items-center gap-2 mb-4 sm:mb-6">
                 <HelpCircle className="w-5 h-5 sm:w-6 sm:h-6 text-primary shrink-0" />
-                <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-base-content break-words">
+                <h2 className="text-lg sm:text-xl lg:text-2xl font-bold text-base-content break-words">
                   {t('faqTitle', 'Frequently Asked Questions')}
                 </h2>
               </div>
@@ -260,7 +260,7 @@ export default function GuideArticleView({
 
           {/* Secondary In-Content CTA */}
           <div className="p-5 sm:p-8 rounded-2xl sm:rounded-3xl bg-base-200/60 border border-base-300 text-center space-y-3 sm:space-y-4 min-w-0 max-w-full overflow-hidden">
-            <h3 className="text-lg sm:text-xl font-bold text-base-content break-words">
+            <h3 className="text-base sm:text-lg font-bold text-base-content break-words">
               {t('readyToOptimize', 'Ready to optimize your documents?')}
             </h3>
             <p className="text-xs sm:text-sm text-base-content/70 max-w-md mx-auto leading-relaxed break-words">
@@ -327,7 +327,7 @@ export default function GuideArticleView({
       {relatedGuides.length > 0 && (
         <div className="pt-8 sm:pt-12 border-t border-base-300 space-y-5 sm:space-y-6 min-w-0 max-w-full">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2.5 sm:gap-4 min-w-0">
-            <h3 className="text-lg sm:text-2xl font-bold text-base-content break-words">
+            <h3 className="text-base sm:text-xl font-bold text-base-content break-words">
               {t('relatedGuidesTitle', 'Related Guides & Tutorials')}
             </h3>
             <Link
@@ -369,7 +369,7 @@ export default function GuideArticleView({
       {/* Related Tools Section */}
       {relatedTools.length > 0 && (
         <div className="pt-6 sm:pt-8 border-t border-base-300 space-y-4 sm:space-y-6 min-w-0 max-w-full">
-          <h3 className="text-lg sm:text-2xl font-bold text-base-content break-words">
+          <h3 className="text-base sm:text-xl font-bold text-base-content break-words">
             {t('helpfulToolsMentioned', 'Helpful Tools Mentioned in This Guide')}
           </h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5 sm:gap-4 min-w-0 max-w-full">
