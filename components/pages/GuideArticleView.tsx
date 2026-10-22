@@ -61,7 +61,7 @@ export default function GuideArticleView({
   };
 
   return (
-    <article className="w-full max-w-5xl px-3 sm:px-6 py-6 sm:py-12 space-y-6 sm:space-y-8 mx-auto min-w-0 max-w-full overflow-x-hidden break-words">
+    <article className="w-full max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-12 space-y-8 sm:space-y-10 min-w-0 max-w-full overflow-x-hidden break-words">
       {/* Back Link */}
       <div>
         <Link
@@ -73,9 +73,9 @@ export default function GuideArticleView({
         </Link>
       </div>
 
-      {/* Article Header (Centered, matching ToolLayout & extract-pdf-pages) */}
-      <div className="text-center space-y-2.5 sm:space-y-3.5 max-w-3xl mx-auto px-1 min-w-0 max-w-full whitespace-normal">
-        <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3">
+      {/* Article Header */}
+      <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full whitespace-normal">
+        <div className="flex flex-wrap items-center gap-2 sm:gap-3">
           <span className="badge badge-primary badge-sm font-semibold text-[11px] sm:text-xs">
             {t(guide.category, guide.categoryLabel)}
           </span>
@@ -93,29 +93,31 @@ export default function GuideArticleView({
           {t(`${guide.slug}_title`, guide.title)}
         </h1>
 
-        <p className="text-xs sm:text-sm md:text-base text-base-content/75 leading-relaxed font-normal pt-1 break-words whitespace-normal max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm md:text-base text-base-content/75 leading-relaxed font-normal pt-1 break-words whitespace-normal">
           {t(`${guide.slug}_desc`, guide.introduction)}
         </p>
       </div>
 
-      {/* Visual Guide Banner (w-full matching tool sandbox on extract-pdf-pages) */}
+      {/* Visual Guide Banner */}
       {guide.coverImage && (
-        <figure className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-card">
-          <img
-            src={guide.coverImage}
-            alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-            title={guide.title}
-            width={1360}
-            height={850}
-            className="w-full h-auto object-cover block aspect-[16/10]"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-          <figcaption className="sr-only">
-            {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-          </figcaption>
-        </figure>
+        <div className="flex justify-center w-full my-1 sm:my-3">
+          <figure className="w-full max-w-3xl lg:max-w-4xl rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-lg">
+            <img
+              src={guide.coverImage}
+              alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+              title={guide.title}
+              width={1360}
+              height={850}
+              className="w-full h-auto object-cover block aspect-[16/10]"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+            <figcaption className="sr-only">
+              {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+            </figcaption>
+          </figure>
+        </div>
       )}
 
       {/* In-Content Primary Tool Callout Banner */}
@@ -169,7 +171,7 @@ export default function GuideArticleView({
       )}
 
       {/* Main Content Grid: Article Sections + Sticky Table of Contents */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 min-w-0 max-w-full">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 min-w-0 max-w-full">
         {/* Article Body (8 cols on desktop) */}
         <div className="lg:col-span-8 space-y-8 sm:space-y-12 min-w-0 max-w-full">
           {guide.sections.map((section) => (
