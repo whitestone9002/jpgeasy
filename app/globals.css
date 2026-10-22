@@ -293,5 +293,21 @@ header label span {
   }
 }
 
+/* Ensure all loading spinners animate continuously with GPU hardware acceleration */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-spin {
+  animation: spin 1s linear infinite !important;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
 
 

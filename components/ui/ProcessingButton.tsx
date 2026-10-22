@@ -66,15 +66,11 @@ export default function ProcessingButton({
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent animate-pulse" />
         </div>
 
-        {/* Left: Spinner & Loading Label */}
+        {/* Left: Spinner & Loading Label - always loading and never stops while processing */}
         <div className="relative z-10 flex items-center gap-2.5 min-w-0">
-          {clampedProgress >= 100 ? (
-            <CheckCircle2 className="w-5 h-5 text-emerald-300 animate-in zoom-in-75 duration-150 shrink-0" />
-          ) : (
-            <Loader2 className="w-5 h-5 animate-spin text-white shrink-0" />
-          )}
+          <Loader2 className="w-5 h-5 animate-spin text-white shrink-0" />
           <span className="text-sm sm:text-base font-bold truncate">
-            {clampedProgress >= 100 ? t('completed', 'Completed!') : `${displayLoadingLabel}...`}
+            {`${displayLoadingLabel}...`}
           </span>
         </div>
 
