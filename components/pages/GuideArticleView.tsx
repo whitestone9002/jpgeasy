@@ -100,22 +100,24 @@ export default function GuideArticleView({
 
       {/* Visual Guide Banner */}
       {guide.coverImage && (
-        <figure className="w-full rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-lg">
-          <img
-            src={guide.coverImage}
-            alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-            title={guide.title}
-            width={1360}
-            height={850}
-            className="w-full h-auto object-cover block aspect-[16/10]"
-            loading="eager"
-            fetchPriority="high"
-            decoding="async"
-          />
-          <figcaption className="sr-only">
-            {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-          </figcaption>
-        </figure>
+        <div className="flex justify-center w-full my-1 sm:my-3">
+          <figure className="w-full max-w-lg md:max-w-xl rounded-2xl overflow-hidden border border-base-300 bg-base-100/60 shadow-md">
+            <img
+              src={guide.coverImage}
+              alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+              title={guide.title}
+              width={1360}
+              height={850}
+              className="w-full h-auto object-contain block aspect-[16/10]"
+              loading="eager"
+              fetchPriority="high"
+              decoding="async"
+            />
+            <figcaption className="sr-only">
+              {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+            </figcaption>
+          </figure>
+        </div>
       )}
 
       {/* In-Content Primary Tool Callout Banner */}
@@ -207,24 +209,7 @@ export default function GuideArticleView({
 
               {/* Optional Step-by-Step Cards */}
               {section.steps && section.steps.length > 0 && (
-                <div className="space-y-4 pt-2 min-w-0 max-w-full">
-                  {guide.coverImage && (
-                    <figure className="w-full rounded-2xl overflow-hidden border border-base-300 bg-base-100/60 shadow-md">
-                      <img
-                        src={guide.coverImage}
-                        alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-                        title={guide.title}
-                        width={1360}
-                        height={850}
-                        className="w-full h-auto object-cover block aspect-[16/10]"
-                        loading="lazy"
-                        decoding="async"
-                      />
-                      <figcaption className="text-center text-xs text-base-content/60 py-2.5 bg-base-200/50 border-t border-base-200">
-                        {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-                      </figcaption>
-                    </figure>
-                  )}
+                <div className="space-y-3 pt-2 min-w-0 max-w-full">
                   {section.steps.map((step) => (
                     <div
                       key={step.number}

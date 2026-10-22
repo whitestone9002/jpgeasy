@@ -328,20 +328,6 @@ export default function GuidesIndexPage() {
                 href={`/guides/${guide.slug}`}
                 className="group relative flex flex-col p-5 sm:p-6 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-base-100 to-base-200/50 border border-base-300 shadow-xs hover:shadow-xl hover:border-primary/50 transition-all duration-300 min-w-0"
               >
-                {guide.coverImage && (
-                  <div className="w-full aspect-[16/10] rounded-xl overflow-hidden mb-4 bg-base-200 border border-base-300 shrink-0">
-                    <img
-                      src={guide.coverImage}
-                      alt={guide.imageAlt || `Tutorial preview: ${guide.title}`}
-                      title={guide.title}
-                      width={640}
-                      height={400}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                )}
                 <div className="flex items-center justify-between mb-3 sm:mb-4">
                   <div className="flex items-center gap-2">
                     {getCategoryIcon(guide.category)}
@@ -402,20 +388,6 @@ export default function GuidesIndexPage() {
                 href={`/guides/${guide.slug}`}
                 className="group flex flex-col p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-base-100 border border-base-300 shadow-xs hover:shadow-lg hover:border-primary/40 transition-all duration-200 min-w-0"
               >
-                {guide.coverImage && (
-                  <div className="w-full aspect-[16/10] rounded-lg sm:rounded-xl overflow-hidden mb-3.5 bg-base-200 border border-base-300 shrink-0">
-                    <img
-                      src={guide.coverImage}
-                      alt={guide.imageAlt || `Tutorial preview: ${guide.title}`}
-                      title={guide.title}
-                      width={640}
-                      height={400}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                      loading="lazy"
-                      decoding="async"
-                    />
-                  </div>
-                )}
                 <div className="flex items-center justify-between mb-3">
                   <div className="flex items-center gap-1.5">
                     {getCategoryIcon(guide.category)}
