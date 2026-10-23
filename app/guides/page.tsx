@@ -98,6 +98,19 @@ export default function GuidesIndexPage() {
     return GUIDES.filter((g) => g.featured);
   }, []);
 
+  const isShowingFeatured = !searchQuery && selectedCategory === 'all' && featuredGuides.length > 0;
+
+  const displayedFeaturedSlugs = useMemo(() => {
+    return isShowingFeatured
+      ? new Set(featuredGuides.slice(0, 3).map((g) => g.slug))
+      : new Set<string>();
+  }, [isShowingFeatured, featuredGuides]);
+
+  const displayedGuides = useMemo(() => {
+    if (!isShowingFeatured) return filteredGuides;
+    return filteredGuides.filter((g) => !displayedFeaturedSlugs.has(g.slug));
+  }, [filteredGuides, isShowingFeatured, displayedFeaturedSlugs]);
+
   const getCategoryIcon = (cat: GuideCategory) => {
     switch (cat) {
       case 'image':
@@ -382,11 +395,11 @@ export default function GuidesIndexPage() {
               : t(selectedCategory, GUIDE_CATEGORIES.find((c) => c.id === selectedCategory)?.label || '')}
           </h2>
           <span className="text-xs text-base-content/50">
-            {filteredGuides.length} {filteredGuides.length === 1 ? t('guide', 'guide') : t('guides', 'guides')}
+            {displayedGuides.length} {displayedGuides.length === 1 ? t('guide', 'guide') : t('guides', 'guides')}
           </span>
         </div>
 
-        {filteredGuides.length === 0 ? (
+        {displayedGuides.length === 0 ? (
           <div className="text-center py-12 sm:py-16 px-4 bg-base-100 rounded-2xl sm:rounded-3xl border border-base-300">
             <BookOpen className="w-10 h-10 sm:w-12 sm:h-12 text-base-content/30 mx-auto mb-3" />
             <h3 className="text-base sm:text-lg font-bold text-base-content mb-1">{t('noGuidesFound', 'No guides found')}</h3>
@@ -396,7 +409,7 @@ export default function GuidesIndexPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
-            {filteredGuides.map((guide) => (
+            {displayedGuides.map((guide) => (
               <Link
                 key={guide.slug}
                 href={`/guides/${guide.slug}`}
