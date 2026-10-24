@@ -160,7 +160,8 @@ export default function ContactContent() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      // Step 1: Strict server-side security, DNS MX verification, and 24h rate-limiting
+      const verifyResponse = await fetch('/api/contact', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
@@ -174,16 +175,46 @@ export default function ContactContent() {
         }),
       });
 
-      const result = await response.json().catch(() => ({}));
+      const verifyResult = await verifyResponse.json().catch(() => ({}));
 
-      if (!response.ok || !result.success) {
+      if (!verifyResponse.ok || !verifyResult.success) {
         setIsSubmitting(false);
-        setErrorMessage(result.error || result.message || 'Failed to send message. Please ensure your email is real and your message contains plain text only.');
+        setErrorMessage(verifyResult.error || 'Failed to verify message. Please ensure your email is real and your message contains plain text only.');
         return;
       }
 
-      // Record 24-hour rate limit timestamp in local storage
+      // Step 2: Client-side dispatch to Web3Forms gateway
+      const web3Response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: '354c2270-1d79-44da-8b3b-600f3743fcd6',
+          name: formData.name.trim(),
+          email: emailTrimmed,
+          subject: `[JPGEASY Support] ${formData.subject} - from ${formData.name.trim()}`,
+          message: formData.message.trim(),
+          from_name: 'JPGEASY Support Desk'
+        })
+      });
+
+      const web3Result = await web3Response.json().catch(() => ({}));
+
+      if (!web3Response.ok || !web3Result.success) {
+        setIsSubmitting(false);
+        setErrorMessage(web3Result.message || 'Service is temporarily unable to dispatch message. Please try again later.');
+        return;
+      }
+
+      // Step 3: Lock 24-hour rate limit on server and client
       try {
+        await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ action: 'record', email: emailTrimmed })
+        });
         localStorage.setItem(`jpgeasy_sent_${emailTrimmed}`, Date.now().toString());
       } catch (_) {}
 

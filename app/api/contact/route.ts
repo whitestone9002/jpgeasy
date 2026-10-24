@@ -40,6 +40,25 @@ const ALLOWED_TOPICS = [
 export async function POST(req: NextRequest) {
   try {
     const data = await req.json();
+
+    // Fast-path: Lock 24-hour cooldown after confirmed dispatch
+    if (data.action === 'record') {
+      const email = String(data.email || '').trim().toLowerCase();
+      if (email && EMAIL_SYNTAX_REGEX.test(email)) {
+        const now = Date.now();
+        emailRateLimits.set(email, now);
+        if (emailRateLimits.size > 2000) {
+          emailRateLimits.forEach((ts, key) => {
+            if (now - ts >= COOLDOWN_MS) {
+              emailRateLimits.delete(key);
+            }
+          });
+        }
+        return NextResponse.json({ success: true });
+      }
+      return NextResponse.json({ error: 'Invalid email' }, { status: 400 });
+    }
+
     let { name, email, subject, message } = data;
 
     // 1. Mandatory presence check
@@ -159,51 +178,15 @@ export async function POST(req: NextRequest) {
       subject = 'Other';
     }
 
-    // 10. Forward to Web3Forms Gateway for Physical Phone Delivery
-    const web3Response = await fetch('https://api.web3forms.com/submit', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        'Accept': 'application/json',
-      },
-      body: JSON.stringify({
-        access_key: '354c2270-1d79-44da-8b3b-600f3743fcd6',
-        name,
-        email,
-        subject: `[JPGEASY Support] ${subject} - from ${name}`,
-        message,
-        from_name: 'JPGEASY Security Gateway'
-      }),
-    });
-
-    const web3Result = await web3Response.json().catch(() => ({}));
-
-    if (!web3Response.ok || !web3Result.success) {
-      return NextResponse.json(
-        { error: web3Result.message || 'Service is temporarily unable to dispatch message. Please try again later.' }, 
-        { status: 502 }
-      );
-    }
-
-    // Record the 24-hour rate limit timestamp for this verified email
-    emailRateLimits.set(email, now);
-
-    // Prune stale rate-limit records older than 24 hours to prevent memory leaks
-    if (emailRateLimits.size > 2000) {
-      emailRateLimits.forEach((ts, key) => {
-        if (now - ts >= COOLDOWN_MS) {
-          emailRateLimits.delete(key);
-        }
-      });
-    }
-
+    // 10. Verification Passed: All DNS MX, anti-spam, and anti-code checks greenlit
     return NextResponse.json({ 
       success: true, 
-      message: 'Support request received and dispatched successfully.' 
+      verified: true,
+      message: 'Verification passed. Proceeding with secure client-side dispatch.' 
     });
   } catch (_) {
     return NextResponse.json(
-      { error: 'Failed to process support request.' }, 
+      { error: 'Failed to verify support request.' }, 
       { status: 500 }
     );
   }
