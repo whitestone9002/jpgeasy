@@ -102,22 +102,29 @@ export default function GuideArticleView({
       {/* Visual Guide Banner */}
       {guide.coverImage && (
         <div className="flex justify-center w-full my-1 sm:my-3">
-          <figure className="w-full max-w-3xl lg:max-w-4xl rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 bg-base-100/60 shadow-lg">
-            <img
-              src={guide.coverImage}
-              alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-              title={guide.title}
-              width={1360}
-              height={850}
-              className="w-full h-auto object-cover block aspect-[16/10]"
-              loading="eager"
-              fetchPriority="high"
-              decoding="async"
-            />
-            <figcaption className="sr-only">
-              {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
-            </figcaption>
-          </figure>
+          <Link
+            href={guide.primaryToolSlug.startsWith('/') ? guide.primaryToolSlug : `/${guide.primaryToolSlug}`}
+            title={`Open ${guide.primaryToolName} – ${guide.title}`}
+            aria-label={`Open ${guide.primaryToolName}`}
+            className="group block w-full max-w-3xl lg:max-w-4xl rounded-2xl sm:rounded-3xl overflow-hidden border border-base-300 hover:border-primary/50 bg-base-100/60 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer"
+          >
+            <figure className="relative w-full overflow-hidden">
+              <img
+                src={guide.coverImage}
+                alt={guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+                title={guide.title}
+                width={1360}
+                height={850}
+                className="w-full h-auto object-cover block aspect-[16/10] group-hover:scale-[1.01] transition-transform duration-300"
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+              />
+              <figcaption className="sr-only">
+                {guide.imageAlt || t(`${guide.slug}_title`, guide.title)}
+              </figcaption>
+            </figure>
+          </Link>
         </div>
       )}
 
