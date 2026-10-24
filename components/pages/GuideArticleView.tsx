@@ -74,9 +74,6 @@ export default function GuideArticleView({
         </Link>
       </div>
 
-      {/* Top Article Ad Banner */}
-      <AdSlot slot="article-top-banner" format="banner" className="my-4 sm:my-6" />
-
       {/* Article Header */}
       <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full whitespace-normal">
         <div className="flex flex-wrap items-center gap-2 sm:gap-3">
@@ -123,6 +120,9 @@ export default function GuideArticleView({
           </figure>
         </div>
       )}
+
+      {/* Ad Banner Directly Under Image Section */}
+      <AdSlot slot="article-under-image" format="banner" className="my-4 sm:my-6" />
 
       {/* In-Content Primary Tool Callout Banner */}
       <div className="p-4 sm:p-6 lg:p-8 rounded-2xl sm:rounded-3xl bg-gradient-to-r from-primary/10 via-primary/5 to-transparent border border-primary/20 flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 sm:gap-6 min-w-0 max-w-full overflow-hidden">
