@@ -56,6 +56,8 @@ export default function ImageToPdfTool({
   const { isProcessing, progress, startProgress, finishProgress, resetProgress } = useProgressAction();
   const [result, setResult] = useState<any | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [isGridDragging, setIsGridDragging] = useState(false);
+  const [isCardDragging, setIsCardDragging] = useState(false);
   const addMoreInputRef = useRef<HTMLInputElement>(null);
 
   const handleFilesSelected = async (newFiles: File[]) => {
@@ -312,21 +314,69 @@ export default function ImageToPdfTool({
 
   return (
     <div className="w-full space-y-6">
-      {/* Upload Zone */}
+      {/* Upload Zone with full Drag & Drop Wrapper */}
       {items.length === 0 && (
-        <UploadZone
-          accept={accept}
-          multiple={true}
-          maxFiles={30}
-          files={items.map((i) => i.file)}
-          onFilesSelected={handleFilesSelected}
-          title={resolvedTitle}
-          subtitle={resolvedSubtitle}
-        />
+        <div
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+              handleFilesSelected(Array.from(e.dataTransfer.files));
+            }
+          }}
+          className="w-full"
+        >
+          <UploadZone
+            accept={accept}
+            multiple={true}
+            maxFiles={30}
+            files={items.map((i) => i.file)}
+            onFilesSelected={handleFilesSelected}
+            title={resolvedTitle}
+            subtitle={resolvedSubtitle}
+          />
+        </div>
       )}
 
       {items.length > 0 && !result && (
-        <div className="space-y-6 animate-in fade-in duration-150">
+        <div
+          onDragOver={(e) => {
+            e.preventDefault();
+            e.dataTransfer.dropEffect = 'copy';
+            setIsGridDragging(true);
+          }}
+          onDragLeave={(e) => {
+            if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+              setIsGridDragging(false);
+            }
+          }}
+          onDrop={(e) => {
+            e.preventDefault();
+            setIsGridDragging(false);
+            setIsCardDragging(false);
+            if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+              handleAddMoreFiles(Array.from(e.dataTransfer.files));
+            }
+          }}
+          className="relative space-y-6 animate-in fade-in duration-150"
+        >
+          {/* Active Drag-and-Drop Overlay when dragging files anywhere over the image sequence */}
+          {isGridDragging && (
+            <div className="absolute inset-0 z-20 bg-primary/10 backdrop-blur-xs border-2 border-dashed border-primary rounded-3xl flex flex-col items-center justify-center p-6 text-center pointer-events-none animate-in fade-in duration-150 shadow-2xl">
+              <div className="w-16 h-16 rounded-2xl bg-primary text-white flex items-center justify-center shadow-lg mb-3 animate-bounce">
+                <Plus className="w-8 h-8" />
+              </div>
+              <span className="text-base sm:text-lg font-bold text-base-content">
+                {t('dropImagesHereToAdd', 'Drop images here to add to your PDF')}
+              </span>
+              <span className="text-xs text-base-content/70 mt-1">
+                {t('supportsImagesLimit', 'Supports images • 20 MB limit per file')}
+              </span>
+            </div>
+          )}
           {/* Top Bar with Sequence & Clear All */}
           <div className="flex items-center justify-between p-4 rounded-2xl bg-base-200/50 border border-base-300">
             <div>
@@ -426,17 +476,49 @@ export default function ImageToPdfTool({
               </div>
             ))}
 
-            {/* Add More Images Card Button */}
+            {/* Add More Images Card Button with Drag & Drop */}
             <div
               onClick={() => addMoreInputRef.current?.click()}
-              className="rounded-2xl border-2 border-dashed border-base-300 hover:border-primary/60 hover:bg-primary/5 cursor-pointer flex flex-col items-center justify-center p-4 min-h-[160px] text-center transition-all group"
-              title={t('addMoreImages', 'Add more photos')}
+              onDragOver={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                e.dataTransfer.dropEffect = 'copy';
+                setIsCardDragging(true);
+              }}
+              onDragLeave={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsCardDragging(false);
+              }}
+              onDrop={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                setIsCardDragging(false);
+                setIsGridDragging(false);
+                if (e.dataTransfer.files && e.dataTransfer.files.length > 0) {
+                  handleAddMoreFiles(Array.from(e.dataTransfer.files));
+                }
+              }}
+              className={`rounded-2xl border-2 border-dashed cursor-pointer flex flex-col items-center justify-center p-4 min-h-[160px] text-center transition-all group select-none ${
+                isCardDragging
+                  ? 'border-primary bg-primary/20 scale-[1.03] shadow-md ring-2 ring-primary'
+                  : 'border-base-300 hover:border-primary/60 hover:bg-primary/5'
+              }`}
+              title={t('addMoreImages', 'Add more photos (or drag & drop)')}
             >
-              <div className="w-10 h-10 rounded-full bg-primary/10 text-primary flex items-center justify-center mb-1 group-hover:scale-110 transition-transform shadow-inner">
+              <div
+                className={`w-10 h-10 rounded-full flex items-center justify-center mb-1 transition-transform shadow-inner ${
+                  isCardDragging ? 'bg-primary text-white scale-125' : 'bg-primary/10 text-primary group-hover:scale-110'
+                }`}
+              >
                 <Plus className="w-5 h-5" />
               </div>
-              <span className="text-xs font-bold text-base-content">{t('addMoreImages', 'Add More Images')}</span>
-              <span className="text-[10px] text-base-content/50 mt-0.5">{t('supportsImagesLimit', 'Supports images · 20 MB limit per file')}</span>
+              <span className="text-xs font-bold text-base-content">
+                {isCardDragging ? t('dropToAdd', 'Drop to Add Images') : t('addMoreImages', 'Add More Images')}
+              </span>
+              <span className="text-[10px] text-base-content/50 mt-0.5">
+                {isCardDragging ? t('releaseToUpload', 'Release mouse to add to PDF') : t('dragOrClickToAdd', 'Drag & drop or click to add')}
+              </span>
               <input
                 ref={addMoreInputRef}
                 type="file"
