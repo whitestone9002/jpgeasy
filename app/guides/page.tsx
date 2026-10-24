@@ -8,6 +8,7 @@ import { GUIDES, GuideCategory, GUIDE_CATEGORIES } from '@/lib/config/guides';
 import { TOOLS } from '@/lib/config/tools';
 import { ICON_MAP } from '@/components/ui/ToolCard';
 import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
+import AdSlot from '@/components/ui/AdSlot';
 
 export default function GuidesIndexPage() {
   const { t } = useLanguage();
@@ -324,6 +325,9 @@ export default function GuidesIndexPage() {
         })}
       </div>
 
+      {/* Top Guides Directory Ad Banner */}
+      <AdSlot slot="guides-index-top" format="banner" className="my-4 sm:my-6" />
+
       {/* Featured Section (Shown when no search query and All categories selected) */}
       {!searchQuery && selectedCategory === 'all' && featuredGuides.length > 0 && (
         <div className="space-y-4 sm:space-y-6 min-w-0">
@@ -463,6 +467,9 @@ export default function GuidesIndexPage() {
           </div>
         )}
       </div>
+
+      {/* Bottom Guides Directory Ad Banner */}
+      <AdSlot slot="guides-index-bottom" format="banner" className="my-6 sm:my-8" />
 
       {/* Popular Tools Callout Section */}
       <div className="p-5 sm:p-8 lg:p-12 rounded-2xl sm:rounded-3xl bg-base-200/50 border border-base-300 space-y-4 sm:space-y-6 min-w-0">

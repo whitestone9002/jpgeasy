@@ -6,6 +6,7 @@ import { GuideArticle } from '@/lib/config/guides';
 import { ToolMeta } from '@/lib/config/tools';
 import ToolCard from '@/components/ui/ToolCard';
 import FAQSection from '@/components/ui/FAQSection';
+import AdSlot from '@/components/ui/AdSlot';
 import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 import {
   ArrowLeft,
@@ -72,6 +73,9 @@ export default function GuideArticleView({
           <span>{t('backToGuides', 'Back to all guides')}</span>
         </Link>
       </div>
+
+      {/* Top Article Ad Banner */}
+      <AdSlot slot="article-top-banner" format="banner" className="my-4 sm:my-6" />
 
       {/* Article Header */}
       <div className="space-y-3 sm:space-y-4 min-w-0 max-w-full whitespace-normal">
@@ -322,6 +326,9 @@ export default function GuideArticleView({
           </div>
         </aside>
       </div>
+
+      {/* Bottom Article Ad Banner */}
+      <AdSlot slot="article-bottom-banner" format="banner" className="my-6 sm:my-8" />
 
       {/* Related Guides Section */}
       {relatedGuides.length > 0 && (
