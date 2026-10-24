@@ -117,7 +117,6 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer support',
-    email: 'jpgeasy.official@gmail.com',
     url: 'https://jpgeasy.com/contact',
   },
 };
