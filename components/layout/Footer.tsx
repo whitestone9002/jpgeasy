@@ -188,6 +188,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/about" className="hover:text-primary transition-colors">
+                  {t('aboutUs', 'About Us')}
+                </Link>
+              </li>
+              <li>
                 <Link href="/privacy" className="hover:text-primary transition-colors">
                   {t('privacy', 'Privacy Policy')}
                 </Link>
