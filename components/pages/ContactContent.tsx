@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { 
   MessageSquare, 
   Inbox, 
@@ -11,7 +11,8 @@ import {
   Wrench, 
   Lock,
   AlertTriangle,
-  ShieldAlert
+  ShieldAlert,
+  Clock
 } from 'lucide-react';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
@@ -21,11 +22,30 @@ const URL_DETECTOR_REGEX = /(https?:\/\/|ftp:\/\/|www\.[^\s]+|[a-zA-Z0-9-]+\.(co
 // S-Tier Security: HTML tags, scripts, image embeds, protocol handlers
 const HTML_CODE_REGEX = /<[^>]*>|javascript:|data:|vbscript:|onload=|onerror=/i;
 
+// Strict RFC 5322 Syntax Regex
+const EMAIL_SYNTAX_REGEX = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)+$/;
+
+// Common fake / throwaway / disposable email domains blacklist
+const DISPOSABLE_DOMAINS = new Set([
+  'mailinator.com', 'tempmail.com', '10minutemail.com', 'guerrillamail.com',
+  'throwawaymail.com', 'yopmail.com', 'trashmail.com', 'fakemailgenerator.com',
+  'sharklasers.com', 'dispostable.com', 'getnada.com', 'inboxkitten.com',
+  'temp-mail.org', 'burnermail.io', 'generator.email', 'mohmal.com',
+  'mytemp.email', 'crazymailing.com', 'armyspy.com', 'cuvox.de',
+  'dayrep.com', 'fleckens.hu', 'gustr.com', 'jourrapide.com',
+  'rhyta.com', 'superrito.com', 'teleworm.us', 'einrot.com',
+  'example.com', 'test.com', 'fake.com', 'sample.com', 'invalid.com',
+  'mailcatch.com', 'maildrop.cc', 'tempmailaddress.com', 'discard.email'
+]);
+
+const COOLDOWN_MS = 24 * 60 * 60 * 1000; // 24 Hours in milliseconds
+
 export default function ContactContent() {
   const { t } = useLanguage();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [cooldownRemaining, setCooldownRemaining] = useState<string | null>(null);
   
   const [formData, setFormData] = useState({
     name: '',
@@ -34,9 +54,48 @@ export default function ContactContent() {
     message: ''
   });
 
+  // Client-Side 24-Hour Cooldown Checker per Email
+  useEffect(() => {
+    const trimmedEmail = formData.email.trim().toLowerCase();
+    if (!trimmedEmail || !trimmedEmail.includes('@')) {
+      setCooldownRemaining(null);
+      return;
+    }
+
+    try {
+      const storedTime = localStorage.getItem(`jpgeasy_sent_${trimmedEmail}`);
+      if (storedTime) {
+        const lastSent = parseInt(storedTime, 10);
+        const elapsed = Date.now() - lastSent;
+        if (elapsed < COOLDOWN_MS) {
+          const remainingMs = COOLDOWN_MS - elapsed;
+          const remainingHours = Math.floor(remainingMs / (1000 * 60 * 60));
+          const remainingMinutes = Math.ceil((remainingMs % (1000 * 60 * 60)) / (1000 * 60));
+          const timeMsg = remainingHours > 0 
+            ? `${remainingHours}h ${remainingMinutes}m` 
+            : `${remainingMinutes} minutes`;
+          setCooldownRemaining(`This email has already sent a message today. Please wait ${timeMsg} before submitting again.`);
+          return;
+        }
+      }
+      setCooldownRemaining(null);
+    } catch (_) {
+      setCooldownRemaining(null);
+    }
+  }, [formData.email]);
+
   // Real-time security checks
   const securityViolation = useMemo(() => {
-    if (!formData.message && !formData.name) return null;
+    if (!formData.message && !formData.name && !formData.email) return null;
+
+    // Email check
+    if (formData.email.trim()) {
+      const emailLower = formData.email.trim().toLowerCase();
+      const domain = emailLower.split('@')[1];
+      if (domain && DISPOSABLE_DOMAINS.has(domain)) {
+        return 'Disposable or temporary email addresses are not permitted. Please use your real, permanent email.';
+      }
+    }
 
     if (URL_DETECTOR_REGEX.test(formData.message) || URL_DETECTOR_REGEX.test(formData.name)) {
       return 'Links, URLs, and external web addresses are strictly blocked for security.';
@@ -47,7 +106,7 @@ export default function ContactContent() {
     }
 
     return null;
-  }, [formData.message, formData.name]);
+  }, [formData.message, formData.name, formData.email]);
 
   const handlePaste = (e: React.ClipboardEvent<HTMLTextAreaElement>) => {
     // Block rich media / file / image pasting
@@ -70,12 +129,25 @@ export default function ContactContent() {
     e.preventDefault();
     setErrorMessage(null);
 
+    if (cooldownRemaining) {
+      setErrorMessage(cooldownRemaining);
+      return;
+    }
+
     if (securityViolation) {
       setErrorMessage(securityViolation);
       return;
     }
 
-    if (!formData.name.trim() || !formData.email.trim() || !formData.message.trim()) {
+    const emailTrimmed = formData.email.trim().toLowerCase();
+
+    // Syntax validation
+    if (!EMAIL_SYNTAX_REGEX.test(emailTrimmed)) {
+      setErrorMessage('Please provide a valid, real email address format.');
+      return;
+    }
+
+    if (!formData.name.trim() || !formData.message.trim()) {
       setErrorMessage('Please fill in all required fields.');
       return;
     }
@@ -88,19 +160,17 @@ export default function ContactContent() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 
           'Content-Type': 'application/json',
           'Accept': 'application/json'
         },
         body: JSON.stringify({
-          access_key: '354c2270-1d79-44da-8b3b-600f3743fcd6',
           name: formData.name.trim(),
-          email: formData.email.trim(),
-          subject: `[JPGEASY Support] ${formData.subject} - from ${formData.name.trim()}`,
+          email: emailTrimmed,
+          subject: formData.subject,
           message: formData.message.trim(),
-          from_name: 'JPGEASY Support Desk'
         }),
       });
 
@@ -108,9 +178,14 @@ export default function ContactContent() {
 
       if (!response.ok || !result.success) {
         setIsSubmitting(false);
-        setErrorMessage(result.message || 'Failed to send message. Please ensure your message contains plain text only.');
+        setErrorMessage(result.error || result.message || 'Failed to send message. Please ensure your email is real and your message contains plain text only.');
         return;
       }
+
+      // Record 24-hour rate limit timestamp in local storage
+      try {
+        localStorage.setItem(`jpgeasy_sent_${emailTrimmed}`, Date.now().toString());
+      } catch (_) {}
 
       setIsSubmitting(false);
       setSubmitted(true);
@@ -146,7 +221,7 @@ export default function ContactContent() {
               Send a Request
             </h2>
             <p className="text-xs sm:text-sm text-base-content/70">
-              Please provide as much detail as possible so we can best assist you.
+              Please provide as much detail as possible in plain text.
             </p>
           </div>
 
@@ -159,26 +234,20 @@ export default function ContactContent() {
               <p className="text-sm text-base-content/75 leading-relaxed max-w-md mx-auto">
                 Thank you for contacting JPGEASY! Your message and feedback have been received and queued for our engineering review. We appreciate your input as we continue improving our tools.
               </p>
-              <button 
-                onClick={() => {
-                  setSubmitted(false);
-                  setFormData({ name: '', email: '', subject: 'Technical problem', message: '' });
-                  setErrorMessage(null);
-                }}
-                className="btn btn-outline btn-sm rounded-xl mt-2"
-              >
-                Send Another Message
-              </button>
+              <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-base-200 text-xs text-base-content/70">
+                <Clock className="w-3.5 h-3.5 text-primary" />
+                <span>Next message allowed from this email in 24 hours</span>
+              </div>
             </div>
           ) : (
             <form onSubmit={handleSubmit} className="space-y-5">
               {/* Server or Client Security Alert */}
-              {(errorMessage || securityViolation) && (
+              {(errorMessage || securityViolation || cooldownRemaining) && (
                 <div className="p-4 rounded-xl bg-error/10 border border-error/30 text-error flex items-start gap-3 text-xs sm:text-sm leading-relaxed">
                   <ShieldAlert className="w-5 h-5 shrink-0 mt-0.5 text-error" />
                   <div className="space-y-1">
-                    <strong className="font-bold block">Security Restriction</strong>
-                    <span>{errorMessage || securityViolation}</span>
+                    <strong className="font-bold block">Security Notice</strong>
+                    <span>{errorMessage || securityViolation || cooldownRemaining}</span>
                   </div>
                 </div>
               )}
@@ -202,23 +271,31 @@ export default function ContactContent() {
               </div>
 
               <div className="space-y-1.5">
-                <label className="text-xs font-semibold text-base-content/85">
-                  Your email <span className="text-error">*</span>
-                </label>
+                <div className="flex items-center justify-between">
+                  <label className="text-xs font-semibold text-base-content/85">
+                    Your email <span className="text-error">*</span>
+                  </label>
+                  <div className="flex items-center gap-1 text-[11px] text-base-content/50">
+                    <ShieldCheck className="w-3 h-3 text-emerald-500" />
+                    <span>Real email required • 1 msg / 24h</span>
+                  </div>
+                </div>
                 <input
                   type="email"
                   required
                   maxLength={120}
-                  placeholder="Enter your email address (for replies)"
+                  placeholder="Enter your real, active email address"
                   value={formData.email}
                   onChange={(e) => {
                     setFormData({ ...formData, email: e.target.value });
                     setErrorMessage(null);
                   }}
-                  className="input input-bordered w-full text-sm rounded-xl bg-base-200/40 focus:bg-base-100"
+                  className={`input input-bordered w-full text-sm rounded-xl bg-base-200/40 focus:bg-base-100 ${
+                    cooldownRemaining ? 'border-error focus:border-error' : ''
+                  }`}
                 />
                 <span className="text-[11px] text-base-content/50 block">
-                  We will use this email address strictly to reply to your question.
+                  Must be a real, reachable email. Temporary or disposable domains are automatically rejected.
                 </span>
               </div>
 
@@ -284,13 +361,13 @@ export default function ContactContent() {
 
               <button
                 type="submit"
-                disabled={isSubmitting || Boolean(securityViolation)}
+                disabled={isSubmitting || Boolean(securityViolation) || Boolean(cooldownRemaining)}
                 className="btn btn-primary w-full gap-2 rounded-xl text-white shadow-sm disabled:bg-base-300 disabled:text-base-content/40"
               >
                 {isSubmitting ? (
                   <>
                     <span className="loading loading-spinner loading-xs" />
-                    <span>Verifying & Sending...</span>
+                    <span>Verifying Email & Sending...</span>
                   </>
                 ) : (
                   <>
@@ -325,13 +402,25 @@ export default function ContactContent() {
               </div>
 
               <div className="flex items-start gap-3.5">
+                <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
+                  <Clock className="w-4 h-4" />
+                </div>
+                <div className="space-y-0.5">
+                  <strong className="text-base-content text-sm block">1 Message Per Email / 24 Hours</strong>
+                  <p className="text-base-content/70 text-xs sm:text-sm leading-relaxed">
+                    To prevent system congestion and automated spam, each verified email address can submit at most 1 inquiry every 24 hours.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-3.5">
                 <div className="w-8 h-8 rounded-xl bg-emerald-500/10 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0">
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <strong className="text-base-content text-sm block">100% Confidential</strong>
+                  <strong className="text-base-content text-sm block">Strict Verification Gateway</strong>
                   <p className="text-base-content/70 text-xs sm:text-sm leading-relaxed">
-                    Your name and email address are strictly used to reply to your question. We never share user information with third parties.
+                    Every email is verified for active mail server records (DNS MX). Disposable, temporary, or non-existent domains are automatically filtered and rejected.
                   </p>
                 </div>
               </div>
@@ -341,9 +430,9 @@ export default function ContactContent() {
                   <Lock className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <strong className="text-base-content text-sm block">Security Hardened Desk</strong>
+                  <strong className="text-base-content text-sm block">Raw Text Firewall</strong>
                   <p className="text-base-content/70 text-xs sm:text-sm leading-relaxed">
-                    For your protection and system integrity, our intake gateway strictly admits raw text only. Links, attachments, scripts, and executable code are automatically filtered and rejected.
+                    Links, scripts, attachments, and embedded code are strictly rejected to guarantee complete platform and user security.
                   </p>
                 </div>
               </div>
