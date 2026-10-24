@@ -88,17 +88,27 @@ export default function ContactContent() {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: '354c2270-1d79-44da-8b3b-600f3743fcd6',
+          name: formData.name.trim(),
+          email: formData.email.trim(),
+          subject: `[JPGEASY Support] ${formData.subject} - from ${formData.name.trim()}`,
+          message: formData.message.trim(),
+          from_name: 'JPGEASY Support Desk'
+        }),
       });
 
       const result = await response.json().catch(() => ({}));
 
-      if (!response.ok) {
+      if (!response.ok || !result.success) {
         setIsSubmitting(false);
-        setErrorMessage(result.error || 'Failed to send message. Please ensure your message contains plain text only.');
+        setErrorMessage(result.message || 'Failed to send message. Please ensure your message contains plain text only.');
         return;
       }
 
