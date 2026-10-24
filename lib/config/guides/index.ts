@@ -5,6 +5,11 @@ import { ESIGN_GUIDES } from './esignGuides';
 import { CLUSTER1_EXACT_KB_GUIDES } from './cluster1ExactKbGuides';
 import { CLUSTER2_EXAM_PORTAL_GUIDES } from './cluster2ExamPortalGuides';
 import { CLUSTER3_PASSPORT_VISA_GUIDES } from './cluster3PassportVisaGuides';
+import { CLUSTER4_PDF_COMPRESSION_GUIDES } from './cluster4PdfCompressionGuides';
+import { CLUSTER5_PDF_ORGANIZING_GUIDES } from './cluster5PdfOrganizingGuides';
+import { CLUSTER6_PDF_SECURITY_OCR_GUIDES } from './cluster6PdfSecurityOcrGuides';
+import { CLUSTER7_IMAGE_FORMAT_DPI_GUIDES } from './cluster7ImageFormatDpiGuides';
+import { CLUSTER8_ECOMMERCE_SOCIAL_GUIDES } from './cluster8EcommerceSocialGuides';
 
 export * from './types';
 export { IMAGE_GUIDES } from './imageGuides';
@@ -13,6 +18,11 @@ export { ESIGN_GUIDES } from './esignGuides';
 export { CLUSTER1_EXACT_KB_GUIDES } from './cluster1ExactKbGuides';
 export { CLUSTER2_EXAM_PORTAL_GUIDES } from './cluster2ExamPortalGuides';
 export { CLUSTER3_PASSPORT_VISA_GUIDES } from './cluster3PassportVisaGuides';
+export { CLUSTER4_PDF_COMPRESSION_GUIDES } from './cluster4PdfCompressionGuides';
+export { CLUSTER5_PDF_ORGANIZING_GUIDES } from './cluster5PdfOrganizingGuides';
+export { CLUSTER6_PDF_SECURITY_OCR_GUIDES } from './cluster6PdfSecurityOcrGuides';
+export { CLUSTER7_IMAGE_FORMAT_DPI_GUIDES } from './cluster7ImageFormatDpiGuides';
+export { CLUSTER8_ECOMMERCE_SOCIAL_GUIDES } from './cluster8EcommerceSocialGuides';
 
 export const GUIDES: GuideArticle[] = [
   ...IMAGE_GUIDES,
@@ -21,6 +31,11 @@ export const GUIDES: GuideArticle[] = [
   ...CLUSTER1_EXACT_KB_GUIDES,
   ...CLUSTER2_EXAM_PORTAL_GUIDES,
   ...CLUSTER3_PASSPORT_VISA_GUIDES,
+  ...CLUSTER4_PDF_COMPRESSION_GUIDES,
+  ...CLUSTER5_PDF_ORGANIZING_GUIDES,
+  ...CLUSTER6_PDF_SECURITY_OCR_GUIDES,
+  ...CLUSTER7_IMAGE_FORMAT_DPI_GUIDES,
+  ...CLUSTER8_ECOMMERCE_SOCIAL_GUIDES,
 ];
 
 export function getGuideBySlug(slug: string): GuideArticle | undefined {
