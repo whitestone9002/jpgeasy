@@ -203,7 +203,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
       </head>
-      <body className="bg-base-200/30 text-base-content antialiased flex flex-col min-h-screen selection:bg-primary selection:text-white max-w-full overflow-x-hidden">
+      <body className="bg-base-200/30 text-base-content antialiased flex flex-col min-h-screen selection:bg-primary selection:text-white max-w-full overflow-x-clip">
         <LanguageProvider>
           <div className="sticky top-0 z-50 w-full flex flex-col max-w-full">
             <ConnectionStatusBanner />
