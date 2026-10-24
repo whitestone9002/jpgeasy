@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { Loader2, RotateCcw, RotateCw, FlipHorizontal, FlipVertical, Sparkles, AlertCircle, Image as ImageIcon } from 'lucide-react';
 import UploadZone from '@/components/ui/UploadZone';
+import ComparisonViewer from '@/components/ui/ComparisonViewer';
 import ResultCard from '@/components/ui/ResultCard';
 import { formatBytes } from '@/lib/utils/formatters';
 import { scrollToTool } from '@/lib/utils/scrollHelper';
@@ -321,23 +322,39 @@ export default function TransformTool({ mode }: TransformToolProps) {
 
       {result && (
         <div className="space-y-6">
-          <div className="p-4 rounded-3xl bg-base-100 border border-base-300 flex items-center justify-center bg-transparency-grid">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src={result.dataUrl}
-              alt="Transformed result"
-              className="max-h-[380px] object-contain rounded-xl shadow-lg"
+          {originalPreviewUrl ? (
+            <ComparisonViewer
+              originalUrl={originalPreviewUrl}
+              processedUrl={result.dataUrl}
+              originalSize={result.originalSize}
+              processedSize={result.compressedSize}
+              originalDimensions={
+                result.originalWidth && result.originalHeight
+                  ? { width: result.originalWidth, height: result.originalHeight }
+                  : origDimensions || undefined
+              }
+              processedDimensions={{ width: result.width, height: result.height }}
             />
-          </div>
+          ) : (
+            <div className="p-4 rounded-3xl bg-base-100 border border-base-300 flex items-center justify-center bg-transparency-grid">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={result.dataUrl}
+                alt="Transformed result"
+                className="max-h-[380px] object-contain rounded-xl shadow-lg"
+              />
+            </div>
+          )}
 
           <ResultCard
             originalSize={result.originalSize}
             newSize={result.compressedSize}
-            filename={`transformed_${result.originalName}`}
+            filename={mode === 'flip' ? `flipped_${result.originalName}` : `rotated_${result.originalName}`}
             dataUrl={result.dataUrl}
             format={result.format}
             dimensions={{ width: result.width, height: result.height }}
             onReset={handleReset}
+            hideHeader={Boolean(originalPreviewUrl)}
           />
         </div>
       )}
