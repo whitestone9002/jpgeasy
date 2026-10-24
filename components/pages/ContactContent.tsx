@@ -3,7 +3,7 @@
 import React, { useState, useMemo } from 'react';
 import { 
   MessageSquare, 
-  Clock, 
+  Inbox, 
   ShieldCheck, 
   Check, 
   Send, 
@@ -132,7 +132,7 @@ export default function ContactContent() {
           Contact Us
         </h1>
         <p className="text-base sm:text-lg text-base-content/70 leading-relaxed">
-          We would love to help you. Fill in the form below and our support team will get back to you as soon as possible.
+          Have feedback, a tool suggestion, or found an issue? Send us a message below and our engineering team will log it for our platform updates.
         </p>
       </div>
 
@@ -157,7 +157,7 @@ export default function ContactContent() {
               </div>
               <h3 className="text-xl font-bold text-base-content">Message Sent Successfully!</h3>
               <p className="text-sm text-base-content/75 leading-relaxed max-w-md mx-auto">
-                Thank you for contacting JPGEASY. Your inquiry has been received by our technical support desk. We will review your request and reply directly to your email address (<strong>{formData.email}</strong>) shortly.
+                Thank you for contacting JPGEASY! Your message and feedback have been received and queued for our engineering review. We appreciate your input as we continue improving our tools.
               </p>
               <button 
                 onClick={() => {
@@ -314,12 +314,12 @@ export default function ContactContent() {
             <div className="space-y-5 text-xs sm:text-sm text-base-content/80">
               <div className="flex items-start gap-3.5">
                 <div className="w-8 h-8 rounded-xl bg-primary/10 text-primary flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4" />
+                  <Inbox className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <strong className="text-base-content text-sm block">Response Time</strong>
+                  <strong className="text-base-content text-sm block">Engineering Review Queue</strong>
                   <p className="text-base-content/70 text-xs sm:text-sm leading-relaxed">
-                    Our team reviews all incoming support tickets and typically responds within <strong>24 to 48 hours</strong> (Monday through Friday).
+                    All bug reports, tool feedback, and portal requests are logged and reviewed periodically by our engineering team to improve the platform.
                   </p>
                 </div>
               </div>
