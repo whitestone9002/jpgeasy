@@ -150,13 +150,6 @@ const softwareApplicationSchema = {
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '4.9',
-    ratingCount: '1280',
-    bestRating: '5',
-    worstRating: '1',
-  },
   description: 'Complete online tool suite to compress, resize, convert, edit, and e-sign PDF documents and images completely free with client-side privacy.',
 };
 
