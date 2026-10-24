@@ -2,16 +2,25 @@ import { GuideArticle, GuideCategory } from './types';
 import { IMAGE_GUIDES } from './imageGuides';
 import { PDF_GUIDES } from './pdfGuides';
 import { ESIGN_GUIDES } from './esignGuides';
+import { CLUSTER1_EXACT_KB_GUIDES } from './cluster1ExactKbGuides';
+import { CLUSTER2_EXAM_PORTAL_GUIDES } from './cluster2ExamPortalGuides';
+import { CLUSTER3_PASSPORT_VISA_GUIDES } from './cluster3PassportVisaGuides';
 
 export * from './types';
 export { IMAGE_GUIDES } from './imageGuides';
 export { PDF_GUIDES } from './pdfGuides';
 export { ESIGN_GUIDES } from './esignGuides';
+export { CLUSTER1_EXACT_KB_GUIDES } from './cluster1ExactKbGuides';
+export { CLUSTER2_EXAM_PORTAL_GUIDES } from './cluster2ExamPortalGuides';
+export { CLUSTER3_PASSPORT_VISA_GUIDES } from './cluster3PassportVisaGuides';
 
 export const GUIDES: GuideArticle[] = [
   ...IMAGE_GUIDES,
   ...PDF_GUIDES,
   ...ESIGN_GUIDES,
+  ...CLUSTER1_EXACT_KB_GUIDES,
+  ...CLUSTER2_EXAM_PORTAL_GUIDES,
+  ...CLUSTER3_PASSPORT_VISA_GUIDES,
 ];
 
 export function getGuideBySlug(slug: string): GuideArticle | undefined {
