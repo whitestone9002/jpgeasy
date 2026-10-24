@@ -635,19 +635,19 @@ export const IMAGE_GUIDES: GuideArticle[] = [
     "slug": "how-to-reduce-jpg-file-size",
     "coverImage": "/guides/how-to-reduce-jpg-file-size.webp",
     "imageAlt": "Visual infographic showing 5 proven techniques to reduce JPG, PNG, and WebP image file sizes",
-    "title": "How to Reduce JPG File Size: 5 Proven Techniques",
-    "metaTitle": "How to Reduce JPG File Size: 5 Proven Methods (2026)",
-    "metaDescription": "Discover the 5 most effective ways to reduce JPG file size. From metadata stripping and dimension resizing to WebP conversion and selective compression.",
-    "shortDescription": "Explore five actionable methods to dramatically shrink JPG files without damaging visual aesthetics or sharpness.",
+    "title": "How to Reduce Image File Size: 5 Proven Techniques",
+    "metaTitle": "How to Reduce Image File Size: 5 Proven Methods (2026)",
+    "metaDescription": "Discover the 5 most effective ways to reduce image file size across JPG, PNG, and WebP. From metadata stripping and dimension resizing to format conversion.",
+    "shortDescription": "Explore five actionable methods to dramatically shrink image files without damaging visual aesthetics or sharpness.",
     "category": "image",
     "categoryLabel": "Image Optimization",
     "readTime": "6 min read",
     "publishedAt": "2026-02-01",
-    "updatedAt": "2026-10-22",
+    "updatedAt": "2026-10-24",
     "featured": true,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "JPGEASY JPG Compressor",
-    "primaryToolCtaText": "Reduce Your JPG File Size",
+    "primaryToolSlug": "compress-image",
+    "primaryToolName": "General Image Compressor",
+    "primaryToolCtaText": "Compress Your Images Now",
     "relatedToolSlugs": [
       "resize-image",
       "crop-image",
@@ -661,7 +661,7 @@ export const IMAGE_GUIDES: GuideArticle[] = [
     "tableOfContents": [
       {
         "id": "5-proven-methods",
-        "text": "5 Proven Techniques to Reduce JPG File Size"
+        "text": "5 Proven Techniques to Reduce Image File Size"
       },
       {
         "id": "method-1-lossy-compression",
@@ -692,9 +692,9 @@ export const IMAGE_GUIDES: GuideArticle[] = [
     "sections": [
       {
         "id": "5-proven-methods",
-        "title": "5 Proven Techniques to Reduce JPG File Size",
+        "title": "5 Proven Techniques to Reduce Image File Size",
         "paragraphs": [
-          "JPG file size is determined by three variables: total pixel count (width × height), color sampling density, and quantization compression ratio. By optimizing each of these factors strategically, you can achieve massive file reductions with zero visible penalty."
+          "Image file size is determined by three variables: total pixel count (width × height), color sampling density, and quantization compression ratio. By optimizing each of these factors strategically, you can achieve massive file reductions with zero visible penalty."
         ]
       },
       {
