@@ -50,14 +50,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for upsc online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the UPSC Civil Services (IAS/IPS/IFS), NDA, and CDS Online Applications through the official Union Public Service Commission (UPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Union Public Service Commission (UPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Union Public Service Commission (UPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Union Public Service Commission (UPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 350 x 350 pixels (minimum) up to 1000 x 1000 pixels (square 1:1 ratio), or standard 200 x 230 pixels with a file size strictly between 20KB to 300KB (strict 20KB minimum and 300KB maximum). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 350 x 350 pixels or 140 x 60 pixels (minimum 3:1 ratio), with a file weight capped between 20KB to 300KB (signature must not be in all capital letters). Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -67,15 +67,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Union Public Service Commission (UPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Photograph must show clear frontal view with 3/4th facial coverage and neutral expression.",
+          "The candidate's face must be clearly visible with ears uncovered and plain white background.",
+          "Ensure the file weight is strictly between 20KB and 300KB; files under 20KB trigger an instant server error.",
+          "Save in pure JPG format with valid sRGB color encoding (grayscale or CMYK photos are rejected)."
         ]
       },
       {
@@ -184,14 +184,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress signature for upsc form is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the UPSC One Time Registration (OTR) and Exam Application Forms through the official Union Public Service Commission (UPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Union Public Service Commission (UPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Union Public Service Commission (UPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Union Public Service Commission (UPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 140 x 60 pixels to 350 x 350 pixels with a file size strictly between 20KB to 300KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels (minimum) to 350 x 350 pixels, with a file weight capped between 20KB to 300KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -201,15 +201,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Union Public Service Commission (UPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Sign with a fresh black or dark blue ink pen on clean unlined white paper.",
+          "Do not sign in ALL CAPITAL LETTERS—UPSC regulations mandate running handwriting.",
+          "Crop tightly around the signature boundaries to eliminate camera shadows and paper texture.",
+          "Compress the resulting file to stay between 20KB and 300KB without blurring ink strokes."
         ]
       },
       {
@@ -318,14 +318,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress photo and signature for ssc cgl is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the SSC Combined Graduate Level (CGL) Recruitment Portal through the official Staff Selection Commission (SSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Staff Selection Commission (SSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Staff Selection Commission (SSC) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Staff Selection Commission (SSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm (width) x 4.5 cm (height) or 200 x 230 pixels with a file size strictly between 20KB to 50KB (live webcam capture or uploaded portrait). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 4.0 cm (width) x 2.0 cm (height) or 140 x 60 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -335,15 +335,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Staff Selection Commission (SSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "SSC requires recent photograph without spectacles, caps, or masks.",
+          "Both ears must be clearly visible against a plain light/white background.",
+          "Signature must be in black ink on white paper, strictly between 10KB and 20KB.",
+          "Blurred photos or inverted signatures lead to direct rejection during Tier-1 scrutiny."
         ]
       },
       {
@@ -452,14 +452,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for ssc chsl form online\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the SSC Combined Higher Secondary Level (CHSL) 10+2 Examination through the official Staff Selection Commission (SSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Staff Selection Commission (SSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Staff Selection Commission (SSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Staff Selection Commission (SSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (approx 200 x 230 pixels) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 4.0 cm x 2.0 cm (approx 140 x 60 pixels), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -469,15 +469,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Staff Selection Commission (SSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Photo must be taken within 3 months of the notification date.",
+          "Facial coverage must occupy 70% to 80% of the vertical frame.",
+          "Signature must strictly be between 10KB and 20KB with no heavy shadows.",
+          "Files must have a '.jpg' or '.jpeg' extension (PNG files are rejected by the SSC portal)."
         ]
       },
       {
@@ -586,14 +586,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress photo and signature for ssc gd is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the SSC Constable GD in CAPFs, SSF, and Rifleman Recruitment through the official Staff Selection Commission (SSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Staff Selection Commission (SSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Staff Selection Commission (SSC) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Staff Selection Commission (SSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 4.0 cm x 2.0 cm (140 x 60 pixels), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -603,15 +603,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Staff Selection Commission (SSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Plain white or off-white background with direct frontal gaze.",
+          "Do not wear uniforms or dark glasses in the application photo.",
+          "Signature size must be between 10KB and 20KB in running script.",
+          "Keep resolution at standard 100 to 200 DPI to avoid server dimension mismatch."
         ]
       },
       {
@@ -720,14 +720,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for ssc mts application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the SSC Multi Tasking Staff (MTS) and Havaldar Examination through the official Staff Selection Commission (SSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Staff Selection Commission (SSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Staff Selection Commission (SSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Staff Selection Commission (SSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 4.0 cm x 2.0 cm (140 x 60 pixels), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -737,15 +737,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Staff Selection Commission (SSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Photo must show candidate's face clearly without shadows across the eyes or chin.",
+          "Signature must be on unlined plain paper, between 10KB and 20KB.",
+          "Check that your live photo matches your uploaded image to prevent admit card discrepancies.",
+          "Use JPGEASY to hit exact 20-50KB and 10-20KB ranges in one click."
         ]
       },
       {
@@ -854,14 +854,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for neet admit card\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the National Eligibility cum Entrance Test (NEET UG) through the official National Testing Agency (NTA) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by National Testing Agency (NTA) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official National Testing Agency (NTA) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The National Testing Agency (NTA) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of Passport Size: 3.5 cm x 4.5 cm (approx 200 x 230 pixels) with a file size strictly between 10KB to 200KB (Passport Photo). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 4KB to 30KB; Finger/Thumb impressions: 10KB to 200KB, with a file weight capped between 4KB to 30KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -871,15 +871,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the National Testing Agency (NTA) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Candidate's name and date of taking photograph must be printed at the bottom of the photo.",
+          "Background must be pure white with 80% facial coverage (ears clearly visible).",
+          "Do not wear caps, goggles, or heavy tinted glasses.",
+          "File size must be strictly between 10KB and 200KB in JPG/JPEG format."
         ]
       },
       {
@@ -988,14 +988,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress postcard size photo for neet 4x6\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the NEET UG Postcard Size (4x6 inch) Upload Requirement through the official National Testing Agency (NTA) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by National Testing Agency (NTA) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official National Testing Agency (NTA) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The National Testing Agency (NTA) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 4 inches x 6 inches (approx 1200 x 1800 pixels at 300 DPI) with a file size strictly between 10KB to 200KB (Postcard Size Photo). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 4KB to 30KB, with a file weight capped between 10KB to 200KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1005,15 +1005,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the National Testing Agency (NTA) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Must be exactly 4 inches wide by 6 inches tall (vertical orientation).",
+          "Candidate's full name and date of photo capture must appear at the bottom.",
+          "White background with 80% face coverage is mandatory.",
+          "Compress below 200KB while preserving sharp facial features for exam center verification."
         ]
       },
       {
@@ -1122,14 +1122,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for gate application form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Graduate Aptitude Test in Engineering (GATE) through the official IIT Organizing Committee (GOAPS Portal) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by IIT Organizing Committee (GOAPS Portal) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official IIT Organizing Committee (GOAPS Portal) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The IIT Organizing Committee (GOAPS Portal) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (minimum 240 x 320 px, maximum 480 x 640 px) with a file size strictly between 5KB to 200KB (Aspect ratio between 0.66 and 0.89). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 2.0 cm x 7.0 cm (minimum 80 x 280 px, maximum 160 x 560 px), with a file weight capped between 5KB to 200KB (Aspect ratio between 3.15 and 3.95). Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1139,15 +1139,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the IIT Organizing Committee (GOAPS Portal) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Aspect ratio must strictly comply with GOAPS bounds (0.66 to 0.89 for photo; 3.15 to 3.95 for signature).",
+          "White background with direct front-facing pose (no side profiles).",
+          "Signature must be in black or dark blue ink within rectangular box.",
+          "GOAPS automated validation rejects files that fail aspect ratio boundaries."
         ]
       },
       {
@@ -1256,14 +1256,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for jee main application form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Joint Entrance Examination (JEE Main) through the official National Testing Agency (NTA) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by National Testing Agency (NTA) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official National Testing Agency (NTA) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The National Testing Agency (NTA) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of Passport Size (approx 200 x 230 pixels or 3.5 x 4.5 cm) with a file size strictly between 10KB to 200KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 4KB to 30KB, with a file weight capped between 4KB to 30KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1273,15 +1273,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the National Testing Agency (NTA) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "80% facial coverage against a white background without mask or tinted lenses.",
+          "Spectacles are permitted only if worn regularly, without glare on the eyes.",
+          "Signature must be on white paper in running hand (no capital letters).",
+          "Files must be in JPG/JPEG format between 10KB and 200KB."
         ]
       },
       {
@@ -1390,14 +1390,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress photo and signature for ctet online form is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the Central Teacher Eligibility Test (CTET) through the official Central Board of Secondary Education (CBSE) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central Board of Secondary Education (CBSE) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Central Board of Secondary Education (CBSE) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Central Board of Secondary Education (CBSE) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm (width) x 4.5 cm (height) with a file size strictly between 10KB to 100KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 3.5 cm (length) x 1.5 cm (height), with a file weight capped between 3KB to 30KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1407,15 +1407,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Central Board of Secondary Education (CBSE) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Photo dimensions: 3.5cm x 4.5cm, strictly between 10KB and 100KB.",
+          "Signature dimensions: 3.5cm x 1.5cm, strictly between 3KB and 30KB.",
+          "White background with clear lighting and natural skin tones.",
+          "Save files in standard JPEG format with RGB color encoding."
         ]
       },
       {
@@ -1524,14 +1524,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for photo size and signature guidelines for ibps exam is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the IBPS PO, Clerk, SO, and RRB Common Recruitment Process through the official Institute of Banking Personnel Selection (IBPS) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Institute of Banking Personnel Selection (IBPS) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Institute of Banking Personnel Selection (IBPS) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Institute of Banking Personnel Selection (IBPS) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 200 x 230 pixels (4.5 cm x 3.5 cm) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels (strictly 10KB to 20KB, NO CAPITAL LETTERS), with a file weight capped between 10KB to 20KB (Thumb: 20-50KB, Declaration: 50-100KB). Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1541,15 +1541,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Institute of Banking Personnel Selection (IBPS) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Photograph: 200x230 px, file size 20KB–50KB, plain light/white background.",
+          "Signature: 140x60 px, file size 10KB–20KB in black ink (running hand only).",
+          "Left Thumb Impression: 240x240 px (20KB–50KB) on clean white paper.",
+          "Handwritten Declaration: 800x400 px (50KB–100KB) in English only."
         ]
       },
       {
@@ -1658,14 +1658,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for ibps rrb online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the IBPS RRB Officer Scale I, II, III & Office Assistant through the official Institute of Banking Personnel Selection (IBPS) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Institute of Banking Personnel Selection (IBPS) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Institute of Banking Personnel Selection (IBPS) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Institute of Banking Personnel Selection (IBPS) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 200 x 230 pixels with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels (10KB to 20KB), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1675,15 +1675,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Institute of Banking Personnel Selection (IBPS) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Passport photograph between 20KB and 50KB with neutral facial expression.",
+          "Signature must be signed with black ink pen, strictly 10KB to 20KB.",
+          "Thumb impression must not have smudges or overlapping ink marks.",
+          "Verify that file names do not contain special characters or spaces before uploading."
         ]
       },
       {
@@ -1792,14 +1792,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for sbi po application form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the SBI Probationary Officer (PO) Recruitment through the official State Bank of India (SBI) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by State Bank of India (SBI) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official State Bank of India (SBI) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The State Bank of India (SBI) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 200 x 230 pixels (preferred) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels (10KB to 20KB), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1809,15 +1809,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the State Bank of India (SBI) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Recent passport photo with light-coloured (preferably white) background.",
+          "No caps, hats, or dark glasses allowed; religious headwear permitted if face is visible.",
+          "Signature in black ink on white paper; capital letters strictly disqualified.",
+          "Thumb impression and handwritten declaration must be clear and within specified byte limits."
         ]
       },
       {
@@ -1926,14 +1926,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for sbi clerk recruitment\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the SBI Junior Associates (Customer Support & Sales) Recruitment through the official State Bank of India (SBI) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by State Bank of India (SBI) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official State Bank of India (SBI) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The State Bank of India (SBI) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 200 x 230 pixels (4.5 cm x 3.5 cm) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels (10KB to 20KB), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -1943,15 +1943,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the State Bank of India (SBI) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Photo file weight must be between 20KB and 50KB in JPG/JPEG format.",
+          "Signature must be 10KB–20KB in running handwriting with black ink.",
+          "Avoid red-eye reflections or shadows behind the ears.",
+          "Ensure all biometric documents pass SBI portal automated size filters."
         ]
       },
       {
@@ -2060,14 +2060,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for rrb ntpc online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the RRB Non-Technical Popular Categories (NTPC) Exam through the official Railway Recruitment Boards (RRB) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Railway Recruitment Boards (RRB) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Railway Recruitment Boards (RRB) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Railway Recruitment Boards (RRB) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 35 mm x 45 mm (approx 320 x 240 pixels) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 10KB to 40KB (50 mm x 20 mm), with a file weight capped between 10KB to 40KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2077,15 +2077,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Railway Recruitment Boards (RRB) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Colour passport photo taken against a plain white or light grey background.",
+          "Photo must be recent (taken within the last month of application opening).",
+          "Do not wear sunglasses, caps, or side-angle poses.",
+          "Signature must be on white paper with black/blue ink, 10KB–40KB."
         ]
       },
       {
@@ -2194,14 +2194,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for railway group d form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the RRC Level 1 (Railway Group D) Recruitment through the official Railway Recruitment Cell (RRC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Railway Recruitment Cell (RRC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Railway Recruitment Cell (RRC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Railway Recruitment Cell (RRC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 35 mm x 45 mm (320 x 240 pixels) with a file size strictly between 20KB to 50KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 10KB to 40KB, with a file weight capped between 10KB to 40KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2211,15 +2211,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Railway Recruitment Cell (RRC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Front-facing portrait with both ears visible and eyes open.",
+          "Light or white background; no tinted or patterned backgrounds.",
+          "Signature must be in running hand; capital letters cause application rejection.",
+          "Compress to 20–50KB using JPGEASY to prevent upload validation errors."
         ]
       },
       {
@@ -2328,14 +2328,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for pan card upload\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Online PAN Card Application (Form 49A / Correction) through the official Income Tax Department (NSDL / Protean & UTIITSL) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Income Tax Department (NSDL / Protean & UTIITSL) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Income Tax Department (NSDL / Protean & UTIITSL) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Income Tax Department (NSDL / Protean & UTIITSL) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of Photo: 200 DPI, 213 x 213 pixels (3.5 cm x 2.5 cm) with a file size strictly between Photo: Strictly under 50KB; Signature: Under 30KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 200 DPI, 400 x 200 pixels (4.5 cm x 2.0 cm), with a file weight capped between Under 30KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2345,15 +2345,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Income Tax Department (NSDL / Protean & UTIITSL) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Photo must be scanned at exactly 200 DPI, 213 x 213 pixels, under 50KB.",
+          "Signature must be scanned at 200 DPI, 400 x 200 pixels, under 30KB.",
+          "Supporting identity/address PDF documents must be under 300KB each.",
+          "Protean/UTIITSL portals reject photos that deviate from 200 DPI scanning resolution."
         ]
       },
       {
@@ -2462,14 +2462,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for driving license online\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Learner's & Permanent Driving Licence Online Services through the official Ministry of Road Transport and Highways (MoRTH - Sarathi Portal) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Ministry of Road Transport and Highways (MoRTH - Sarathi Portal) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Ministry of Road Transport and Highways (MoRTH - Sarathi Portal) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Ministry of Road Transport and Highways (MoRTH - Sarathi Portal) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 35 mm x 45 mm (approx 420 x 525 pixels) with a file size strictly between 10KB to 20KB. The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 10KB to 20KB (aspect ratio approx 2:1), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2479,15 +2479,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Ministry of Road Transport and Highways (MoRTH - Sarathi Portal) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Both photograph and signature must be strictly between 10KB and 20KB.",
+          "White background with clear frontal view and natural lighting.",
+          "Signature must be signed inside the designated box on white paper.",
+          "Supporting identity and medical certificate PDFs must be under 200KB."
         ]
       },
       {
@@ -2596,14 +2596,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for nda application form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the NDA Application Photo & Signature Resize: UPSC Defence Guidelines through the official National Defence Academy (NDA - UPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by National Defence Academy (NDA - UPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official National Defence Academy (NDA - UPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The National Defence Academy (NDA - UPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2613,15 +2613,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the National Defence Academy (NDA - UPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -2730,14 +2730,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for cds exam online form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the CDS Exam Photo & Signature Compression: Complete UPSC Portal Guide through the official Combined Defence Services (CDS - UPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Combined Defence Services (CDS - UPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Combined Defence Services (CDS - UPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Combined Defence Services (CDS - UPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2747,15 +2747,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Combined Defence Services (CDS - UPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -2864,14 +2864,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for police recruitment form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Police Recruitment Photo & Signature Resizer Online Free through the official State Police Recruitment Board (SI & Constable) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by State Police Recruitment Board (SI & Constable) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official State Police Recruitment Board (SI & Constable) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The State Police Recruitment Board (SI & Constable) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -2881,15 +2881,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the State Police Recruitment Board (SI & Constable) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -2998,14 +2998,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for state psc exam portal\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the State PSC Application Photo & Signature Compression Guide (MPSC, UPPSC, BPSC) through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3015,15 +3015,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3132,14 +3132,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for uppsc online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the UPPSC Photo and Signature Combined Resize Guide (3.5 x 6 cm) through the official Uttar Pradesh Public Service Commission (UPPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Uttar Pradesh Public Service Commission (UPPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Uttar Pradesh Public Service Commission (UPPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Uttar Pradesh Public Service Commission (UPPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3149,15 +3149,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Uttar Pradesh Public Service Commission (UPPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3266,14 +3266,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress photo and signature for bpsc form is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the BPSC Photo & Signature Resize: Hindi & English Signature Guidelines through the official Bihar Public Service Commission (BPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Bihar Public Service Commission (BPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Bihar Public Service Commission (BPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Bihar Public Service Commission (BPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3283,15 +3283,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Bihar Public Service Commission (BPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3400,14 +3400,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for mpsc application portal\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the MPSC Photo & Signature Resizer Online: Meet Exact Pixel Rules through the official Maharashtra Public Service Commission (MPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Maharashtra Public Service Commission (MPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Maharashtra Public Service Commission (MPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Maharashtra Public Service Commission (MPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3417,15 +3417,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Maharashtra Public Service Commission (MPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3534,14 +3534,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for tnpsc group 4 application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the TNPSC Group 4 Photo & Signature Resize: 20KB\\u201350KB Online Tool through the official Tamil Nadu Public Service Commission (TNPSC) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Tamil Nadu Public Service Commission (TNPSC) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Tamil Nadu Public Service Commission (TNPSC) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Tamil Nadu Public Service Commission (TNPSC) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3551,15 +3551,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Tamil Nadu Public Service Commission (TNPSC) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3668,14 +3668,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for post office gds online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the India Post GDS Photo & Signature Resizer: Upload Guidelines through the official India Post Gramin Dak Sevak (GDS) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by India Post Gramin Dak Sevak (GDS) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official India Post Gramin Dak Sevak (GDS) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The India Post Gramin Dak Sevak (GDS) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3685,15 +3685,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the India Post Gramin Dak Sevak (GDS) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -3802,14 +3802,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for agniveer army recruitment\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Agniveer General Duty, Technical, Clerk, and Tradesman Rallies through the official Indian Army (Join Indian Army Portal) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Indian Army (Join Indian Army Portal) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Indian Army (Join Indian Army Portal) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Indian Army (Join Indian Army Portal) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (approx 200 x 230 pixels) with a file size strictly between 10KB to 20KB (Photo). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically Signature: 10KB to 20KB, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3819,15 +3819,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Indian Army (Join Indian Army Portal) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Candidates must be clean shaven (except Sikh candidates who are permitted turbans/beards).",
+          "Plain white or light background with formal attire (no military camouflage or caps).",
+          "Photo file size must be strictly between 10KB and 20KB.",
+          "Signature must be 10KB to 20KB in black ink on unlined white paper."
         ]
       },
       {
@@ -3936,14 +3936,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for university admission form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the How to Resize & Compress Photo for College & University Admission Portals through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -3953,15 +3953,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4070,14 +4070,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for ignou admission portal\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the IGNOU Admission Portal Document Compression: Photo, Signature & Marksheets through the official Indira Gandhi National Open University (IGNOU) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Indira Gandhi National Open University (IGNOU) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Indira Gandhi National Open University (IGNOU) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Indira Gandhi National Open University (IGNOU) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4087,15 +4087,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Indira Gandhi National Open University (IGNOU) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4204,14 +4204,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for cuet ug application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the CUET UG Photo & Signature Resize: NTA Portal Upload Rules through the official Common University Entrance Test (CUET - NTA) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Common University Entrance Test (CUET - NTA) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Common University Entrance Test (CUET - NTA) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Common University Entrance Test (CUET - NTA) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4221,15 +4221,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Common University Entrance Test (CUET - NTA) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4338,14 +4338,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for passport seva online portal\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Passport Seva Online Photo Upload: Resize and Compress to Exact Rules through the official Passport Seva Portal (Ministry of External Affairs) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Passport Seva Portal (Ministry of External Affairs) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Passport Seva Portal (Ministry of External Affairs) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Passport Seva Portal (Ministry of External Affairs) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4355,15 +4355,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Passport Seva Portal (Ministry of External Affairs) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4472,14 +4472,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for aadhaar card update online\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Aadhaar Card Document Upload: Resize & Compress Proof Documents Online through the official Unique Identification Authority of India (UIDAI) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Unique Identification Authority of India (UIDAI) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Unique Identification Authority of India (UIDAI) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Unique Identification Authority of India (UIDAI) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4489,15 +4489,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Unique Identification Authority of India (UIDAI) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4606,14 +4606,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "When uploading scanned signatures to competitive exam forms, government recruitment portals, banking KYC workflows, or legal verification systems, meeting the strict file weight constraint for compress signature for bank kyc update is critical. Standard photo apps compress signatures aggressively, leaving ink strokes faded, broken, or unreadable\u2014leading to immediate application rejection. JPGEASY combines grayscale luminance encoding with smart dimension downscaling, allowing you to hit your exact target weight while keeping signature penmanship razor-sharp.",
+    "introduction": "Applying for the How to Compress Signature for Online Bank KYC Update (SBI, HDFC, ICICI) through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Signature Upload Specifications & Dimensional Bounds",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Most government and recruitment portals enforce strict limits on signature files: generally a file size between 10KB and 20KB (or 20KB to 50KB for state PSCs), with standard dimensions of 140x60 pixels to 200x100 pixels (a 2:1 to 3:1 width-to-height ratio). Server validation scripts automatically reject files that exceed the byte cap or have an inverted aspect ratio.",
-          "Because an admit card or official ID badge prints the signature inside a small rectangular box, maintaining clean contrast is essential. A blurry signature can prevent identity verification at exam exam halls and biometric check-in desks."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4623,15 +4623,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "How to Preserve Sharp Signature Strokes at Low Kilobytes",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "The key to achieving ultra-low file sizes without blur is eliminating wasted RGB color data. A smartphone photo of a signature contains millions of unnecessary color bytes depicting beige paper and subtle shadows. By cropping tightly to the signature strokes and scaling dimensions to approximately 140\u2013200 pixels wide, you eliminate up to 75% of raw image payload before compression begins."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Sign with a fresh black or dark blue ink pen on clean, unlined white paper.",
-          "Crop closely around the signature, leaving only a 5% to 10% white margin around the edges.",
-          "Avoid casting mobile camera shadows across the page when taking the photo.",
-          "Use JPGEASY's target-size engine to automatically land right under the required threshold without trial and error."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -4740,14 +4740,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Uploading clear thumb impressions for national recruitment applications (such as SSC CGL, IBPS, and State PSCs) demands extreme care. Biometric verification scripts inspect fingerprint ridge clarity to confirm applicant identity. Compressing a thumb impression for compress thumb impression to 20kb requires balancing tight file limits (typically under 20KB) with sharp ridge definition. Here is how to meet the standard 4cm x 2cm dimensions and byte limits cleanly.",
+    "introduction": "Applying for the Competitive Exams, Banking, and Government KYC Portals through the official National Testing & Recruitment Portals online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by National Testing & Recruitment Portals and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Thumb Impression Specifications: Dimensions, Ink & KB Bounds",
+        "title": "Official National Testing & Recruitment Portals Image & Signature Specifications",
         "paragraphs": [
-          "Official portals generally mandate left thumb impressions (or right thumb for female candidates in specific notifications) to be scanned at 200 DPI with dimensions of 4.0 cm x 2.0 cm (approximately 150x75 to 200x100 pixels) and a file weight between 10KB and 20KB. The background must be clean white with no ink smudges on the paper border.",
-          "If fingerprint ridges appear as an indistinguishable black blob, the document verification team will reject the form during admit card processing."
+          "The National Testing & Recruitment Portals validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 240 x 240 pixels or 3.0 cm x 3.0 cm with a file size strictly between 10KB to 20KB (or 20KB to 50KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 240 x 240 pixels (1:1 square), with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4757,15 +4757,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Techniques to Retain Clean Fingerprint Ridge Visibility",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "To capture distinct ridges, do not press your thumb too heavily onto the ink pad. A light, even roll across blue or black stamp pad ink yields distinct friction ridge impressions. When digitizing, ensure high contrast so individual loops and whorls remain clearly delineated."
+          "Most candidate rejections on the National Testing & Recruitment Portals portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
           "Use blue or black stamp pad ink on clean white unlined paper.",
-          "Roll thumb lightly from side to side; avoid excessive pressure that causes pooling.",
-          "Crop away excessive white space surrounding the thumbprint.",
-          "Never use smartphone 'beauty' filters or skin smoothing, which erase biometric ridges."
+          "Ensure ridge patterns are clearly visible without smudging or excessive ink blotches.",
+          "Crop tightly around the thumb impression to eliminate unnecessary white margins.",
+          "Compress to exactly 10KB–20KB using JPGEASY while preserving dermal ridge details."
         ]
       },
       {
@@ -4874,14 +4874,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Uploading clear thumb impressions for national recruitment applications (such as SSC CGL, IBPS, and State PSCs) demands extreme care. Biometric verification scripts inspect fingerprint ridge clarity to confirm applicant identity. Compressing a thumb impression for resize left thumb impression for ssc cgl requires balancing tight file limits (typically under 20KB) with sharp ridge definition. Here is how to meet the standard 4cm x 2cm dimensions and byte limits cleanly.",
+    "introduction": "Applying for the Left Thumb Impression Resizer for SSC CGL: 4cm x 2cm Dimensions & KB Size through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Thumb Impression Specifications: Dimensions, Ink & KB Bounds",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Official portals generally mandate left thumb impressions (or right thumb for female candidates in specific notifications) to be scanned at 200 DPI with dimensions of 4.0 cm x 2.0 cm (approximately 150x75 to 200x100 pixels) and a file weight between 10KB and 20KB. The background must be clean white with no ink smudges on the paper border.",
-          "If fingerprint ridges appear as an indistinguishable black blob, the document verification team will reject the form during admit card processing."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -4891,15 +4891,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Techniques to Retain Clean Fingerprint Ridge Visibility",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "To capture distinct ridges, do not press your thumb too heavily onto the ink pad. A light, even roll across blue or black stamp pad ink yields distinct friction ridge impressions. When digitizing, ensure high contrast so individual loops and whorls remain clearly delineated."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use blue or black stamp pad ink on clean white unlined paper.",
-          "Roll thumb lightly from side to side; avoid excessive pressure that causes pooling.",
-          "Crop away excessive white space surrounding the thumbprint.",
-          "Never use smartphone 'beauty' filters or skin smoothing, which erase biometric ridges."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5008,14 +5008,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize declaration for ibps clerk online form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the IBPS Clerk Handwritten Declaration Upload through the official Institute of Banking Personnel Selection (IBPS) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Institute of Banking Personnel Selection (IBPS) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Institute of Banking Personnel Selection (IBPS) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Institute of Banking Personnel Selection (IBPS) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 800 x 400 pixels (aspect ratio 2:1) with a file size strictly between 50KB to 100KB (Declaration). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 800 x 400 pixels, with a file weight capped between 50KB to 100KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5025,15 +5025,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Institute of Banking Personnel Selection (IBPS) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Must be handwritten by the candidate in English only on white paper with black ink.",
+          "Do NOT write the declaration in CAPITAL LETTERS (will result in disqualification).",
+          "Dimensions: 800 x 400 pixels (2:1 aspect ratio), file weight 50KB to 100KB.",
+          "Declarations written by someone else or in another language will void the application."
         ]
       },
       {
@@ -5142,14 +5142,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for cat exam registration\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the CAT Exam Registration Photo & Signature Resize Guidelines through the official Common Admission Test (CAT - IIMs) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Common Admission Test (CAT - IIMs) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Common Admission Test (CAT - IIMs) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Common Admission Test (CAT - IIMs) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5159,15 +5159,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Common Admission Test (CAT - IIMs) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5276,14 +5276,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for clat online application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the CLAT Photo & Signature Resize: Law Entrance Portal Instructions through the official Common Admission Test (CAT - IIMs) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Common Admission Test (CAT - IIMs) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Common Admission Test (CAT - IIMs) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Common Admission Test (CAT - IIMs) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5293,15 +5293,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Common Admission Test (CAT - IIMs) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5410,14 +5410,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for aiims nursing application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the AIIMS Nursing & MBBS Photo Resize: Avoid PAAR Registration Rejection through the official Common Admission Test (CAT - IIMs) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Common Admission Test (CAT - IIMs) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Common Admission Test (CAT - IIMs) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Common Admission Test (CAT - IIMs) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5427,15 +5427,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Common Admission Test (CAT - IIMs) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5544,14 +5544,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for postal assistant recruitment\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Postal Assistant Exam Photo & Signature Compression Guide through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5561,15 +5561,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5678,14 +5678,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in resize photo for dsssb online form\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the DSSSB Postcard & Passport Size Photo Resizer Online through the official Delhi Subordinate Services Selection Board (DSSSB) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Delhi Subordinate Services Selection Board (DSSSB) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Delhi Subordinate Services Selection Board (DSSSB) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Delhi Subordinate Services Selection Board (DSSSB) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5695,15 +5695,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Delhi Subordinate Services Selection Board (DSSSB) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5812,14 +5812,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in compress photo for central govt job application\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the Central Government Job Application Photo & Signature Compression Guide through the official Common Admission Test (CAT - IIMs) online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Common Admission Test (CAT - IIMs) and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Common Admission Test (CAT - IIMs) Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Common Admission Test (CAT - IIMs) validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5829,15 +5829,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Common Admission Test (CAT - IIMs) portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
@@ -5946,14 +5946,14 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
         "text": "Frequently Asked Questions"
       }
     ],
-    "introduction": "Applying for competitive government examinations, national entrance tests, or civil services (such as UPSC, SSC, NEET, JEE, IBPS, GATE, RRB, and State PSCs) requires meeting the most exacting photo and document guidelines on the web. A minor mistake in fix invalid photo dimensions error on exam portal\u2014whether exceeding the byte limit by 1KB, using the wrong aspect ratio, or having poor contrast\u2014can cause instant application disqualification. This guide provides the official specifications and a foolproof in-browser tool workflow to ensure your submission is accepted immediately.",
+    "introduction": "Applying for the How to Fix \\ through the official Central & State Government Examination Authority online portal requires strict adherence to mandatory digital upload guidelines. Submitting a photograph or signature that exceeds byte limits, uses incorrect dimensions, or has poor contrast triggers automatic server rejection during form scrutiny. This guide details the exact specifications mandated by Central & State Government Examination Authority and explains how to format your files instantly using JPGEASY.",
     "sections": [
       {
         "id": "section-specifications",
-        "title": "Official Exam Portal Image & Signature Guidelines",
+        "title": "Official Central & State Government Examination Authority Image & Signature Specifications",
         "paragraphs": [
-          "Examination authorities use automated image validation algorithms to screen millions of applicants. Standard parameters include: passport photographs sized at 3.5 cm x 4.5 cm (typically 200x230 px to 350x450 px), file weight strictly between 20KB and 50KB (or 10KB to 200KB for NTA NEET/JEE), recent capture within 3 to 6 months, plain white background, and 75% to 80% facial coverage without hats, masks, or tinted spectacles.",
-          "For signatures, dimensions are typically 3.5cm x 1.5cm or 140x60 px, with file size capped between 10KB and 20KB. Submitting files outside these explicit ranges generates upload rejection errors on server backends."
+          "The Central & State Government Examination Authority validation server evaluates uploads against strict dimensional and file weight thresholds. For photographs, standard parameters require dimensions of 3.5 cm x 4.5 cm (200 x 230 pixels to 350 x 350 pixels) with a file size strictly between 20KB to 50KB (or up to 100KB). The portrait must be taken against a plain white or light-coloured background with the candidate looking directly at the camera with both ears clearly visible.",
+          "For signatures and biometric thumb impressions, the required dimensions are typically 140 x 60 pixels to 200 x 100 pixels, with a file weight capped between 10KB to 20KB. Signatures must be executed on clean white unlined paper using dark ink. Uploading files with inverted aspect ratios or files exceeding the byte ceiling causes immediate validation errors."
         ],
         "callout": {
           "type": "info",
@@ -5963,15 +5963,15 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
       },
       {
         "id": "section-quality-optimization",
-        "title": "Preventing Common Rejection Traps on Exam Portals",
+        "title": "Avoiding Disqualification and Portal Upload Errors",
         "paragraphs": [
-          "Most candidates fail portal validation not because of poor internet connection, but because of hidden file defects. Common triggers include submitting selfies with distorted fish-eye perspectives, photos taken against textured wallpapers, or images retaining bloated EXIF camera metadata that pushes an otherwise small image over the byte ceiling."
+          "Most candidate rejections on the Central & State Government Examination Authority portal are caused by preventable errors: selfies taken with wide-angle camera distortion, textured backgrounds, or photos containing heavy camera EXIF metadata that pushes an otherwise normal file over the byte limit. Following the verified guidelines below ensures your submission passes server screening on the first attempt."
         ],
         "bulletPoints": [
-          "Use even frontal lighting to eliminate shadows behind the ears or under the chin.",
-          "Wear dark or contrasting clothing; avoid white shirts against a white background.",
-          "Verify whether the notification requires your name and date of photo printed at the bottom of the portrait.",
-          "Ensure facial coverage occupies 75% to 80% of the vertical frame."
+          "Official portal rules require recent passport photographs taken against a plain light/white background.",
+          "Facial coverage must be 70% to 80% with both ears visible and eyes looking directly into the camera.",
+          "Signatures must be signed in black or dark blue ink on clean unlined paper (no capital letters).",
+          "Files must be saved in JPG/JPEG format within the official byte constraints."
         ]
       },
       {
