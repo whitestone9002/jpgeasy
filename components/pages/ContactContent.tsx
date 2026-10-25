@@ -433,13 +433,13 @@ export default function ContactContent() {
               </div>
 
               <div className="flex items-start gap-3.5">
-                <div className="w-8 h-8 rounded-xl bg-amber-500/10 text-amber-600 dark:text-amber-400 flex items-center justify-center shrink-0">
-                  <Clock className="w-4 h-4" />
+                <div className="w-8 h-8 rounded-xl bg-blue-500/10 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0">
+                  <Wrench className="w-4 h-4" />
                 </div>
                 <div className="space-y-0.5">
-                  <strong className="text-base-content text-sm block">1 Message Per Email / 24 Hours</strong>
+                  <strong className="text-base-content text-sm block">Tool Improvements & Suggestions</strong>
                   <p className="text-base-content/70 text-xs sm:text-sm leading-relaxed">
-                    To prevent system congestion and automated spam, each verified email address can submit at most 1 inquiry every 24 hours.
+                    Have an idea for a new feature, dimension preset, or encountered an unexpected file issue? Your feedback helps guide future platform updates.
                   </p>
                 </div>
               </div>
