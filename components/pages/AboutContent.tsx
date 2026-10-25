@@ -114,7 +114,7 @@ export default function AboutContent() {
             <div className="space-y-1">
               <h4 className="font-semibold text-sm text-base-content">No Hidden Paywalls or Subscriptions</h4>
               <p className="text-xs sm:text-sm text-base-content/70">
-                All 44 core image and PDF tools are free to use without limits or premium tiers.
+                All our core image and PDF tools are free to use without limits or premium tiers.
               </p>
             </div>
           </div>
@@ -173,7 +173,7 @@ export default function AboutContent() {
         <div className="space-y-1">
           <h3 className="text-lg font-bold text-base-content">Explore Our Free Tools</h3>
           <p className="text-xs sm:text-sm text-base-content/70">
-            Browse our full suite of 44 online image and PDF processing tools.
+            Browse our full suite of online image and PDF processing tools.
           </p>
         </div>
         <Link 
