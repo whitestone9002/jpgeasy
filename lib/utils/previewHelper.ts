@@ -34,25 +34,20 @@ export async function getSafeImagePreview(
     fileType.includes('heif') ||
     fileType.includes('tiff');
 
-  // If format is HEIC or TIFF, try server Sharp pipeline first with a 3s timeout
+  // If format is HEIC or TIFF, try server pipeline first with a 6s timeout
   if (isHeicOrTiff) {
     try {
       const serverResult = await Promise.race([
         fetchServerPreview(file),
-        new Promise<null>((resolve) => setTimeout(() => resolve(null), 3000)),
+        new Promise<null>((resolve) => setTimeout(() => resolve(null), 6000)),
       ]);
       if (serverResult && serverResult.previewUrl) return serverResult;
     } catch (err) {
       console.warn('Server HEIC/TIFF preview failed:', err);
     }
 
-    if (baselineBlobUrl) {
-      return {
-        previewUrl: baselineBlobUrl,
-        width: 1920,
-        height: 1080,
-      };
-    }
+    // Browsers cannot display raw HEIC/TIFF blobs, so throw clean error instead of unrenderable blob
+    throw new Error('Unsupported format for browser thumbnail preview.');
   }
 
   // 1. Try createImageBitmap with a 1000ms timeout (auto-rotates camera photos from EXIF)
@@ -181,7 +176,7 @@ async function fetchServerPreview(
   file: File
 ): Promise<{ previewUrl: string; width: number; height: number } | null> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 2500);
+  const timeoutId = setTimeout(() => controller.abort(), 6000);
 
   try {
     const formData = new FormData();

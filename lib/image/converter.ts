@@ -61,7 +61,12 @@ export async function convertImageFormat(
   const originalWidth = (isTransposed ? metadata.height : metadata.width) || 800;
   const originalHeight = (isTransposed ? metadata.width : metadata.height) || 600;
 
-  let pipeline = sharp(workingBuffer, { failOnError: false }).rotate();
+  const isSvg = workingBuffer.length > 20 &&
+    (workingBuffer.subarray(0, 200).toString('utf8').includes('<svg') ||
+     workingBuffer.subarray(0, 200).toString('utf8').includes('<?xml'));
+  const sharpOptions = isSvg ? { density: 300, failOnError: false } : { failOnError: false };
+
+  let pipeline = sharp(workingBuffer, sharpOptions).rotate();
   const quality = options.quality || 90;
 
   if (options.targetFormat === 'jpeg') {

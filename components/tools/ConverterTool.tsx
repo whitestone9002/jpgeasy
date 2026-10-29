@@ -47,13 +47,17 @@ export default function ConverterTool({
     let isCancelled = false;
 
     if (files.length > 0) {
-      const isHeic = (files[0].name || '').toLowerCase().endsWith('.heic') ||
-                    (files[0].name || '').toLowerCase().endsWith('.heif');
+      const fileName = (files[0].name || '').toLowerCase();
+      const isUnsupportedNativeBlob =
+        fileName.endsWith('.heic') ||
+        fileName.endsWith('.heif') ||
+        fileName.endsWith('.tiff') ||
+        fileName.endsWith('.tif');
 
       // 1. For standard formats, immediately provide instant baseline preview (0ms)
-      // For HEIC, browsers cannot decode raw HEIC blobs in <img>, so wait for safe server/wasm preview
+      // For HEIC and TIFF, browsers cannot decode raw blobs in <img>, so wait for safe server/wasm preview
       let instantUrl = '';
-      if (!isHeic) {
+      if (!isUnsupportedNativeBlob) {
         try {
           instantUrl = URL.createObjectURL(files[0]);
           setOriginalPreviewUrl(instantUrl);
@@ -75,7 +79,7 @@ export default function ConverterTool({
         .catch((err) => {
           if (!isCancelled) {
             console.error('Converter preview error:', err);
-            if (instantUrl && !isHeic) {
+            if (instantUrl && !isUnsupportedNativeBlob) {
               setOriginalPreviewUrl(instantUrl);
             } else {
               setOriginalPreviewUrl(null);

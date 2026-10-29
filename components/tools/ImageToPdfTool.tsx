@@ -62,8 +62,16 @@ export default function ImageToPdfTool({
 
   const handleFilesSelected = async (newFiles: File[]) => {
     const initialItems: ImageItem[] = newFiles.map((file) => {
+      const fname = (file.name || '').toLowerCase();
+      const isUnsupportedNativeBlob =
+        fname.endsWith('.heic') ||
+        fname.endsWith('.heif') ||
+        fname.endsWith('.tiff') ||
+        fname.endsWith('.tif');
       let previewUrl = '';
-      try { previewUrl = URL.createObjectURL(file); } catch {}
+      if (!isUnsupportedNativeBlob) {
+        try { previewUrl = URL.createObjectURL(file); } catch {}
+      }
       return {
         id: `${file.name}-${file.size}-${file.lastModified}-${Math.random().toString(36).substring(2, 7)}`,
         file,
@@ -94,8 +102,16 @@ export default function ImageToPdfTool({
     if (validFiles.length === 0) return;
 
     const startItems: ImageItem[] = validFiles.map((file) => {
+      const fname = (file.name || '').toLowerCase();
+      const isUnsupportedNativeBlob =
+        fname.endsWith('.heic') ||
+        fname.endsWith('.heif') ||
+        fname.endsWith('.tiff') ||
+        fname.endsWith('.tif');
       let previewUrl = '';
-      try { previewUrl = URL.createObjectURL(file); } catch {}
+      if (!isUnsupportedNativeBlob) {
+        try { previewUrl = URL.createObjectURL(file); } catch {}
+      }
       return {
         id: `${file.name}-${file.size}-${file.lastModified}-${Math.random().toString(36).substring(2, 7)}`,
         file,
@@ -216,6 +232,38 @@ export default function ImageToPdfTool({
             if (blob) {
               embedImg = await pdfDoc.embedJpg(await blob.arrayBuffer());
             }
+          }
+        }
+
+        if (!embedImg) {
+          try {
+            if (item.previewUrl && item.previewUrl.startsWith('data:image/jpeg;base64,')) {
+              const base64Data = item.previewUrl.split(',')[1];
+              const binaryString = atob(base64Data);
+              const bytes = new Uint8Array(binaryString.length);
+              for (let i = 0; i < binaryString.length; i++) {
+                bytes[i] = binaryString.charCodeAt(i);
+              }
+              embedImg = await pdfDoc.embedJpg(bytes);
+            } else {
+              const formData = new FormData();
+              formData.append('file', item.file);
+              const res = await fetch('/api/image-preview', { method: 'POST', body: formData });
+              if (res.ok) {
+                const data = await res.json();
+                if (data.previewUrl && data.previewUrl.startsWith('data:image/jpeg;base64,')) {
+                  const base64Data = data.previewUrl.split(',')[1];
+                  const binaryString = atob(base64Data);
+                  const bytes = new Uint8Array(binaryString.length);
+                  for (let i = 0; i < binaryString.length; i++) {
+                    bytes[i] = binaryString.charCodeAt(i);
+                  }
+                  embedImg = await pdfDoc.embedJpg(bytes);
+                }
+              }
+            }
+          } catch (fallbackErr) {
+            console.warn('Fallback embedding in PDF failed:', fallbackErr);
           }
         }
 
@@ -412,11 +460,8 @@ export default function ImageToPdfTool({
                       alt={item.file.name}
                       className="h-full w-full object-contain drop-shadow-sm rounded-lg"
                       onError={() => {
-                        try {
-                           const fallbackUrl = URL.createObjectURL(item.file);
-                          item.previewUrl = fallbackUrl;
-                          setItems((prev) => [...prev]);
-                        } catch {}
+                        item.previewUrl = '';
+                        setItems((prev) => [...prev]);
                       }}
                     />
                   ) : (
