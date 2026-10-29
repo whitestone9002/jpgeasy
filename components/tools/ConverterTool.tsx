@@ -47,12 +47,20 @@ export default function ConverterTool({
     let isCancelled = false;
 
     if (files.length > 0) {
-      // 1. Immediately provide instant baseline preview so thumbnail and preview appear in 0ms!
+      const isHeic = (files[0].name || '').toLowerCase().endsWith('.heic') ||
+                    (files[0].name || '').toLowerCase().endsWith('.heif');
+
+      // 1. For standard formats, immediately provide instant baseline preview (0ms)
+      // For HEIC, browsers cannot decode raw HEIC blobs in <img>, so wait for safe server/wasm preview
       let instantUrl = '';
-      try {
-        instantUrl = URL.createObjectURL(files[0]);
-        setOriginalPreviewUrl(instantUrl);
-      } catch {}
+      if (!isHeic) {
+        try {
+          instantUrl = URL.createObjectURL(files[0]);
+          setOriginalPreviewUrl(instantUrl);
+        } catch {}
+      } else {
+        setOriginalPreviewUrl(null);
+      }
 
       setIsPreviewLoading(true);
 
@@ -67,15 +75,10 @@ export default function ConverterTool({
         .catch((err) => {
           if (!isCancelled) {
             console.error('Converter preview error:', err);
-            if (instantUrl) {
+            if (instantUrl && !isHeic) {
               setOriginalPreviewUrl(instantUrl);
-              const img = new Image();
-              img.onload = () => {
-                if (!isCancelled && img.naturalWidth) {
-                  setOrigDimensions({ width: img.naturalWidth, height: img.naturalHeight });
-                }
-              };
-              img.src = instantUrl;
+            } else {
+              setOriginalPreviewUrl(null);
             }
             setIsPreviewLoading(false);
           }
@@ -313,9 +316,7 @@ export default function ConverterTool({
                     alt="Original thumb"
                     className="w-full h-full object-cover"
                     onError={() => {
-                      try {
-                        setOriginalPreviewUrl(URL.createObjectURL(files[0]));
-                      } catch {}
+                      setOriginalPreviewUrl(null);
                     }}
                   />
                 ) : isPreviewLoading ? (
@@ -369,9 +370,7 @@ export default function ConverterTool({
                   alt={files[0].name}
                   className="max-h-[300px] sm:max-h-[360px] w-auto max-w-full object-contain rounded-lg shadow-sm"
                   onError={() => {
-                    try {
-                      setOriginalPreviewUrl(URL.createObjectURL(files[0]));
-                    } catch {}
+                    setOriginalPreviewUrl(null);
                   }}
                 />
               </div>

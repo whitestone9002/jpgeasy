@@ -1,5 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
+// @ts-ignore
+import heicConvert from 'heic-convert';
 
 export const dynamic = 'force-dynamic';
 export const maxDuration = 60;
@@ -17,7 +19,32 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ success: false, error: 'File exceeds 20 MB upload limit per file.' }, { status: 400 });
     }
 
-    const buffer = Buffer.from(await file.arrayBuffer());
+    let buffer = Buffer.from(await file.arrayBuffer());
+
+    const fileName = (file.name || '').toLowerCase();
+    const isHeic =
+      fileName.endsWith('.heic') ||
+      fileName.endsWith('.heif') ||
+      (buffer.length > 12 &&
+        buffer.subarray(4, 12).toString('latin1').includes('ftyp') &&
+        (buffer.subarray(8, 16).toString('latin1').includes('heic') ||
+          buffer.subarray(8, 16).toString('latin1').includes('mif1') ||
+          buffer.subarray(8, 16).toString('latin1').includes('heix') ||
+          buffer.subarray(8, 16).toString('latin1').includes('hevc')));
+
+    if (isHeic) {
+      try {
+        const jpegConverted = await heicConvert({
+          buffer,
+          format: 'JPEG',
+          quality: 0.9,
+        });
+        buffer = Buffer.from(jpegConverted);
+      } catch (heicErr) {
+        console.warn('heic-convert preview fallback to sharp:', heicErr);
+      }
+    }
+
     const rawImage = sharp(buffer, { failOnError: false });
     const metadata = await rawImage.metadata();
 

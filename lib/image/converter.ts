@@ -1,4 +1,6 @@
 import sharp from 'sharp';
+// @ts-ignore
+import heicConvert from 'heic-convert';
 
 export interface ConvertOptions {
   targetFormat: 'jpeg' | 'png' | 'webp' | 'avif' | 'tiff';
@@ -10,12 +12,56 @@ export async function convertImageFormat(
   options: ConvertOptions
 ) {
   const originalSize = inputBuffer.length;
-  const metadata = await sharp(inputBuffer, { failOnError: false }).metadata();
+  let workingBuffer = inputBuffer;
+
+  // Detect HEIC/HEIF container
+  const isHeic =
+    workingBuffer.length > 12 &&
+    workingBuffer.subarray(4, 12).toString('latin1').includes('ftyp') &&
+    (workingBuffer.subarray(8, 16).toString('latin1').includes('heic') ||
+      workingBuffer.subarray(8, 16).toString('latin1').includes('mif1') ||
+      workingBuffer.subarray(8, 16).toString('latin1').includes('heix') ||
+      workingBuffer.subarray(8, 16).toString('latin1').includes('hevc'));
+
+  if (isHeic) {
+    try {
+      const jpegConverted = await heicConvert({
+        buffer: workingBuffer,
+        format: 'JPEG',
+        quality: (options.quality || 90) / 100,
+      });
+      workingBuffer = Buffer.from(jpegConverted);
+    } catch (heicErr) {
+      console.warn('heic-convert failed, attempting sharp fallback:', heicErr);
+    }
+  }
+
+  let metadata;
+  try {
+    metadata = await sharp(workingBuffer, { failOnError: false }).metadata();
+  } catch (err: any) {
+    if (!isHeic) {
+      try {
+        const jpegConverted = await heicConvert({
+          buffer: workingBuffer,
+          format: 'JPEG',
+          quality: (options.quality || 90) / 100,
+        });
+        workingBuffer = Buffer.from(jpegConverted);
+        metadata = await sharp(workingBuffer, { failOnError: false }).metadata();
+      } catch {
+        throw err;
+      }
+    } else {
+      throw err;
+    }
+  }
+
   const isTransposed = metadata.orientation && metadata.orientation >= 5 && metadata.orientation <= 8;
   const originalWidth = (isTransposed ? metadata.height : metadata.width) || 800;
   const originalHeight = (isTransposed ? metadata.width : metadata.height) || 600;
 
-  let pipeline = sharp(inputBuffer, { failOnError: false }).rotate();
+  let pipeline = sharp(workingBuffer, { failOnError: false }).rotate();
   const quality = options.quality || 90;
 
   if (options.targetFormat === 'jpeg') {
