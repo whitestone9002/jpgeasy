@@ -405,7 +405,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-convert-iphone-heic-photos-to-jpg-for-upload",
-    "coverImage": "/guides/how-to-compress-jpg-without-losing-quality.webp",
+    "coverImage": "/guides/how-to-convert-heic-to-jpg.webp",
     "imageAlt": "How to Convert HEIC to JPG Free (Step-by-Step iPhone to JPEG Guide) - Visual workflow and step-by-step guide",
     "title": "How to Convert HEIC to JPG Free (Step-by-Step iPhone to JPEG Guide)",
     "metaTitle": "How to Convert HEIC to JPG Free (iPhone to JPEG Guide) | JPGEASY",
@@ -4693,7 +4693,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-convert-heic-to-jpg-on-windows",
-    "coverImage": "/guides/how-to-compress-jpg-without-losing-quality.webp",
+    "coverImage": "/guides/how-to-convert-heic-to-jpg.webp",
     "imageAlt": "How to Convert HEIC to JPG on Windows Free Without Installing Software - Step-by-step visual workflow and guide",
     "title": "How to Convert HEIC to JPG on Windows Free (Without Installing Software)",
     "metaTitle": "How to Convert HEIC to JPG on Windows Free | JPGEASY",
@@ -4823,7 +4823,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-convert-webp-to-gif",
-    "coverImage": "/guides/how-to-compress-animated-gif-or-convert-to-lightweight-webp.webp",
+    "coverImage": "/guides/how-to-convert-webp-to-gif.webp",
     "imageAlt": "How to Convert WebP to GIF Online (Free Animation Guide) - Visual step-by-step workflow",
     "title": "How to Convert WebP to GIF Online (Free Animation Guide)",
     "metaTitle": "How to Convert WebP to GIF Online Free | JPGEASY",
