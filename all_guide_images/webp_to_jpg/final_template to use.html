@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Convert WebP to JPG &mdash; Editable Workflow Template</title>
+<style>
+  /* ==========================================================
+     EDITABLE TEMPLATE
+     Change the colors in :root, edit text in the HTML, and
+     replace the sample image in each <img src="...">.
+     ========================================================== */
+  :root {
+    --bg: #03122b;
+    --panel: #041734;
+    --panel-inner: #05142b;
+    --navy: #071b39;
+    --cyan: #00caff;
+    --cyan-blue: #00aef5;
+    --white: #f6f8ff;
+    --muted: #c0d7ef;
+    --dim: #5d85ae;
+    --green: #00de9d;
+    --red: #ff3243;
+    --yellow: #ffb800;
+    --border: #008fe0;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    color: var(--white);
+    background: var(--bg);
+    font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  .page {
+    width: min(100%, 1672px);
+    margin: 0 auto;
+    padding: 20px 26px 28px;
+    position: relative;
+    isolation: isolate;
+  }
+  .hero { text-align: center; margin-bottom: 27px; }
+  .badge {
+    display: inline-block; border-radius: 999px; padding: 5px 22px;
+    background: var(--cyan); color: #001327; font-weight: 700;
+    font-size: 15px; line-height: 1.1;
+  }
+  h1 {
+    font-size: clamp(32px, 4.5vw, 72px);
+    line-height: 1.04; margin: 10px 0 10px;
+    font-weight: 850; letter-spacing: -1.9px;
+  }
+  h1 .accent { color: var(--cyan); }
+  .subtitle {
+    margin: 0 auto; max-width: 1200px; color: var(--muted);
+    font-size: clamp(13px, 1.25vw, 20px); line-height: 1.5;
+  }
+
+  .workflow {
+    display: grid; grid-template-columns: 1fr 100px 1fr 100px 1fr;
+    align-items: center; gap: 14px; margin: 28px auto 25px;
+    max-width: 1410px;
+  }
+  .step {
+    min-height: 62px; border: 2px solid var(--cyan); border-radius: 999px;
+    background: rgba(3, 20, 44, .8); display: flex; align-items: center;
+    justify-content: flex-start; gap: 18px; position: relative; padding-left: 10px;
+    font-size: clamp(15px, 1.5vw, 26px); font-weight: 750;
+    box-shadow: inset 0 0 15px rgba(0,202,255,.06);
+  }
+  .step-number {
+    width: 76px; height: 76px; border-radius: 50%;
+    display: grid; place-items: center; flex: 0 0 auto;
+    background: linear-gradient(145deg, #00d9ff, #0079f5);
+    border: 1px solid #00d9ff; font-size: 40px; font-weight: 850;
+    box-shadow: 0 0 20px rgba(0,202,255,.35);
+    margin-left: 0;
+  }
+  .step-icon { font-size: 32px; line-height: 1; color: var(--cyan); display: inline-flex; }
+  .flow-arrow { color: var(--cyan); text-align: center; font-size: 60px; font-weight: 300; line-height: 1; }
+
+  .panels {
+    display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px;
+  }
+  .tool-panel {
+    min-width: 0; border: 2px solid var(--cyan-blue); border-radius: 23px;
+    background: linear-gradient(155deg, rgba(4,23,52,.98), rgba(2,15,35,.98));
+    padding: 18px 13px 15px; box-shadow: 0 0 22px rgba(0,153,255,.18);
+    position: relative;
+  }
+  .panel-inner {
+    border: 1px solid #07518a; border-radius: 17px;
+    background: rgba(2,15,35,.55); padding: 12px 11px 14px; height: 100%;
+  }
+  .mini-badge {
+    display: table; margin: 0 auto 5px; background: var(--cyan);
+    color: #001327; font-weight: 800; border-radius: 99px;
+    padding: 3px 8px; font-size: 8px; line-height: 1;
+  }
+  .panel-title { text-align: center; font-size: clamp(16px, 1.55vw, 25px); line-height: 1.15; margin: 3px 0 8px; font-weight: 850; }
+  .panel-desc { text-align: center; font-size: clamp(8px, .63vw, 10px); color: var(--muted); line-height: 1.45; min-height: 27px; margin: 0 0 14px; }
+  .box {
+    border: 1px solid #07518a; border-radius: 14px; background: rgba(4,23,52,.78);
+    padding: 10px; margin-bottom: 12px; min-width: 0;
+  }
+  .box-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; font-size: 11px; font-weight: 750; margin-bottom: 10px; }
+  .muted { color: var(--muted); font-weight: 500; }
+  .tiny-toggle { border: 1px solid #0877b4; border-radius: 9px; padding: 5px 7px; color: var(--muted); white-space: nowrap; font-size: 9px; }
+  .tiny-toggle strong { background: var(--cyan-blue); color: white; border-radius: 5px; padding: 4px 5px; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .preview-card { border: 1px solid #009de9; border-radius: 11px; padding: 7px; min-width: 0; }
+  .preview-label { display: flex; justify-content: space-between; align-items: center; gap: 3px; font-size: 9px; font-weight: 700; margin-bottom: 7px; }
+  .size-pill { background: var(--cyan-blue); border-radius: 99px; padding: 2px 5px; color: white; font-size: 8px; white-space: nowrap; }
+  .checker {
+    background-color: #e8ebf0;
+    background-image: linear-gradient(45deg,#b7c0cd 25%,transparent 25%),linear-gradient(-45deg,#b7c0cd 25%,transparent 25%),linear-gradient(45deg,transparent 75%,#b7c0cd 75%),linear-gradient(-45deg,transparent 75%,#b7c0cd 75%);
+    background-size: 12px 12px; background-position: 0 0,0 6px,6px -6px,-6px 0;
+    border-radius: 5px; overflow: hidden; display: grid; place-items: center;
+    height: clamp(92px, 8vw, 142px); padding: 5px;
+  }
+  .checker img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .dimensions { color: var(--muted); text-align: center; font-size: 8px; margin-top: 6px; }
+  .file-row {
+    display: flex; align-items: center; gap: 10px; padding: 10px;
+    background: var(--navy); border: 1px solid #07518a; border-radius: 12px;
+  }
+  .file-icon {
+    display: grid; place-items: center; width: 38px; height: 38px; flex: 0 0 auto;
+    color: var(--cyan); border: 1px solid #0877b4; background: #003152; border-radius: 9px; font-size: 22px;
+  }
+  .file-main { min-width: 0; flex: 1; }
+  .filename { font-size: 11px; font-weight: 800; overflow-wrap: anywhere; }
+  .ready { color: var(--green); background: #00483c; border: 1px solid #007d67; border-radius: 99px; padding: 1px 5px; font-size: 8px; margin-left: 4px; }
+  .file-sub { color: var(--muted); font-size: 9px; margin-top: 3px; }
+  .reduction { border: 1px solid #08766f; color: var(--green); background: #062d36; border-radius: 10px; padding: 7px 8px; text-align: center; font-size: 9px; font-weight: 800; white-space: nowrap; }
+  .button-row { display: flex; gap: 7px; flex-wrap: wrap; margin-top: 9px; }
+  .btn {
+    display: inline-flex; justify-content: center; align-items: center; gap: 6px;
+    border: 1px solid #07518a; border-radius: 9px; padding: 10px 11px;
+    color: var(--white); background: #061a35; font-size: 10px; font-weight: 700;
+  }
+  .btn.primary { background: var(--cyan-blue); border-color: var(--cyan); box-shadow: 0 5px 12px rgba(0,174,245,.2); }
+  .details { border-top: 1px solid #06406c; padding-top: 9px; margin-top: 11px; }
+  .details h3 { margin: 0 0 7px; font-size: 11px; }
+  .detail-line { font-size: 9px; color: var(--muted); line-height: 1.7; overflow-wrap: anywhere; }
+  .detail-line b { color: var(--white); font-weight: 650; }
+  .upload-info { display: flex; align-items: center; gap: 12px; }
+  .upload-info img { width: 48px; height: 43px; object-fit: contain; background: white; border-radius: 8px; padding: 3px; }
+  .change { margin-left: auto; color: var(--muted); background: transparent; border: 0; cursor: pointer; font-size: 10px; }
+  .upload-preview { padding: 10px; }
+  .large-preview { height: 165px; display: grid; place-items: center; border: 1px solid #07518a; border-radius: 9px; background: #061a35; padding: 10px; }
+  .large-preview img { width: 80%; height: 100%; object-fit: contain; background: white; border-radius: 5px; }
+  .compress-btn { width: 100%; margin-top: 10px; min-height: 50px; background: var(--cyan-blue); color: white; border: 1px solid var(--cyan); border-radius: 10px; font-size: 15px; font-weight: 850; box-shadow: 0 8px 18px rgba(0,174,245,.25); }
+  .dropzone {
+    min-height: 310px; border: 1px dashed var(--cyan-blue); border-radius: 12px;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 18px; gap: 10px;
+  }
+  .cloud-icon { width: 72px; height: 68px; border: 1px solid #0079bb; border-radius: 14px; display: grid; place-items: center; background: #003052; color: var(--cyan); font-size: 36px; }
+  .drop-title { font-size: 14px; font-weight: 800; }
+  .drop-sub { font-size: 10px; color: var(--muted); }
+  .choose { padding: 10px 22px; background: var(--cyan); color: #001327; border: 0; border-radius: 10px; font-weight: 750; cursor: pointer; }
+  .annotation {
+    position: absolute; width: 68px; height: 68px; pointer-events: none;
+    filter: drop-shadow(0 4px 10px rgba(0,0,0,0.6));
+    z-index: 10;
+  }
+  .annotation svg { display: block; width: 100%; height: 100%; }
+  .annotation.a1 { left: 52%; top: 54%; transform: rotate(90deg); } /* Points down-left into Choose File */
+  .annotation.a2 { right: 14%; bottom: 21%; transform: rotate(90deg); } /* Points down-left into Compress to 10KB */
+  .annotation.a3 { left: 14%; bottom: 34%; transform: rotate(0deg); } /* Points down-right into Download File */
+  .edit-note { color: #7ea8d0; font-size: 12px; text-align: center; margin-top: 18px; }
+  .panel-inner {
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 540px;
+    padding: 10px;
+  }
+  .panel-inner img.added-img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 540px;
+    object-fit: contain;
+    border-radius: 12px;
+  }
+  input[type=file] { display: none; }
+
+  @media (max-width: 1100px) {
+    .page { padding: 18px 14px; }
+    .workflow { grid-template-columns: 1fr 35px 1fr 35px 1fr; gap: 6px; }
+    .step { gap: 8px; min-height: 50px; padding-left: 6px; }
+    .step-number { width: 55px; height: 55px; font-size: 28px; margin-left: 0; }
+    .step-icon { font-size: 23px; }
+    .flow-arrow { font-size: 36px; }
+    .panels { gap: 8px; }
+    .tool-panel { padding: 10px 7px; }
+    .panel-inner { padding: 8px 6px; }
+    .reduction { display: none; }
+    .large-preview { height: 125px; }
+    .dropzone { min-height: 250px; }
+  }
+  @media (max-width: 760px) {
+    .page { padding: 20px 12px; }
+    .workflow { grid-template-columns: 1fr; max-width: 380px; gap: 10px; margin: 22px auto; }
+    .step { min-height: 52px; font-size: 17px; justify-content: flex-start; padding-left: 28px; }
+    .step-number { width: 50px; height: 50px; font-size: 26px; }
+    .flow-arrow { transform: rotate(90deg); font-size: 35px; height: 25px; }
+    .panels { grid-template-columns: 1fr; gap: 18px; }
+    .tool-panel { padding: 14px; }
+    .panel-inner { padding: 12px; }
+    .panel-title { font-size: 22px; }
+    .panel-desc { font-size: 11px; min-height: auto; }
+    .checker { height: 145px; }
+    .large-preview { height: 220px; }
+    .dropzone { min-height: 290px; }
+    .annotation { display: none; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <span class="badge" contenteditable="true">Image Converter</span>
+    <h1 contenteditable="true">Convert WebP to <span class="accent">JPG</span></h1>
+    <p class="subtitle" contenteditable="true">Quickly convert modern WebP images to standard JPG photos for universal compatibility.</p>
+  </header>
+
+  <nav class="workflow" aria-label="Workflow steps">
+    <div class="step"><span class="step-number">1</span><span class="step-icon"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 18a4.5 4.5 0 0 1-.6-8.96A6 6 0 0 1 17.9 8.6 4.8 4.8 0 0 1 17.5 18"/><path d="M12 20v-8"/><path d="M8.8 14.8 12 11.6l3.2 3.2"/></svg></span><span contenteditable="true">Upload WebP</span></div>
+    <div class="flow-arrow">⟶</div>
+    <div class="step"><span class="step-number">2</span><span class="step-icon"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+  <polyline points="4 14 10 14 10 20"/>
+  <polyline points="20 10 14 10 14 4"/>
+  <line x1="14" y1="10" x2="21" y2="3"/>
+  <line x1="3" y1="21" x2="10" y2="14"/>
+</svg></span><span contenteditable="true">Convert to JPG</span></div>
+    <div class="flow-arrow">⟶</div>
+    <div class="step"><span class="step-number">3</span><span class="step-icon"><svg viewBox="0 0 24 24" width="30" height="30" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12"/><path d="M7.5 10.8 12 15.3l4.5-4.5"/><path d="M4 16v2.5A2.5 2.5 0 0 0 6.5 21h11a2.5 2.5 0 0 0 2.5-2.5V16"/></svg></span><span contenteditable="true">Download JPG</span></div>
+  </nav>
+
+  <main class="panels">
+    <!-- PANEL 1: UPLOAD / EMPTY STATE -->
+    <section class="tool-panel">
+      <div class="panel-inner" contenteditable="true">
+      </div>
+    </section>
+
+    <!-- PANEL 2: SETTINGS / PROCESS -->
+    <section class="tool-panel">
+      <div class="panel-inner" contenteditable="true">
+      </div>
+    </section>
+
+    <!-- PANEL 3: RESULT / DOWNLOAD -->
+    <section class="tool-panel">
+      <div class="panel-inner" contenteditable="true">
+      </div>
+    </section>
+  </main>
+
+  <input type="file" id="replace-image" accept="image/*">
+</div>
+<script>
+  // Simple convenience: selecting a new image replaces every sample image.
+  document.getElementById('replace-image').addEventListener('change', function (event) {
+    const file = event.target.files && event.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      document.querySelectorAll('.sample-img').forEach(img => img.src = e.target.result);
+    };
+    reader.readAsDataURL(file);
+  });
+
+  // Each of the 3 panels accepts any content: type text, paste, or drop images / text into it.
+  document.querySelectorAll('.panel-inner').forEach(function (panel) {
+    function addImage(file) {
+      const r = new FileReader();
+      r.onload = function (e) {
+        const img = document.createElement('img');
+        img.className = 'added-img'; img.src = e.target.result; img.alt = '';
+        panel.appendChild(img);
+      };
+      r.readAsDataURL(file);
+    }
+    panel.addEventListener('dragover', function (e) { e.preventDefault(); });
+    panel.addEventListener('drop', function (e) {
+      const files = e.dataTransfer && e.dataTransfer.files;
+      if (files && files.length) {
+        e.preventDefault();
+        Array.from(files).forEach(function (f) { if (f.type.startsWith('image/')) addImage(f); });
+      }
+    });
+    panel.addEventListener('paste', function (e) {
+      const items = (e.clipboardData && e.clipboardData.items) || [];
+      for (const it of items) {
+        if (it.type.startsWith('image/')) { e.preventDefault(); addImage(it.getAsFile()); }
+      }
+    });
+  });
+</script>
+</body>
+</html>
