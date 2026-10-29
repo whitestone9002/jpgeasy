@@ -14,7 +14,7 @@ import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 interface ConverterToolProps {
   sourceFormat?: 'jpg' | 'png' | 'webp' | 'jfif' | 'avif' | 'svg' | 'tiff' | 'heic' | 'any';
-  targetFormat?: 'jpeg' | 'png' | 'webp';
+  targetFormat?: 'jpeg' | 'png' | 'webp' | 'gif';
   fixedTarget?: boolean;
 }
 
@@ -25,7 +25,7 @@ export default function ConverterTool({
 }: ConverterToolProps) {
   const { t } = useLanguage();
   const [files, setFiles] = useState<File[]>([]);
-  const [targetFormat, setTargetFormat] = useState<'jpeg' | 'png' | 'webp'>(initialTarget);
+  const [targetFormat, setTargetFormat] = useState<'jpeg' | 'png' | 'webp' | 'gif'>(initialTarget);
   const [quality, setQuality] = useState<number>(90);
   const { isProcessing, progress, startProgress, finishProgress, resetProgress } = useProgressAction();
   const [result, setResult] = useState<any | null>(null);
@@ -101,9 +101,14 @@ export default function ConverterTool({
   // High-performance client-side canvas conversion (instant, bypasses server size limits, preserves true image quality)
   const convertImageInBrowser = async (
     file: File,
-    format: 'jpeg' | 'png' | 'webp',
+    format: 'jpeg' | 'png' | 'webp' | 'gif',
     qualityVal: number
   ): Promise<any> => {
+    // Multi-frame animation encoding for GIF is delegated to high-speed Sharp server engine
+    if (format === 'gif') {
+      throw new Error('GIF conversion requires server animation engine');
+    }
+
     let source: ImageBitmap | HTMLImageElement;
     if (typeof createImageBitmap !== 'undefined') {
       try {

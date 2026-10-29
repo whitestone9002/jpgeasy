@@ -1481,7 +1481,48 @@ export const TOOLS: ToolMeta[] = [
         a: 'Yes, JPGEASY is 100% free with no file limits, watermarks, or sign-up requirements.'
       }
     ]
-  }
+  },
+  {
+    id: 'webp-to-gif',
+    name: 'WebP to GIF Converter',
+    shortName: 'WebP to GIF',
+    slug: 'webp-to-gif',
+    description: 'Convert WebP images and animated WebP files to universal GIF format online for free with full animation support.',
+    longDescription: 'Turn static and animated WebP files into universally compatible GIFs. Perfect for Discord, Slack, PowerPoint, forums, and social platforms that lack WebP animation support.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.webp,image/webp,image/*',
+    maxFiles: 10,
+    keywords: ['webp to gif', 'convert webp to gif', 'webp to gif converter', 'animated webp to gif', 'turn webp into gif', 'webp to gif animation free'],
+    features: [
+      'Converts both static and animated WebP files to GIF',
+      'Preserves animation frame timing and loop cycles',
+      'Universally compatible with Discord, Slack, and email clients',
+      '100% Free, browser-safe, and private with instant download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your WebP image or animation.' },
+      { step: '2', text: 'Click "Convert to GIF" to initiate high-speed animation encoding.' },
+      { step: '3', text: 'Preview your animated GIF in the player.' },
+      { step: '4', text: 'Click "Download GIF" to save your file.' }
+    ],
+    faqs: [
+      {
+        q: 'Does this converter preserve animations in WebP files?',
+        a: 'Yes! JPGEASY fully supports animated WebP files, preserving all frame timings, dimensions, and infinite loop cycles in the resulting GIF.'
+      },
+      {
+        q: 'Why should I convert WebP to GIF?',
+        a: 'While WebP produces smaller file sizes, many legacy chat applications, forum software, email clients, and presentation apps (like PowerPoint) do not support animated WebP. Converting to GIF ensures your animations play seamlessly everywhere.'
+      },
+      {
+        q: 'Is this WebP to GIF converter free?',
+        a: 'Yes, JPGEASY is completely free with no watermarks, registration, or hidden file limits.'
+      }
+    ]
+  },
 ];
 
 export const CATEGORIES = [

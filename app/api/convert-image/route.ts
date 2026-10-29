@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
         ? 'image/avif'
         : result.format === 'tiff'
         ? 'image/tiff'
+        : result.format === 'gif'
+        ? 'image/gif'
         : 'image/jpeg';
     const base64Data = `data:${mimeType};base64,${result.buffer.toString('base64')}`;
 

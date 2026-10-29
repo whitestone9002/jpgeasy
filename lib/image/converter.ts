@@ -3,7 +3,7 @@ import sharp from 'sharp';
 import heicConvert from 'heic-convert';
 
 export interface ConvertOptions {
-  targetFormat: 'jpeg' | 'png' | 'webp' | 'avif' | 'tiff';
+  targetFormat: 'jpeg' | 'png' | 'webp' | 'avif' | 'tiff' | 'gif';
   quality?: number;
 }
 
@@ -64,7 +64,10 @@ export async function convertImageFormat(
   const isSvg = workingBuffer.length > 20 &&
     (workingBuffer.subarray(0, 200).toString('utf8').includes('<svg') ||
      workingBuffer.subarray(0, 200).toString('utf8').includes('<?xml'));
-  const sharpOptions = isSvg ? { density: 300, failOnError: false } : { failOnError: false };
+  const isAnimatedTarget = options.targetFormat === 'gif';
+  const sharpOptions = isSvg
+    ? { density: 300, failOnError: false }
+    : { animated: isAnimatedTarget, failOnError: false };
 
   let pipeline = sharp(workingBuffer, sharpOptions).rotate();
   const quality = options.quality || 90;
@@ -81,6 +84,8 @@ export async function convertImageFormat(
     pipeline = pipeline.avif({ quality, effort: 4 });
   } else if (options.targetFormat === 'tiff') {
     pipeline = pipeline.tiff({ quality });
+  } else if (options.targetFormat === 'gif') {
+    pipeline = pipeline.gif();
   }
 
   const { data: resultBuffer, info } = await pipeline.toBuffer({ resolveWithObject: true });
@@ -90,7 +95,7 @@ export async function convertImageFormat(
     size: resultBuffer.length,
     originalSize,
     width: info.width || originalWidth,
-    height: info.height || originalHeight,
+    height: (info as any).pageHeight || info.height || originalHeight,
     format: options.targetFormat,
     reductionPercentage:
       originalSize > 0

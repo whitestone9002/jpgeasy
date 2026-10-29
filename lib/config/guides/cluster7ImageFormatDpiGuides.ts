@@ -4835,13 +4835,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-26",
     "updatedAt": "2026-10-29",
     "featured": false,
-    "primaryToolSlug": "webp-to-jpg",
-    "primaryToolName": "WebP Converter",
-    "primaryToolCtaText": "Convert WebP Online",
+    "primaryToolSlug": "webp-to-gif",
+    "primaryToolName": "WebP to GIF Converter",
+    "primaryToolCtaText": "Launch WebP to GIF Converter Online",
     "relatedToolSlugs": [
+      "webp-to-gif",
       "webp-to-jpg",
-      "webp-to-png",
-      "compress-image"
+      "webp-to-png"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-animated-gif-or-convert-to-lightweight-webp",
