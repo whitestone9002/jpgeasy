@@ -29,7 +29,7 @@ export default function Header() {
 
             {/* Desktop Navigation Links */}
             <nav className="hidden lg:flex items-center gap-0.5 xl:gap-1 shrink-0">
-              {/* Image Tools Dropdown */}
+              {/* Image Tools Mega Menu */}
               <div className="dropdown dropdown-hover dropdown-bottom">
                 <div
                   role="button"
@@ -40,20 +40,69 @@ export default function Header() {
                   <span className="whitespace-nowrap">{t('imageTools', 'Image Tools')}</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
                 </div>
-                <ul
+                <div
                   tabIndex={0}
-                  className="dropdown-content z-50 menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                  className="dropdown-content z-50 p-4 shadow-2xl bg-base-100 rounded-2xl w-[680px] xl:w-[720px] border border-base-300 grid grid-cols-3 gap-3.5 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
-                  <li><Link href="/compress-jpg" className="text-xs font-medium py-1.5">{t('compressJpg', 'Compress JPG / JPEG')}</Link></li>
-                  <li><Link href="/compress-jpg-to-10kb" className="text-xs font-medium py-1.5 text-primary font-semibold">{t('compressJpg10kb', 'Compress JPG to 10KB')}</Link></li>
-                  <li><Link href="/compress-image" className="text-xs font-medium py-1.5">{t('compressImage', 'General Image Compressor')}</Link></li>
-                  <li><Link href="/resize-image" className="text-xs font-medium py-1.5">{t('resizeImage', 'Resize Image')}</Link></li>
-                  <li><Link href="/crop-image" className="text-xs font-medium py-1.5">{t('cropImage', 'Crop Image')}</Link></li>
-                  <li><Link href="/jpg-to-png" className="text-xs font-medium py-1.5">{t('jpgToPng', 'JPG to PNG')}</Link></li>
-                  <li><Link href="/png-to-jpg" className="text-xs font-medium py-1.5">{t('pngToJpg', 'PNG to JPG')}</Link></li>
-                  <li><Link href="/jpg-to-webp" className="text-xs font-medium py-1.5">{t('jpgToWebp', 'JPG to WebP')}</Link></li>
-                  <li><Link href="/image-to-pdf" className="text-xs font-medium py-1.5 text-primary font-semibold">{t('imageToPdf', 'Image to PDF')}</Link></li>
-                </ul>
+                  {/* Column 1: Compress & Target Size */}
+                  <div>
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
+                      {t('compressAndTarget', 'Compress & Target')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/compress-jpg" className="py-1.5 font-semibold text-primary">{t('compressJpg', 'Compress JPG / JPEG')}</Link></li>
+                      <li><Link href="/compress-jpg-to-10kb" className="py-1.5 text-primary font-semibold">{t('compressJpg10kb', 'Compress JPG to 10KB')}</Link></li>
+                      <li><Link href="/compress-jpg-to-20kb" className="py-1.5">{t('compressJpg20kb', 'Compress JPG to 20KB')}</Link></li>
+                      <li><Link href="/compress-jpg-to-50kb" className="py-1.5">{t('compressJpg50kb', 'Compress JPG to 50KB')}</Link></li>
+                      <li><Link href="/compress-jpg-to-100kb" className="py-1.5">{t('compressJpg100kb', 'Compress JPG to 100KB')}</Link></li>
+                      <li><Link href="/compress-jpg-to-200kb" className="py-1.5">{t('compressJpg200kb', 'Compress JPG to 200KB')}</Link></li>
+                      <li><Link href="/compress-jpg-to-500kb" className="py-1.5">{t('compressJpg500kb', 'Compress JPG to 500KB')}</Link></li>
+                      <li><Link href="/compress-image" className="py-1.5 text-emerald-600 font-medium">{t('compressImage', 'General Compressor')}</Link></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 2: Resize, Edit & Popular Converters */}
+                  <div className="border-l border-base-200 pl-3">
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
+                      {t('resizeAndEdit', 'Resize & Edit')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/resize-image" className="py-1.5 font-medium">{t('resizeImage', 'Resize Image')}</Link></li>
+                      <li><Link href="/crop-image" className="py-1.5">{t('cropImage', 'Crop Image')}</Link></li>
+                      <li><Link href="/rotate-image" className="py-1.5">{t('rotateImage', 'Rotate Image')}</Link></li>
+                      <li><Link href="/flip-image" className="py-1.5">{t('flipImage', 'Flip Image')}</Link></li>
+                    </ul>
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mt-2.5 mb-1.5 whitespace-nowrap">
+                      {t('convertPopular', 'Popular Convert')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/jpg-to-png" className="py-1.5 font-medium text-primary">{t('jpgToPng', 'JPG to PNG')}</Link></li>
+                      <li><Link href="/png-to-jpg" className="py-1.5 font-medium">{t('pngToJpg', 'PNG to JPG')}</Link></li>
+                      <li><Link href="/jpg-to-webp" className="py-1.5">{t('jpgToWebp', 'JPG to WebP')}</Link></li>
+                      <li><Link href="/png-to-webp" className="py-1.5">{t('pngToWebp', 'PNG to WebP')}</Link></li>
+                      <li><Link href="/webp-to-jpg" className="py-1.5">{t('webpToJpg', 'WebP to JPG')}</Link></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 3: Format Converters */}
+                  <div className="border-l border-base-200 pl-3">
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
+                      {t('formatConverters', 'Format Converters')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/heic-to-jpg" className="py-1.5 font-semibold text-primary">{t('heicToJpg', 'HEIC to JPG')}</Link></li>
+                      <li><Link href="/webp-to-gif" className="py-1.5 font-medium text-teal-600">{t('webpToGif', 'WebP to GIF')}</Link></li>
+                      <li><Link href="/webp-to-png" className="py-1.5">{t('webpToPng', 'WebP to PNG')}</Link></li>
+                      <li><Link href="/avif-to-jpg" className="py-1.5">{t('avifToJpg', 'AVIF to JPG')}</Link></li>
+                      <li><Link href="/avif-to-png" className="py-1.5">{t('avifToPng', 'AVIF to PNG')}</Link></li>
+                      <li><Link href="/jfif-to-jpg" className="py-1.5">{t('jfifToJpg', 'JFIF to JPG')}</Link></li>
+                      <li><Link href="/jfif-to-png" className="py-1.5">{t('jfifToPng', 'JFIF to PNG')}</Link></li>
+                      <li><Link href="/svg-to-jpg" className="py-1.5">{t('svgToJpg', 'SVG to JPG')}</Link></li>
+                      <li><Link href="/svg-to-png" className="py-1.5">{t('svgToPng', 'SVG to PNG')}</Link></li>
+                      <li><Link href="/tiff-to-jpg" className="py-1.5">{t('tiffToJpg', 'TIFF to JPG')}</Link></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               {/* Merged PDF Tools Dropdown (Organize + Convert) */}
@@ -90,18 +139,19 @@ export default function Header() {
                   {/* Column 2: Convert */}
                   <div className="border-l border-base-200 pl-4">
                     <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
-                      {t('convertPdf', 'Convert PDF')}
+                      {t('convertPdf', 'Convert PDF & OCR')}
                     </span>
                     <ul className="menu menu-compact p-0 text-xs space-y-0.5">
                       <li><Link href="/pdf-to-png" className="py-1.5 font-medium text-primary">{t('pdfToPng', 'PDF to PNG')}</Link></li>
                       <li><Link href="/pdf-to-jpg" className="py-1.5">{t('pdfToJpg', 'PDF to JPG')}</Link></li>
-                      <li><Link href="/pdf-ocr" className="py-1.5">{t('pdfOcr', 'OCR Text Extractor')}</Link></li>
+                      <li><Link href="/pdf-ocr" className="py-1.5 font-medium text-teal-600">{t('pdfOcr', 'OCR Text Extractor')}</Link></li>
+                      <li><Link href="/flatten-pdf" className="py-1.5">{t('flattenPdf', 'Flatten PDF')}</Link></li>
                     </ul>
                   </div>
                 </div>
               </div>
 
-              {/* Edit PDF Dropdown */}
+              {/* Edit PDF & Convert to PDF Dropdown */}
               <div className="dropdown dropdown-hover dropdown-bottom">
                 <div
                   role="button"
@@ -112,16 +162,41 @@ export default function Header() {
                   <span className="whitespace-nowrap">{t('editPdf', 'Edit PDF')}</span>
                   <ChevronDown className="w-3.5 h-3.5 opacity-60 shrink-0" />
                 </div>
-                <ul
+                <div
                   tabIndex={0}
-                  className="dropdown-content z-50 menu p-3 shadow-xl bg-base-100 rounded-2xl w-60 border border-base-300 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
+                  className="dropdown-content z-50 p-4 shadow-2xl bg-base-100 rounded-2xl w-[480px] border border-base-300 grid grid-cols-2 gap-4 mt-1 before:absolute before:-top-3 before:left-0 before:right-0 before:h-3"
                 >
-                  <li><Link href="/sign-pdf" className="text-xs font-semibold py-1.5 text-primary">{t('signPdf', 'Sign PDF (eSign)')}</Link></li>
-                  <li><Link href="/add-page-numbers-to-pdf" className="text-xs font-medium py-1.5">{t('pageNumbers', 'Page Numbers')}</Link></li>
-                  <li><Link href="/watermark-pdf" className="text-xs font-medium py-1.5">{t('watermarkPdf', 'Watermark PDF')}</Link></li>
-                  <li><Link href="/crop-pdf" className="text-xs font-medium py-1.5">{t('cropPdf', 'Crop PDF')}</Link></li>
-                  <li><Link href="/pdf-scanner" className="text-xs font-medium py-1.5 text-teal-600">{t('scanner', 'Camera Scanner')}</Link></li>
-                </ul>
+                  {/* Column 1: Edit & Security */}
+                  <div>
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
+                      {t('editAndSecurity', 'Edit & Security')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/sign-pdf" className="text-xs font-semibold py-1.5 text-primary">{t('signPdf', 'Sign PDF (eSign)')}</Link></li>
+                      <li><Link href="/add-page-numbers-to-pdf" className="text-xs font-medium py-1.5">{t('pageNumbers', 'Page Numbers')}</Link></li>
+                      <li><Link href="/watermark-pdf" className="text-xs font-medium py-1.5">{t('watermarkPdf', 'Watermark PDF')}</Link></li>
+                      <li><Link href="/crop-pdf" className="text-xs font-medium py-1.5">{t('cropPdf', 'Crop PDF')}</Link></li>
+                      <li><Link href="/pdf-scanner" className="text-xs font-medium py-1.5 text-teal-600">{t('scanner', 'Camera Scanner')}</Link></li>
+                    </ul>
+                  </div>
+
+                  {/* Column 2: Convert to PDF */}
+                  <div className="border-l border-base-200 pl-4">
+                    <span className="text-[11px] font-bold text-base-content/50 uppercase tracking-wider px-2 block mb-1.5 whitespace-nowrap">
+                      {t('convertToPdf', 'Convert to PDF')}
+                    </span>
+                    <ul className="menu menu-compact p-0 text-xs space-y-0.5">
+                      <li><Link href="/image-to-pdf" className="py-1.5 font-semibold text-primary">{t('imageToPdf', 'Image to PDF')}</Link></li>
+                      <li><Link href="/jpg-to-pdf" className="py-1.5">{t('jpgToPdf', 'JPG to PDF')}</Link></li>
+                      <li><Link href="/webp-to-pdf" className="py-1.5">{t('webpToPdf', 'WebP to PDF')}</Link></li>
+                      <li><Link href="/jfif-to-pdf" className="py-1.5">{t('jfifToPdf', 'JFIF to PDF')}</Link></li>
+                      <li><Link href="/svg-to-pdf" className="py-1.5">{t('svgToPdf', 'SVG to PDF')}</Link></li>
+                      <li><Link href="/tiff-to-pdf" className="py-1.5">{t('tiffToPdf', 'TIFF to PDF')}</Link></li>
+                      <li><Link href="/html-to-pdf" className="py-1.5">{t('htmlToPdf', 'HTML to PDF')}</Link></li>
+                      <li><Link href="/txt-to-pdf" className="py-1.5">{t('txtToPdf', 'TXT to PDF')}</Link></li>
+                    </ul>
+                  </div>
+                </div>
               </div>
 
               <Link
