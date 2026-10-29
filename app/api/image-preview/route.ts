@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server';
 import sharp from 'sharp';
 // @ts-ignore
+import heicDecode from 'heic-decode';
+// @ts-ignore
 import heicConvert from 'heic-convert';
 
 export const dynamic = 'force-dynamic';
@@ -34,14 +36,85 @@ export async function POST(req: NextRequest) {
 
     if (isHeic) {
       try {
-        const jpegConverted = await heicConvert({
-          buffer,
-          format: 'JPEG',
-          quality: 0.9,
-        });
-        buffer = Buffer.from(jpegConverted);
-      } catch (heicErr) {
-        console.warn('heic-convert preview fallback to sharp:', heicErr);
+        const decodeFn = (heicDecode as any)?.default || heicDecode;
+        if (typeof decodeFn === 'function') {
+          // If multi-image / embedded thumbnail is available, use decode.all to get the fastest thumbnail
+          const allFn = decodeFn.all || (heicDecode as any).all;
+          if (typeof allFn === 'function') {
+            try {
+              const images = await allFn({ buffer });
+              if (images && images.length > 0) {
+                // Find best preview image: prefer embedded thumbnail if available, otherwise primary
+                const previewImg = images.find((img: any) => img.width >= 320 && img.width <= 1600) || images[0];
+                const naturalW = images[0].width || 800;
+                const naturalH = images[0].height || 600;
+                const decoded = await previewImg.decode();
+                if (typeof images.dispose === 'function') {
+                  try { images.dispose(); } catch {}
+                }
+
+                const previewBuffer = await sharp(Buffer.from(decoded.data.buffer), {
+                  raw: {
+                    width: decoded.width,
+                    height: decoded.height,
+                    channels: 4,
+                  },
+                })
+                  .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
+                  .jpeg({ quality: 85 })
+                  .toBuffer();
+
+                const dataUrl = `data:image/jpeg;base64,${previewBuffer.toString('base64')}`;
+                return NextResponse.json({
+                  success: true,
+                  previewUrl: dataUrl,
+                  width: naturalW,
+                  height: naturalH,
+                  format: 'jpeg',
+                });
+              }
+            } catch (allErr) {
+              console.warn('decode.all failed, falling back to single decode:', allErr);
+            }
+          }
+
+          // Single decode fallback
+          const decoded = await decodeFn({ buffer });
+          const previewBuffer = await sharp(Buffer.from(decoded.data.buffer), {
+            raw: {
+              width: decoded.width,
+              height: decoded.height,
+              channels: 4,
+            },
+          })
+            .resize(1200, 1200, { fit: 'inside', withoutEnlargement: true })
+            .jpeg({ quality: 85 })
+            .toBuffer();
+
+          const dataUrl = `data:image/jpeg;base64,${previewBuffer.toString('base64')}`;
+          return NextResponse.json({
+            success: true,
+            previewUrl: dataUrl,
+            width: decoded.width,
+            height: decoded.height,
+            format: 'jpeg',
+          });
+        }
+      } catch (decodeErr) {
+        console.warn('heic-decode failed, trying heic-convert:', decodeErr);
+        try {
+          const convertFn = (heicConvert as any)?.default || heicConvert;
+          if (typeof convertFn === 'function') {
+            const jpegConverted = await convertFn({
+              buffer,
+              format: 'JPEG',
+              quality: 0.8,
+            });
+            buffer = Buffer.from(jpegConverted);
+          }
+        } catch (heicErr) {
+          console.warn('heic-convert preview fallback failed:', heicErr);
+        }
       }
     }
 

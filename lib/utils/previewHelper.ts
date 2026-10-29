@@ -34,12 +34,12 @@ export async function getSafeImagePreview(
     fileType.includes('heif') ||
     fileType.includes('tiff');
 
-  // If format is HEIC or TIFF, try server pipeline first with a 6s timeout
+  // If format is HEIC or TIFF, try server pipeline first with a 15s timeout
   if (isHeicOrTiff) {
     try {
       const serverResult = await Promise.race([
         fetchServerPreview(file),
-        new Promise<null>((resolve) => setTimeout(() => resolve(null), 6000)),
+        new Promise<null>((resolve) => setTimeout(() => resolve(null), 15000)),
       ]);
       if (serverResult && serverResult.previewUrl) return serverResult;
     } catch (err) {
@@ -176,7 +176,7 @@ async function fetchServerPreview(
   file: File
 ): Promise<{ previewUrl: string; width: number; height: number } | null> {
   const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), 6000);
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
 
   try {
     const formData = new FormData();
