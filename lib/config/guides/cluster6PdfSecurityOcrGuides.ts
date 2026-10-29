@@ -953,13 +953,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "split-pdf",
-    "primaryToolName": "Split PDF Pages",
-    "primaryToolCtaText": "Split PDF Online Free",
+    "primaryToolSlug": "pdf-ocr",
+    "primaryToolName": "PDF OCR Tool",
+    "primaryToolCtaText": "Extract Text from Scanned PDF Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "pdf-ocr",
+      "pdf-to-jpg",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -1221,13 +1221,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "image-to-pdf",
+    "primaryToolName": "Image to PDF Converter",
+    "primaryToolCtaText": "Convert Picture to PDF Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "image-to-pdf",
+      "pdf-ocr",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -1489,13 +1489,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "flatten-pdf",
+    "primaryToolName": "Flatten PDF Tool",
+    "primaryToolCtaText": "Flatten & Lock PDF Form Fields Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "flatten-pdf",
+      "compress-pdf",
+      "sign-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -1757,13 +1757,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "watermark-pdf",
+    "primaryToolName": "Watermark & Stamp PDF Tool",
+    "primaryToolCtaText": "Add Date & Stamp to PDF Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "watermark-pdf",
+      "sign-pdf",
+      "flatten-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -2025,13 +2025,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "watermark-pdf",
-    "primaryToolName": "Watermark PDF",
-    "primaryToolCtaText": "Watermark PDF Online Free",
+    "primaryToolSlug": "sign-pdf",
+    "primaryToolName": "Sign PDF Tool",
+    "primaryToolCtaText": "Sign PDF Free Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "sign-pdf",
+      "watermark-pdf",
+      "flatten-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -2159,13 +2159,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "add-page-numbers-to-pdf",
+    "primaryToolName": "Add Page Numbers to PDF Tool",
+    "primaryToolCtaText": "Add Page Numbers to PDF Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "add-page-numbers-to-pdf",
+      "organize-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3231,13 +3231,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "pdf-ocr",
+    "primaryToolName": "PDF OCR Tool",
+    "primaryToolCtaText": "Make Scanned PDF Searchable with OCR",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "pdf-ocr",
+      "flatten-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3767,13 +3767,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "sign-pdf",
-    "primaryToolName": "Sign PDF Online",
-    "primaryToolCtaText": "Sign PDF Online Free",
+    "primaryToolSlug": "flatten-pdf",
+    "primaryToolName": "Flatten PDF Tool",
+    "primaryToolCtaText": "Flatten PDF for DocuSign Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "flatten-pdf",
+      "sign-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3901,13 +3901,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "flatten-pdf",
+    "primaryToolName": "Flatten PDF Tool",
+    "primaryToolCtaText": "Flatten XFA Form to PDF Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "flatten-pdf",
+      "compress-pdf",
+      "sign-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -4035,13 +4035,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "watermark-pdf",
+    "primaryToolName": "Watermark & Stamp PDF Tool",
+    "primaryToolCtaText": "Stamp PAID on Invoice PDF Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "watermark-pdf",
+      "flatten-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -4169,13 +4169,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "watermark-pdf",
+    "primaryToolName": "Watermark & Stamp PDF Tool",
+    "primaryToolCtaText": "Stamp Certified True Copy Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "watermark-pdf",
+      "sign-pdf",
+      "flatten-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -4437,13 +4437,13 @@ export const CLUSTER6_PDF_SECURITY_OCR_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "flatten-pdf",
+    "primaryToolName": "Flatten PDF Tool",
+    "primaryToolCtaText": "Make PDF Form Read-Only Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "flatten-pdf",
+      "compress-pdf",
+      "sign-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",

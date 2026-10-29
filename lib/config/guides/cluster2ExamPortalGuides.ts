@@ -5375,13 +5375,13 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-15",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "crop-image",
-    "primaryToolName": "Image Cropper",
-    "primaryToolCtaText": "Launch Image Cropper Online",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Photo for AIIMS Online Free",
     "relatedToolSlugs": [
-      "compress-jpg-to-50kb",
       "resize-image",
-      "compress-jpg-to-20kb"
+      "crop-image",
+      "compress-jpg-to-50kb"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-jpg-to-50kb",
@@ -5643,13 +5643,13 @@ export const CLUSTER2_EXAM_PORTAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-15",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "crop-image",
-    "primaryToolName": "Image Cropper",
-    "primaryToolCtaText": "Launch Image Cropper Online",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Photo for DSSSB Online Free",
     "relatedToolSlugs": [
-      "compress-jpg-to-50kb",
       "resize-image",
-      "compress-jpg-to-20kb"
+      "crop-image",
+      "compress-jpg-to-50kb"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-jpg-to-50kb",

@@ -283,13 +283,13 @@ export const CLUSTER8_ECOMMERCE_SOCIAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "crop-image",
-    "primaryToolName": "Image Cropper",
-    "primaryToolCtaText": "Crop Your Image Online",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Image for Instagram Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "resize-image",
+      "crop-image",
+      "compress-image"
     ],
     "relatedGuideSlugs": [
       "how-to-resize-an-image-without-losing-quality",
@@ -685,13 +685,13 @@ export const CLUSTER8_ECOMMERCE_SOCIAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "compress-image",
+    "primaryToolName": "Image Compressor",
+    "primaryToolCtaText": "Compress Discord Avatar Under 8MB",
     "relatedToolSlugs": [
-      "compress-pdf",
+      "compress-image",
       "resize-image",
-      "crop-image"
+      "compress-jpg"
     ],
     "relatedGuideSlugs": [
       "how-to-resize-an-image-without-losing-quality",
@@ -1355,13 +1355,13 @@ export const CLUSTER8_ECOMMERCE_SOCIAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "crop-image",
-    "primaryToolName": "Image Cropper",
-    "primaryToolCtaText": "Crop Your Image Online",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Event Banner to 1920x1005 Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "resize-image",
+      "crop-image",
+      "compress-image"
     ],
     "relatedGuideSlugs": [
       "how-to-resize-an-image-without-losing-quality",
@@ -2427,13 +2427,13 @@ export const CLUSTER8_ECOMMERCE_SOCIAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "sign-pdf",
-    "primaryToolName": "Sign PDF Online",
-    "primaryToolCtaText": "Sign PDF Online Free",
+    "primaryToolSlug": "compress-jpg-to-20kb",
+    "primaryToolName": "Compress JPG to 20KB",
+    "primaryToolCtaText": "Compress Signature Logo Under 20KB Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "compress-jpg-to-20kb",
+      "resize-image",
+      "crop-image"
     ],
     "relatedGuideSlugs": [
       "how-to-resize-an-image-without-losing-quality",
@@ -2829,13 +2829,13 @@ export const CLUSTER8_ECOMMERCE_SOCIAL_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "webp-to-gif",
+    "primaryToolName": "WebP & GIF Tools",
+    "primaryToolCtaText": "Convert WebP to GIF Online Free",
     "relatedToolSlugs": [
-      "compress-pdf",
-      "resize-image",
-      "crop-image"
+      "webp-to-gif",
+      "compress-image",
+      "jpg-to-webp"
     ],
     "relatedGuideSlugs": [
       "how-to-resize-an-image-without-losing-quality",

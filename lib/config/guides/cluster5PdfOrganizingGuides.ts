@@ -417,13 +417,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "delete-pdf-pages",
+    "primaryToolName": "Delete PDF Pages Tool",
+    "primaryToolCtaText": "Remove Blank Pages Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "delete-pdf-pages",
+      "split-pdf",
+      "organize-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -953,13 +953,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "rotate-pdf",
+    "primaryToolName": "Rotate PDF Pages Tool",
+    "primaryToolCtaText": "Rotate Upside-Down Page Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "rotate-pdf",
+      "organize-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -1623,13 +1623,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "organize-pdf",
+    "primaryToolName": "Organize PDF Pages Tool",
+    "primaryToolCtaText": "Rearrange PDF Page Order Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "organize-pdf",
+      "merge-pdf",
+      "split-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -1757,13 +1757,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "delete-pdf-pages",
+    "primaryToolName": "Delete PDF Pages Tool",
+    "primaryToolCtaText": "Remove Sensitive Pages Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "delete-pdf-pages",
+      "split-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -2025,13 +2025,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "rotate-pdf",
+    "primaryToolName": "Rotate PDF Pages Tool",
+    "primaryToolCtaText": "Rotate Landscape Pages to Portrait",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "rotate-pdf",
+      "organize-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -2561,13 +2561,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "delete-pdf-pages",
+    "primaryToolName": "Delete PDF Pages Tool",
+    "primaryToolCtaText": "Delete Duplicate Pages Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "delete-pdf-pages",
+      "organize-pdf",
+      "split-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3097,13 +3097,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "merge-pdf",
+    "primaryToolName": "Merge PDF Tool",
+    "primaryToolCtaText": "Insert Page into PDF Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "merge-pdf",
+      "organize-pdf",
+      "split-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3231,13 +3231,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "organize-pdf",
+    "primaryToolName": "Organize PDF Pages Tool",
+    "primaryToolCtaText": "Interleave PDF Pages Online Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "organize-pdf",
+      "merge-pdf",
+      "split-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -3767,13 +3767,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "organize-pdf",
+    "primaryToolName": "Organize PDF Pages Tool",
+    "primaryToolCtaText": "Reverse PDF Page Order Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "organize-pdf",
+      "rotate-pdf",
+      "split-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -4303,13 +4303,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "delete-pdf-pages",
+    "primaryToolName": "Delete PDF Pages Tool",
+    "primaryToolCtaText": "Remove Table of Contents Pages Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "delete-pdf-pages",
+      "split-pdf",
+      "organize-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",
@@ -4839,13 +4839,13 @@ export const CLUSTER5_PDF_ORGANIZING_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "rotate-pdf",
+    "primaryToolName": "Rotate PDF Pages Tool",
+    "primaryToolCtaText": "Rotate PDF Pages 180 Degrees Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "rotate-pdf",
+      "organize-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",

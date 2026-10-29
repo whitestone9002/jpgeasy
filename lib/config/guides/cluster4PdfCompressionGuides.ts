@@ -4437,13 +4437,13 @@ export const CLUSTER4_PDF_COMPRESSION_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "sign-pdf",
-    "primaryToolName": "Sign PDF Online",
-    "primaryToolCtaText": "Sign PDF Online Free",
+    "primaryToolSlug": "compress-pdf",
+    "primaryToolName": "Compress PDF Tool",
+    "primaryToolCtaText": "Compress Court Exhibit PDF Free",
     "relatedToolSlugs": [
-      "compress-jpg",
       "compress-pdf",
-      "resize-image"
+      "sign-pdf",
+      "flatten-pdf"
     ],
     "relatedGuideSlugs": [
       "how-to-compress-a-pdf",

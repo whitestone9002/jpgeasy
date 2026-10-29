@@ -271,7 +271,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-convert-webp-to-jpg-on-windows-11",
-    "coverImage": "/guides/how-to-reduce-jpg-file-size.webp",
+    "coverImage": "/guides/how-to-convert-webp-to-jpg.webp",
     "imageAlt": "How to Convert Annoying WEBP Files to JPG on Windows 11 / 10 Free - Step-by-step visual workflow and specifications guide",
     "title": "How to Convert Annoying WEBP Files to JPG on Windows 11 / 10 Free",
     "metaTitle": "How to Convert Annoying WEBP Files to JPG on | JPGEASY",
@@ -287,9 +287,9 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "primaryToolName": "WebP to JPG Converter",
     "primaryToolCtaText": "Convert WebP to JPG Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "webp-to-jpg",
+      "jpg-to-webp",
+      "compress-image"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -2415,7 +2415,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-convert-heic-to-png-transparent-on-windows",
-    "coverImage": "/guides/how-to-compress-jpg-without-losing-quality.webp",
+    "coverImage": "/guides/how-to-convert-heic-to-jpg.webp",
     "imageAlt": "How to Convert iPhone HEIC Cutouts to Transparent PNG on Windows - Step-by-step visual workflow and specifications guide",
     "title": "How to Convert iPhone HEIC Cutouts to Transparent PNG on Windows",
     "metaTitle": "How to Convert iPhone HEIC Cutouts to | JPGEASY",
@@ -2427,13 +2427,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "heic-to-jpg",
+    "primaryToolName": "HEIC Converter",
+    "primaryToolCtaText": "Convert HEIC Image Online Free",
     "relatedToolSlugs": [
-      "compress-pdf",
-      "resize-image",
-      "crop-image"
+      "heic-to-jpg",
+      "png-to-jpg",
+      "jpg-to-png"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -2695,13 +2695,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "crop-image",
-    "primaryToolName": "Image Cropper",
-    "primaryToolCtaText": "Crop Your Image Online",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Image to 4:3 Ratio Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "resize-image",
+      "crop-image",
+      "compress-image"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -3231,13 +3231,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "jpg-to-png",
+    "primaryToolName": "JPG to PNG Converter",
+    "primaryToolCtaText": "Convert Scanned Receipt to PNG Free",
     "relatedToolSlugs": [
-      "compress-pdf",
-      "resize-image",
-      "crop-image"
+      "jpg-to-png",
+      "png-to-jpg",
+      "pdf-scanner"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -3353,7 +3353,7 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
   },
   {
     "slug": "how-to-batch-convert-webp-images-to-jpg-in-bulk",
-    "coverImage": "/guides/how-to-compress-jpg-without-losing-quality.webp",
+    "coverImage": "/guides/how-to-convert-webp-to-jpg.webp",
     "imageAlt": "How to Batch Convert Multiple WebP Files to JPG in 1 Click Free - Step-by-step visual workflow and specifications guide",
     "title": "How to Batch Convert Multiple WebP Files to JPG in 1 Click Free",
     "metaTitle": "How to Batch Convert Multiple WebP Files to JPG | JPGEASY",
@@ -3365,13 +3365,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "webp-to-jpg",
+    "primaryToolName": "WebP to JPG Converter",
+    "primaryToolCtaText": "Batch Convert WebP to JPG Free",
     "relatedToolSlugs": [
-      "compress-pdf",
-      "resize-image",
-      "crop-image"
+      "webp-to-jpg",
+      "webp-to-png",
+      "jpg-to-webp"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -3499,13 +3499,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "jpg-to-pdf",
+    "primaryToolName": "JPG to PDF Converter",
+    "primaryToolCtaText": "Convert JPGs to Single PDF Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "jpg-to-pdf",
+      "image-to-pdf",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -3633,13 +3633,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "pdf-to-png",
+    "primaryToolName": "PDF to PNG Converter",
+    "primaryToolCtaText": "Convert PDF Page to 300 DPI PNG",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "pdf-to-png",
+      "pdf-to-jpg",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -3767,13 +3767,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-pdf",
-    "primaryToolName": "Compress PDF File",
-    "primaryToolCtaText": "Compress PDF Online Free",
+    "primaryToolSlug": "pdf-to-jpg",
+    "primaryToolName": "PDF to JPG Converter",
+    "primaryToolCtaText": "Convert PDF to Sharp JPG Online",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "resize-image",
-      "crop-image"
+      "pdf-to-jpg",
+      "pdf-to-png",
+      "compress-pdf"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",
@@ -4169,13 +4169,13 @@ export const CLUSTER7_IMAGE_FORMAT_DPI_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "sign-pdf",
-    "primaryToolName": "Sign PDF Online",
-    "primaryToolCtaText": "Sign PDF Online Free",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Signature to 140x60 Pixels Free",
     "relatedToolSlugs": [
-      "compress-jpg",
-      "compress-pdf",
-      "resize-image"
+      "resize-image",
+      "crop-image",
+      "compress-jpg-to-20kb"
     ],
     "relatedGuideSlugs": [
       "jpg-vs-png",

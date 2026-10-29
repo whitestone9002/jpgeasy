@@ -3767,13 +3767,13 @@ export const CLUSTER3_PASSPORT_VISA_GUIDES: GuideArticle[] = [
     "publishedAt": "2026-02-20",
     "updatedAt": "2026-10-24",
     "featured": false,
-    "primaryToolSlug": "compress-jpg",
-    "primaryToolName": "Compress JPG / JPEG",
-    "primaryToolCtaText": "Compress JPG Online Now",
+    "primaryToolSlug": "resize-image",
+    "primaryToolName": "Resize Image Tool",
+    "primaryToolCtaText": "Resize Photo to 35x45mm Online Free",
     "relatedToolSlugs": [
-      "compress-pdf",
       "resize-image",
-      "crop-image"
+      "crop-image",
+      "compress-jpg-to-50kb"
     ],
     "relatedGuideSlugs": [
       "how-to-crop-image",
