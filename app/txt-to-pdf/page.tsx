@@ -4,7 +4,7 @@ import DocToPdfTool from '@/components/tools/DocToPdfTool';
 import ToolLayout from '@/components/ui/ToolLayout';
 
 export const metadata: Metadata = {
-  title: 'TXT & Text to PDF Converter - Free Online PDF Generator',
+  title: 'TXT to PDF Converter Online Free - Convert Text to PDF',
   description: 'Convert plain text files or pasted text into styled, formatted PDF documents.',
   alternates: {
     canonical: 'https://jpgeasy.com/txt-to-pdf',

@@ -224,7 +224,7 @@ export const TOOLS: ToolMeta[] = [
     popular: true,
     acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
     maxFiles: 10,
-    keywords: ['compress image', 'png compressor', 'webp compressor', 'image optimizer', 'shrink photo'],
+    keywords: ['compress image size', 'compress image', 'png compressor', 'webp compressor', 'image optimizer', 'shrink photo', 'reduce image size'],
     features: [
       'Supports JPG, PNG, and WebP formats',
       'Live quality slider from 1% to 100%',
@@ -385,7 +385,7 @@ export const TOOLS: ToolMeta[] = [
     popular: true,
     acceptedTypes: 'image/png',
     maxFiles: 10,
-    keywords: ['png to jpg', 'convert png to jpg', 'png to jpeg', 'change png to jpg with white background'],
+    keywords: ['png to jpg converter', 'png to jpg', 'convert png to jpg', 'png to jpeg', 'jpeg to png converter', 'change png to jpg with white background'],
     features: [
       'Smart transparency handling with background color selector',
       'Quality control slider',
@@ -456,7 +456,7 @@ export const TOOLS: ToolMeta[] = [
     icon: 'FileImage',
     acceptedTypes: 'image/webp',
     maxFiles: 10,
-    keywords: ['webp to jpg', 'convert webp to jpeg', 'open webp as jpg', 'webp converter to jpg'],
+    keywords: ['convert webp to jpg', 'webp to jpg converter', 'webp to jpg', 'convert webp to jpeg', 'open webp as jpg', 'webp converter to jpg'],
     features: ['Universal device compatibility', 'Quality preservation', 'Batch conversion'],
     howTo: [
       { step: '1', text: 'Upload your WebP file(s).' },
@@ -556,7 +556,7 @@ export const TOOLS: ToolMeta[] = [
     popular: true,
     acceptedTypes: 'application/pdf',
     maxFiles: 1,
-    keywords: ['pdf to jpg', 'convert pdf to image', 'extract pages from pdf to jpg', 'pdf to jpeg converter', 'pdf to photo'],
+    keywords: ['convert pdf to jpg', 'pdf to jpg converter', 'pdf to jpg', 'convert pdf to image', 'extract pages from pdf to jpg', 'pdf to jpeg converter', 'pdf to photo'],
     features: [
       'High DPI page rendering for crisp text and graphics',
       'Select all pages or specific page ranges (e.g. 1, 3-5)',
@@ -652,7 +652,7 @@ export const TOOLS: ToolMeta[] = [
     icon: 'Minimize2',
     acceptedTypes: 'application/pdf',
     maxFiles: 5,
-    keywords: ['compress pdf', 'reduce pdf size', 'shrink pdf', 'pdf optimizer', 'make pdf smaller'],
+    keywords: ['compress pdf', 'free compress pdf', 'how to compress pdf', 'compress pdf file size', 'reduce pdf size', 'shrink pdf', 'pdf optimizer', 'make pdf smaller'],
     features: [
       'PDF object and cross-reference stream compression',
       'Removes unreferenced redundant data',
@@ -896,7 +896,7 @@ export const TOOLS: ToolMeta[] = [
     category: 'convert',
     icon: 'Image',
     acceptedTypes: 'application/pdf',
-    keywords: ['pdf to png', 'convert pdf to png', 'extract png from pdf', 'pdf pages to images'],
+    keywords: ['pdf to png', 'convert pdf to png', 'pdf to png converter', 'extract png from pdf', 'pdf pages to images', 'pdf to png high resolution'],
     features: [
       'High-DPI 2.0x retina image rendering',
       'Preview every page thumbnail before downloading',
@@ -925,7 +925,7 @@ export const TOOLS: ToolMeta[] = [
     category: 'convert',
     icon: 'FileCode',
     acceptedTypes: '.txt,.text,.md,.log',
-    keywords: ['txt to pdf', 'text to pdf', 'convert text to pdf', 'notepad to pdf online'],
+    keywords: ['txt to pdf', 'convert txt to pdf', 'txt to pdf converter', 'text to pdf', 'convert text to pdf', 'notepad to pdf online'],
     features: [
       'Automatic word wrapping and page break pagination',
       'Supports file upload or direct text copy-paste',
@@ -1088,6 +1088,397 @@ export const TOOLS: ToolMeta[] = [
       {
         q: 'How does this OCR extractor work?',
         a: 'It scans the underlying character streams and fonts embedded in your PDF document to reconstruct the plain text.'
+      }
+    ]
+  }
+,
+  // --- New High-Demand Conversion Tools ---
+  {
+    id: 'jfif-to-jpg',
+    name: 'JFIF to JPG Converter',
+    shortName: 'JFIF to JPG',
+    slug: 'jfif-to-jpg',
+    description: 'Convert JFIF images to standard JPG format online for free. Fix Windows camera and browser download issues with zero quality loss.',
+    longDescription: 'Turn downloaded .jfif files into universally recognized .jpg photos instantly. 100% in-browser conversion ensures complete file privacy, rapid processing, and zero server upload delays.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.jfif,image/jpeg,image/*',
+    maxFiles: 10,
+    keywords: ['jfif to jpg', 'convert jfif to jpg', 'jfif to jpeg', 'change jfif to jpg', 'jfif converter', 'convert jfif to jpg online free'],
+    features: [
+      'Instant client-side canvas conversion',
+      'Retains original photo dimensions and DPI',
+      'No server uploads – 100% private in-browser',
+      'Compatible with Windows, Mac, iOS, and Android'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag and drop your .jfif file into the upload area.' },
+      { step: '2', text: 'Adjust the quality percentage if needed (default is 90% for high fidelity).' },
+      { step: '3', text: 'Click "Convert to JPG" to process the image in your browser.' },
+      { step: '4', text: 'Click "Download JPG" to save your standard compatible photo.' }
+    ],
+    faqs: [
+      {
+        q: 'What is a JFIF file and why convert it to JPG?',
+        a: 'JFIF (JPEG File Interchange Format) is a variation of the standard JPEG format often saved by Windows 10/11 or modern web browsers. Many websites, job portals, and photo editors reject .jfif extensions. Converting JFIF to standard JPG ensures universal compatibility.'
+      },
+      {
+        q: 'Is converting JFIF to JPG on JPGEASY safe and private?',
+        a: 'Yes. JPGEASY processes your images directly in your browser memory. Your files are never uploaded to any remote server or stored in the cloud.'
+      },
+      {
+        q: 'Will converting JFIF to JPG reduce image quality?',
+        a: 'No. JPGEASY preserves the exact pixel dimensions and color data of the original image with zero perceptible quality loss.'
+      }
+    ]
+  },
+  {
+    id: 'jfif-to-png',
+    name: 'JFIF to PNG Converter',
+    shortName: 'JFIF to PNG',
+    slug: 'jfif-to-png',
+    description: 'Convert JFIF files to lossless PNG images online for free with crystal-clear sharpness.',
+    longDescription: 'Convert .jfif images into lossless, high-definition PNG format. Perfect for graphic design, web assets, and presentations requiring clean digital rendering.',
+    category: 'convert',
+    icon: 'FileImage',
+    acceptedTypes: '.jfif,image/jpeg,image/*',
+    maxFiles: 10,
+    keywords: ['jfif to png', 'convert jfif to png', 'jfif to png converter', 'change jfif to png'],
+    features: [
+      'Lossless PNG output format',
+      'Preserves original resolution and crisp details',
+      'Fast client-side processing without server delays',
+      '100% free with no file limits or watermarks'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your .jfif image into the tool.' },
+      { step: '2', text: 'Click "Convert to PNG" to process the image.' },
+      { step: '3', text: 'Download your crisp, high-definition PNG file.' }
+    ],
+    faqs: [
+      {
+        q: 'Why convert JFIF to PNG instead of JPG?',
+        a: 'PNG is a lossless format, making it ideal if you plan to edit the image further, print it, or use it in graphic software without compression artifacts.'
+      }
+    ]
+  },
+  {
+    id: 'jfif-to-pdf',
+    name: 'JFIF to PDF Converter',
+    shortName: 'JFIF to PDF',
+    slug: 'jfif-to-pdf',
+    description: 'Convert and merge JFIF images into a clean, professional PDF document online for free.',
+    longDescription: 'Easily turn one or multiple JFIF photos into a standard PDF document. Reorder pages, select margins and paper sizes (A4, Letter), and download immediately.',
+    category: 'pdf',
+    icon: 'FileText',
+    acceptedTypes: '.jfif,image/jpeg,image/*',
+    maxFiles: 30,
+    keywords: ['jfif to pdf', 'convert jfif to pdf', 'combine jfif to pdf', 'jfif to pdf converter'],
+    features: [
+      'Combine multiple JFIF images into one PDF',
+      'Custom page sizes: A4, US Letter, and Fit-to-Image',
+      'Drag-and-drop page reordering',
+      '100% in-browser generation with complete privacy'
+    ],
+    howTo: [
+      { step: '1', text: 'Drop your JFIF images into the converter box.' },
+      { step: '2', text: 'Arrange the page order and choose page orientation (portrait/landscape).' },
+      { step: '3', text: 'Click "Convert to PDF" to generate your document.' },
+      { step: '4', text: 'Download your compiled PDF file instantly.' }
+    ],
+    faqs: [
+      {
+        q: 'Can I combine multiple JFIF photos into a single PDF?',
+        a: 'Yes, JPGEASY allows you to upload up to 30 JFIF files at once and combine them into a single, multi-page PDF document.'
+      }
+    ]
+  },
+  {
+    id: 'avif-to-jpg',
+    name: 'AVIF to JPG Converter',
+    shortName: 'AVIF to JPG',
+    slug: 'avif-to-jpg',
+    description: 'Convert AVIF images to standard high-compatibility JPG photos online for free. Fast in-browser conversion.',
+    longDescription: 'Easily convert next-generation .avif web images into universal .jpg format. Ensure your photos can be opened on any PC, Mac, mobile device, or photo editing app.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.avif,image/avif,image/*',
+    maxFiles: 10,
+    keywords: ['avif to jpg', 'convert avif to jpg', 'avif to jpeg', 'avif to jpg converter', 'change avif to jpg online free'],
+    features: [
+      'Next-gen AVIF to universal JPG conversion',
+      'Adjustable output quality slider',
+      'Ultra-fast client-side processing',
+      'Zero server uploads – completely secure'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your .avif image file.' },
+      { step: '2', text: 'Select output quality (default is 90%).' },
+      { step: '3', text: 'Click "Convert to JPG".' },
+      { step: '4', text: 'Download your universal JPG photo.' }
+    ],
+    faqs: [
+      {
+        q: 'Why convert AVIF to JPG?',
+        a: 'While AVIF provides high compression for modern browsers, many desktop software programs, older smartphones, and email clients cannot open .avif files. Converting to JPG makes them universally viewable.'
+      }
+    ]
+  },
+  {
+    id: 'avif-to-png',
+    name: 'AVIF to PNG Converter',
+    shortName: 'AVIF to PNG',
+    slug: 'avif-to-png',
+    description: 'Convert AVIF pictures into lossless PNG format online for free with transparent support.',
+    longDescription: 'Convert AVIF files to high-quality PNG format. Preserves transparent backgrounds and fine visual details without compression degradation.',
+    category: 'convert',
+    icon: 'FileImage',
+    acceptedTypes: '.avif,image/avif,image/*',
+    maxFiles: 10,
+    keywords: ['avif to png', 'convert avif to png', 'avif to png converter', 'avif to png transparent'],
+    features: [
+      'Lossless PNG conversion with alpha transparency support',
+      'Instant in-browser processing',
+      'Maintains exact native image resolution',
+      'Zero limits, zero watermarks'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your AVIF file.' },
+      { step: '2', text: 'Click "Convert to PNG".' },
+      { step: '3', text: 'Download your transparent or lossless PNG.' }
+    ],
+    faqs: [
+      {
+        q: 'Does converting AVIF to PNG preserve transparency?',
+        a: 'Yes. If your original AVIF file has transparent elements, JPGEASY preserves the alpha channel perfectly in the output PNG.'
+      }
+    ]
+  },
+  {
+    id: 'svg-to-jpg',
+    name: 'SVG to JPG Converter',
+    shortName: 'SVG to JPG',
+    slug: 'svg-to-jpg',
+    description: 'Rasterize vector SVG files into crisp, high-resolution JPG images with custom clean background.',
+    longDescription: 'Convert scalable vector graphics (.svg) into standard raster JPEG photos. High-resolution canvas rendering ensures lines, curves, and text remain sharp and clear.',
+    category: 'convert',
+    icon: 'FileImage',
+    acceptedTypes: '.svg,image/svg+xml,image/*',
+    maxFiles: 10,
+    keywords: ['svg to jpg', 'convert svg to jpg', 'svg to jpg converter', 'svg to jpeg', 'rasterize svg to jpg'],
+    features: [
+      'High-resolution vector rasterization',
+      'Clean white background fill for opaque JPEG standard',
+      'Fast client-side rendering',
+      'Safe and private – zero server uploads'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your .svg vector graphic.' },
+      { step: '2', text: 'Set desired output quality percentage.' },
+      { step: '3', text: 'Click "Convert to JPG" to rasterize the graphic.' },
+      { step: '4', text: 'Download your high-resolution JPG image.' }
+    ],
+    faqs: [
+      {
+        q: 'What happens to the transparent background of an SVG when converted to JPG?',
+        a: 'Because JPG does not support transparency, JPGEASY automatically renders a clean, solid white background behind your vector graphic.'
+      }
+    ]
+  },
+  {
+    id: 'svg-to-png',
+    name: 'SVG to PNG Converter',
+    shortName: 'SVG to PNG',
+    slug: 'svg-to-png',
+    description: 'Convert SVG vectors into high-resolution transparent PNG images online for free.',
+    longDescription: 'Render your SVG vector files into crystal-clear PNG images with full transparency preserved. Ideal for website icons, logos, and digital graphic design.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.svg,image/svg+xml,image/*',
+    maxFiles: 10,
+    keywords: ['svg to png', 'convert svg to png', 'svg to png converter', 'vector to png', 'svg to png transparent'],
+    features: [
+      'Full alpha transparency preservation',
+      'High-DPI sharp vector rendering',
+      'Instant in-browser processing with zero server uploads',
+      'Download individual PNGs or batch files'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your vector SVG image.' },
+      { step: '2', text: 'Click "Convert to PNG".' },
+      { step: '3', text: 'Download your transparent PNG logo or icon.' }
+    ],
+    faqs: [
+      {
+        q: 'Can I convert SVG logos to transparent PNG?',
+        a: 'Yes, JPGEASY preserves all transparent areas in your SVG, outputting a clean transparent PNG suitable for any background.'
+      }
+    ]
+  },
+  {
+    id: 'svg-to-pdf',
+    name: 'SVG to PDF Converter',
+    shortName: 'SVG to PDF',
+    slug: 'svg-to-pdf',
+    description: 'Convert vector SVG graphics into print-ready PDF documents with perfect resolution.',
+    longDescription: 'Turn vector SVG designs and illustrations into standard PDF documents. Perfect for blueprints, schematics, print presentations, and vector document archiving.',
+    category: 'pdf',
+    icon: 'FileText',
+    acceptedTypes: '.svg,image/svg+xml,image/*',
+    maxFiles: 20,
+    keywords: ['svg to pdf', 'convert svg to pdf', 'svg to pdf converter', 'vector svg to pdf'],
+    features: [
+      'Crisp high-resolution rendering',
+      'Custom PDF paper sizes (A4, Letter, Fit)',
+      'Batch conversion of multiple SVGs into a single PDF',
+      '100% private in-browser generation'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your SVG file(s).' },
+      { step: '2', text: 'Select page orientation and margin settings.' },
+      { step: '3', text: 'Click "Convert to PDF".' },
+      { step: '4', text: 'Download your professional PDF file.' }
+    ],
+    faqs: [
+      {
+        q: 'Is SVG to PDF vector quality preserved?',
+        a: 'Yes, JPGEASY renders high-DPI vector streams onto clean PDF pages ensuring crisp lines even when zoomed in or printed.'
+      }
+    ]
+  },
+  {
+    id: 'webp-to-pdf',
+    name: 'WebP to PDF Converter',
+    shortName: 'WebP to PDF',
+    slug: 'webp-to-pdf',
+    description: 'Convert single or multiple WebP images into a single formatted PDF document online for free.',
+    longDescription: 'Easily transform web-saved .webp images into a clean, multi-page PDF document. Rearrange pages, adjust orientation, and compile reports in seconds.',
+    category: 'pdf',
+    icon: 'FileText',
+    acceptedTypes: '.webp,image/webp,image/*',
+    maxFiles: 30,
+    keywords: ['webp to pdf', 'convert webp to pdf', 'webp to pdf converter', 'combine webp to pdf'],
+    features: [
+      'Merge multiple WebP images into one organized PDF',
+      'Select A4 or US Letter page formats',
+      'Drag-and-drop page reordering',
+      'Zero server uploads – fully secure in-browser'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your WebP images.' },
+      { step: '2', text: 'Reorder pages if necessary.' },
+      { step: '3', text: 'Click "Convert to PDF".' },
+      { step: '4', text: 'Download your merged PDF document.' }
+    ],
+    faqs: [
+      {
+        q: 'How many WebP files can I convert to PDF at once?',
+        a: 'You can convert up to 30 WebP images simultaneously into a single multi-page PDF document.'
+      }
+    ]
+  },
+  {
+    id: 'tiff-to-jpg',
+    name: 'TIFF to JPG Converter',
+    shortName: 'TIFF to JPG',
+    slug: 'tiff-to-jpg',
+    description: 'Convert heavy TIFF and TIF scanner files into lightweight, universal JPG images online.',
+    longDescription: 'Quickly convert large .tiff and .tif scanned documents or photos into compressed, universally compatible JPG images. Shrink file sizes by over 80% while retaining readability.',
+    category: 'convert',
+    icon: 'FileImage',
+    acceptedTypes: '.tiff,.tif,image/tiff,image/*',
+    maxFiles: 10,
+    keywords: ['tiff to jpg', 'tif to jpg', 'convert tiff to jpg', 'tiff to jpeg converter', 'convert tif to jpg online'],
+    features: [
+      'Converts heavy TIFF/TIF scans into compact JPGs',
+      'Fast processing with automatic rotation correction',
+      'Strips bloated header data to reduce file size',
+      'Safe, private in-browser and secure processing'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag your .tiff or .tif file into the upload zone.' },
+      { step: '2', text: 'Adjust the output quality percentage.' },
+      { step: '3', text: 'Click "Convert to JPG".' },
+      { step: '4', text: 'Download your compact JPG image.' }
+    ],
+    faqs: [
+      {
+        q: 'Why are TIFF files so large compared to JPG?',
+        a: 'TIFF files typically use uncompressed or lossless raster storage designed for publishing and printing. Converting TIFF to JPG compresses redundant data, reducing file size by 80-90% with virtually no visible difference.'
+      }
+    ]
+  },
+  {
+    id: 'tiff-to-pdf',
+    name: 'TIFF to PDF Converter',
+    shortName: 'TIFF to PDF',
+    slug: 'tiff-to-pdf',
+    description: 'Convert scanned TIFF or TIF documents into clean, searchable, compact PDF files online.',
+    longDescription: 'Convert multi-page or high-resolution TIFF scans into standardized PDF files. Ideal for office document archival, legal filing, and medical records.',
+    category: 'pdf',
+    icon: 'FileText',
+    acceptedTypes: '.tiff,.tif,image/tiff,image/*',
+    maxFiles: 20,
+    keywords: ['tiff to pdf', 'tif to pdf', 'convert tiff to pdf', 'convert tif to pdf', 'tiff to pdf converter'],
+    features: [
+      'Turn TIFF scanner documents into standard PDFs',
+      'Custom page margins and standard document sizing',
+      'Easy drag-and-drop page sequencing',
+      'High security with private processing'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your TIFF or TIF scanned files.' },
+      { step: '2', text: 'Arrange your desired page sequence.' },
+      { step: '3', text: 'Click "Convert to PDF".' },
+      { step: '4', text: 'Download your compiled PDF document.' }
+    ],
+    faqs: [
+      {
+        q: 'Can I combine multiple scanned TIFF pages into one PDF?',
+        a: 'Yes, JPGEASY easily combines multiple single-page or multi-page TIFF scans into a single organized PDF document.'
+      }
+    ]
+  },
+  {
+    id: 'heic-to-jpg',
+    name: 'HEIC to JPG Converter',
+    shortName: 'HEIC to JPG',
+    slug: 'heic-to-jpg',
+    description: 'Convert Apple iPhone HEIC and HEIF photos to standard JPG format online for free with zero quality loss.',
+    longDescription: 'Effortlessly turn iPhone and iPad .heic photos into standard .jpg images. Fix compatibility issues on Windows, Android, websites, and government upload portals instantly.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.heic,.heif,image/heic,image/heif,image/*',
+    maxFiles: 10,
+    keywords: ['heic to jpg', 'convert heic to jpg', 'how to convert heic to jpg', 'heic to jpg converter', 'iphone heic to jpg', 'convert heic to jpg online free'],
+    features: [
+      'Universal Apple iPhone HEIC to JPG conversion',
+      'Preserves original EXIF metadata and orientation',
+      'Retains true 100% photo resolution and color depth',
+      '100% free with instant download'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your iPhone .heic or .heif photo.' },
+      { step: '2', text: 'Select desired quality (default 90% retains maximum fidelity).' },
+      { step: '3', text: 'Click "Convert to JPG".' },
+      { step: '4', text: 'Download your universally compatible JPG photo.' }
+    ],
+    faqs: [
+      {
+        q: 'Why does my Windows computer or website reject iPhone photos?',
+        a: 'Apple devices take photos in the high-efficiency HEIC format by default. Most Windows PCs, Android phones, and online upload portals do not support HEIC natively. Converting HEIC to standard JPG makes them open everywhere.'
+      },
+      {
+        q: 'Is converting HEIC to JPG on JPGEASY free?',
+        a: 'Yes, JPGEASY is 100% free with no file limits, watermarks, or sign-up requirements.'
       }
     ]
   }

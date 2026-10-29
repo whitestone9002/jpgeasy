@@ -4,10 +4,15 @@ import PdfToJpgTool from '@/components/tools/PdfToJpgTool';
 import ToolLayout from '@/components/ui/ToolLayout';
 
 export const metadata: Metadata = {
-  title: 'PDF to PNG Converter - Extract High-Resolution PNG Images',
-  description: 'Convert PDF pages into high-quality PNG images online. Download individual pages or all pages as a ZIP archive.',
+  title: 'PDF to PNG - Convert PDF to PNG High-Resolution Online Free',
+  description: 'Convert PDF to PNG online for free. Extract individual pages or entire documents as high-resolution, crystal-clear PNG images with transparent support.',
+  keywords: ['pdf to png', 'convert pdf to png', 'pdf to png converter', 'extract png from pdf', 'pdf pages to images'],
   alternates: {
     canonical: 'https://jpgeasy.com/pdf-to-png',
+  },
+  openGraph: {
+    title: 'PDF to PNG - Convert PDF to PNG Online Free | JPGEASY',
+    description: 'Convert PDF document pages into high-resolution, crystal-clear PNG images.',
   },
 };
 

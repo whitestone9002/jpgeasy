@@ -7,14 +7,14 @@ import CompressPdfTool from '@/components/tools/CompressPdfTool';
 const tool = getToolBySlug('compress-pdf')!;
 
 export const metadata: Metadata = {
-  title: 'Compress PDF Online Free - Reduce PDF File Size',
-  description: tool.description,
+  title: 'Compress PDF Online Free - Free Compress PDF File Size Tool',
+  description: 'Free compress PDF file size online without losing quality. Reduce large PDF documents instantly in your browser with zero server uploads.',
   keywords: tool.keywords,
   alternates: {
     canonical: `https://jpgeasy.com/${tool.slug}`,
   },
   openGraph: {
-    title: `${tool.name} - JPGEASY Tools`,
+    title: 'Compress PDF Online Free - Reduce PDF File Size | JPGEASY',
     description: tool.description,
   },
 };

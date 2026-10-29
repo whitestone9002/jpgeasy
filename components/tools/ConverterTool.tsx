@@ -13,7 +13,7 @@ import ProcessingButton from '@/components/ui/ProcessingButton';
 import { useLanguage } from '@/lib/i18n/LanguageContext';
 
 interface ConverterToolProps {
-  sourceFormat?: 'jpg' | 'png' | 'webp' | 'any';
+  sourceFormat?: 'jpg' | 'png' | 'webp' | 'jfif' | 'avif' | 'svg' | 'tiff' | 'heic' | 'any';
   targetFormat?: 'jpeg' | 'png' | 'webp';
   fixedTarget?: boolean;
 }
@@ -147,8 +147,8 @@ export default function ConverterTool({
       });
     }
 
-    const width = 'naturalWidth' in source ? source.naturalWidth : source.width;
-    const height = 'naturalHeight' in source ? source.naturalHeight : source.height;
+    const width = ('naturalWidth' in source ? source.naturalWidth : source.width) || 1200;
+    const height = ('naturalHeight' in source ? source.naturalHeight : source.height) || 1200;
 
     const canvas = document.createElement('canvas');
     canvas.width = width;
@@ -276,7 +276,17 @@ export default function ConverterTool({
       ? 'image/png,image/*,.png,.PNG,.jpg,.jpeg,.jfif,.pjpeg,.webp'
       : sourceFormat === 'webp'
       ? 'image/webp,image/*,.webp,.WEBP,.jpg,.jpeg,.jfif,.pjpeg,.png'
-      : 'image/*,.jpg,.jpeg,.png,.webp,.heic,.heif';
+      : sourceFormat === 'jfif'
+      ? '.jfif,image/jpeg,image/*,.pjpeg,.jpg,.jpeg'
+      : sourceFormat === 'avif'
+      ? '.avif,image/avif,image/*,.webp,.png,.jpg'
+      : sourceFormat === 'svg'
+      ? '.svg,image/svg+xml,image/*'
+      : sourceFormat === 'tiff'
+      ? '.tiff,.tif,image/tiff,image/*'
+      : sourceFormat === 'heic'
+      ? '.heic,.heif,image/heic,image/heif,image/*'
+      : 'image/*,.jpg,.jpeg,.png,.webp,.heic,.heif,.jfif,.avif,.svg,.tiff,.tif';
 
   return (
     <div className="w-full space-y-6">

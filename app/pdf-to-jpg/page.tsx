@@ -7,7 +7,7 @@ import PdfToJpgTool from '@/components/tools/PdfToJpgTool';
 const tool = getToolBySlug('pdf-to-jpg')!;
 
 export const metadata: Metadata = {
-  title: 'PDF to JPG Converter - Extract PDF Pages as High-Res Images Online',
+  title: 'Convert PDF to JPG Online Free - PDF to JPG Converter (High Res)',
   description: tool.description,
   keywords: tool.keywords,
   alternates: {

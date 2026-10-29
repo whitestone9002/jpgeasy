@@ -7,14 +7,14 @@ import GeneralCompressorTool from '@/components/tools/GeneralCompressorTool';
 const tool = getToolBySlug('compress-image')!;
 
 export const metadata: Metadata = {
-  title: 'Image Compressor - Compress JPG, PNG, and WebP Online',
-  description: tool.description,
+  title: 'Compress Image Size Online Free - Reduce Photo & Image KB/MB',
+  description: 'Compress image size online for free. Reduce JPG, PNG, and WebP file sizes with custom quality settings while preserving crystal-clear sharpness.',
   keywords: tool.keywords,
   alternates: {
     canonical: `https://jpgeasy.com/${tool.slug}`,
   },
   openGraph: {
-    title: `${tool.name} - JPGEASY Tools`,
+    title: 'Compress Image Size Online Free - JPGEASY',
     description: tool.description,
   },
 };

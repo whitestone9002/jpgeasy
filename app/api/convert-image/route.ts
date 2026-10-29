@@ -29,7 +29,16 @@ export async function POST(req: NextRequest) {
       quality,
     });
 
-    const mimeType = result.format === 'png' ? 'image/png' : result.format === 'webp' ? 'image/webp' : 'image/jpeg';
+    const mimeType =
+      result.format === 'png'
+        ? 'image/png'
+        : result.format === 'webp'
+        ? 'image/webp'
+        : result.format === 'avif'
+        ? 'image/avif'
+        : result.format === 'tiff'
+        ? 'image/tiff'
+        : 'image/jpeg';
     const base64Data = `data:${mimeType};base64,${result.buffer.toString('base64')}`;
 
     return NextResponse.json({

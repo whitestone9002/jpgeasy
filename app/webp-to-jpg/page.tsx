@@ -7,7 +7,7 @@ import ConverterTool from '@/components/tools/ConverterTool';
 const tool = getToolBySlug('webp-to-jpg')!;
 
 export const metadata: Metadata = {
-  title: 'WebP to JPG Converter - Universal Format Conversion',
+  title: 'Convert WebP to JPG Online Free - Fast In-Browser WebP to JPG',
   description: tool.description,
   keywords: tool.keywords,
   alternates: {
