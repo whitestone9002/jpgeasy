@@ -106,6 +106,11 @@ export const metadata: Metadata = {
     shortcut: '/favicon.ico',
     apple: '/apple-touch-icon.png',
   },
+  verification: {
+    other: {
+      'p:domain_verify': 'dd1174d77183a71e3a280efc43a8b3ac',
+    },
+  },
 };
 
 const organizationSchema = {
@@ -163,6 +168,7 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark" suppressHydrationWarning>
       <head>
+        <meta name="p:domain_verify" content="dd1174d77183a71e3a280efc43a8b3ac" />
         <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
