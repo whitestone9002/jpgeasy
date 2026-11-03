@@ -885,7 +885,7 @@ export default function MergePdfTool() {
           {/* White Card Container */}
           <div className="w-full rounded-3xl bg-base-100 border border-base-300 p-5 sm:p-7 space-y-6 shadow-sm">
             {/* Top file summary card */}
-            <div className="rounded-2xl bg-blue-50/60 dark:bg-base-200/50 border border-blue-100/80 dark:border-base-300 p-4 sm:p-5 flex items-center justify-between gap-4">
+            <div className="rounded-2xl bg-base-200/50 border border-base-300 p-4 sm:p-5 flex items-center justify-between gap-4">
               <div className="flex items-center gap-3.5 sm:gap-4 min-w-0">
                 {/* Red PDF Document Icon */}
                 <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-red-500/15 border border-red-500/30 text-red-500 flex items-center justify-center shrink-0 shadow-xs">
