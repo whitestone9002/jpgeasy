@@ -221,7 +221,7 @@ export default function Header() {
                 {t('searchPlaceholder', 'Search tools...')}
               </span>
               <kbd className="hidden sm:inline-block px-1.5 py-0.5 text-[10px] font-semibold bg-base-100 rounded border border-base-300 text-base-content/70">
-                Ctrl K
+                Ctrl + K
               </kbd>
             </button>
 
