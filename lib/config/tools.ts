@@ -1523,6 +1523,79 @@ export const TOOLS: ToolMeta[] = [
       }
     ]
   },
+  {
+    id: 'heic-to-png',
+    name: 'HEIC to PNG Converter',
+    shortName: 'HEIC to PNG',
+    slug: 'heic-to-png',
+    description: 'Convert Apple iPhone HEIC and HEIF photos to high quality transparent PNG format online for free with zero loss.',
+    longDescription: 'Easily convert iPhone and iPad .heic photos into lossless .png images. Preserve transparency, crisp details, and true color fidelity with instant in-browser processing.',
+    category: 'convert',
+    badge: 'Popular',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.heic,.heif,image/heic,image/heif,image/*',
+    maxFiles: 10,
+    keywords: ['heic to png', 'convert heic to png', 'how to convert heic to png', 'heic to png converter', 'iphone heic to png', 'convert heic to png online free'],
+    features: [
+      'Universal Apple iPhone HEIC to PNG conversion',
+      'Lossless image quality preservation',
+      'Supports transparency and full color depth',
+      '100% Free with instant download'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your iPhone .heic or .heif photo.' },
+      { step: '2', text: 'Click "Convert to PNG".' },
+      { step: '3', text: 'Download your high quality PNG photo.' }
+    ],
+    faqs: [
+      {
+        q: 'Why convert HEIC to PNG instead of JPG?',
+        a: 'PNG is a lossless format that maintains the absolute highest image fidelity without compression artifacts. It also supports transparency, making it ideal for graphic design, logos, and digital editing.'
+      },
+      {
+        q: 'Is this HEIC to PNG converter free?',
+        a: 'Yes, JPGEASY is 100% free with no watermarks, account requirements, or hidden limits.'
+      }
+    ]
+  },
+  {
+    id: 'heic-to-pdf',
+    name: 'HEIC to PDF Converter',
+    shortName: 'HEIC to PDF',
+    slug: 'heic-to-pdf',
+    description: 'Convert iPhone HEIC photos into a clean, professional PDF document online for free. Combine multiple photos into one PDF.',
+    longDescription: 'Turn Apple iPhone .heic and .heif photos directly into standardized PDF documents. Combine multiple iPhone pictures, receipts, or document photos into a single PDF with custom page sizing.',
+    category: 'pdf',
+    badge: 'Popular',
+    icon: 'FileText',
+    popular: true,
+    acceptedTypes: '.heic,.heif,image/heic,image/heif,image/*',
+    maxFiles: 20,
+    keywords: ['heic to pdf', 'convert heic to pdf', 'iphone photo to pdf', 'heic to pdf converter', 'convert heic to pdf online free', 'how to convert heic to pdf'],
+    features: [
+      'Convert single or multiple iPhone HEIC photos into one PDF',
+      'Standard A4, US Letter, and Fit-to-Page sizing options',
+      'Custom margin settings (None, Small, Large)',
+      '100% secure with instant download'
+    ],
+    howTo: [
+      { step: '1', text: 'Upload your iPhone .heic photos.' },
+      { step: '2', text: 'Arrange page order, orientation, and margin settings.' },
+      { step: '3', text: 'Click "Convert to PDF".' },
+      { step: '4', text: 'Download your compiled PDF document.' }
+    ],
+    faqs: [
+      {
+        q: 'Can I combine multiple HEIC photos into one single PDF?',
+        a: 'Yes! You can upload multiple HEIC images from your iPhone and merge them into a single, multi-page PDF document.'
+      },
+      {
+        q: 'Will my iPhone photos lose clarity when converted to PDF?',
+        a: 'No, JPGEASY converts your HEIC images with full high-resolution fidelity, preserving document text and sharp photo details.'
+      }
+    ]
+  },
 ];
 
 export const CATEGORIES = [

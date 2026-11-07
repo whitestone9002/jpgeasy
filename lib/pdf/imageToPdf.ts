@@ -1,5 +1,6 @@
 import { PDFDocument, PageSizes } from 'pdf-lib';
 import sharp from 'sharp';
+import { convertImageFormat } from '@/lib/image/converter';
 
 export interface ImageToPdfOptions {
   pageSize?: 'A4' | 'LETTER' | 'FIT';
@@ -26,16 +27,36 @@ export async function convertImagesToPdf(
   const margin = marginMap[options.margin || 'small'] ?? 20;
 
   for (const item of images) {
+    let imageBuffer = item.buffer;
+    const isHeic =
+      (item.name || '').toLowerCase().endsWith('.heic') ||
+      (item.name || '').toLowerCase().endsWith('.heif') ||
+      (imageBuffer.length > 12 &&
+        imageBuffer.subarray(4, 12).toString('latin1').includes('ftyp') &&
+        (imageBuffer.subarray(8, 16).toString('latin1').includes('heic') ||
+          imageBuffer.subarray(8, 16).toString('latin1').includes('mif1') ||
+          imageBuffer.subarray(8, 16).toString('latin1').includes('heix') ||
+          imageBuffer.subarray(8, 16).toString('latin1').includes('hevc')));
+
+    if (isHeic) {
+      try {
+        const conv = await convertImageFormat(imageBuffer, { targetFormat: 'jpeg', quality: 92 });
+        imageBuffer = conv.buffer;
+      } catch (heicErr) {
+        console.warn('HEIC decode in imageToPdf failed:', heicErr);
+      }
+    }
+
     // Normalize image to clean JPEG or PNG using sharp
-    const meta = await sharp(item.buffer).metadata();
+    const meta = await sharp(imageBuffer).metadata();
     const hasAlpha = !!meta.hasAlpha;
 
     let embedImage;
     if (hasAlpha || meta.format === 'png') {
-      const pngBuffer = await sharp(item.buffer).png().toBuffer();
+      const pngBuffer = await sharp(imageBuffer).png().toBuffer();
       embedImage = await pdfDoc.embedPng(pngBuffer);
     } else {
-      const jpgBuffer = await sharp(item.buffer)
+      const jpgBuffer = await sharp(imageBuffer)
         .jpeg({ quality: 92, mozjpeg: true })
         .toBuffer();
       embedImage = await pdfDoc.embedJpg(jpgBuffer);
