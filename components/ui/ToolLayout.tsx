@@ -24,13 +24,13 @@ export default function ToolLayout({
   children,
   isWide = false,
   noCardWrapper = false,
-  showShareBar = false,
+  showShareBar = true,
 }: ToolLayoutProps) {
   const { t } = useLanguage();
   const toolKey = getToolTranslationKey(tool.slug);
   const toolName = t(toolKey, tool.name);
   const toolDescription = t(`${toolKey}Desc`, tool.description);
-  const shouldRenderShare = showShareBar || tool.slug === 'compress-jpg';
+  const shouldRenderShare = showShareBar !== false;
 
   const relatedTools = TOOLS.filter(
     (t) => t.id !== tool.id && (t.category === tool.category || t.popular)
