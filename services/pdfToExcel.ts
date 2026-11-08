@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 // @ts-ignore
-import * as pdfjsLib from "pdfjs-dist/build/pdf.mjs";
+import * as pdfjsLib from "pdfjs-dist/legacy/build/pdf.mjs";
 import * as XLSX from "xlsx";
 
 export class PdfToExcelError extends Error {}
