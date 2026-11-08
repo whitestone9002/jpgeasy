@@ -157,17 +157,6 @@ export default function ToolLayout({
           <p className="text-xs sm:text-sm text-base-content/70 leading-relaxed">
             {toolDescription}
           </p>
-
-          {/* Social Share Bar (Previewed on selected tool pages) */}
-          {shouldRenderShare && (
-            <div className="pt-2 sm:pt-3 flex justify-center">
-              <SocialShareBar
-                url={toolUrl}
-                title={`${tool.name} - Free Online Tool`}
-                description={tool.description}
-              />
-            </div>
-          )}
         </div>
 
         {/* Main Tool Interactive Sandbox */}
@@ -178,6 +167,17 @@ export default function ToolLayout({
         ) : (
           <div id="tool-sandbox" className={`w-full tool-interactive-sandbox scroll-mt-24 bg-base-100 rounded-2xl sm:rounded-3xl border border-base-300 shadow-card ${isWide ? 'p-1.5 sm:p-4 lg:p-6' : 'p-3 sm:p-6 lg:p-8'}`}>
             {children}
+          </div>
+        )}
+
+        {/* Social Share Bar (Previewed directly under the tool) */}
+        {shouldRenderShare && (
+          <div className="flex justify-center pt-1 pb-2">
+            <SocialShareBar
+              url={toolUrl}
+              title={`${tool.name} - Free Online Tool`}
+              description={tool.description}
+            />
           </div>
         )}
 
