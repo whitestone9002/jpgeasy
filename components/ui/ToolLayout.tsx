@@ -8,6 +8,7 @@ import { getRelatedGuidesForTool } from '@/lib/config/guides';
 import FAQSection from './FAQSection';
 import AdSlot from './AdSlot';
 import ToolCard from './ToolCard';
+import SocialShareBar from './SocialShareBar';
 import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 
 interface ToolLayoutProps {
@@ -15,13 +16,21 @@ interface ToolLayoutProps {
   children: React.ReactNode;
   isWide?: boolean;
   noCardWrapper?: boolean;
+  showShareBar?: boolean;
 }
 
-export default function ToolLayout({ tool, children, isWide = false, noCardWrapper = false }: ToolLayoutProps) {
+export default function ToolLayout({
+  tool,
+  children,
+  isWide = false,
+  noCardWrapper = false,
+  showShareBar = false,
+}: ToolLayoutProps) {
   const { t } = useLanguage();
   const toolKey = getToolTranslationKey(tool.slug);
   const toolName = t(toolKey, tool.name);
   const toolDescription = t(`${toolKey}Desc`, tool.description);
+  const shouldRenderShare = showShareBar || tool.slug === 'compress-jpg';
 
   const relatedTools = TOOLS.filter(
     (t) => t.id !== tool.id && (t.category === tool.category || t.popular)
@@ -148,6 +157,17 @@ export default function ToolLayout({ tool, children, isWide = false, noCardWrapp
           <p className="text-xs sm:text-sm text-base-content/70 leading-relaxed">
             {toolDescription}
           </p>
+
+          {/* Social Share Bar (Previewed on selected tool pages) */}
+          {shouldRenderShare && (
+            <div className="pt-2 sm:pt-3 flex justify-center">
+              <SocialShareBar
+                url={toolUrl}
+                title={`${tool.name} - Free Online Tool`}
+                description={tool.description}
+              />
+            </div>
+          )}
         </div>
 
         {/* Main Tool Interactive Sandbox */}
