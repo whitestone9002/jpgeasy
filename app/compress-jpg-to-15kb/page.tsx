@@ -1,0 +1,28 @@
+import React from 'react';
+import type { Metadata } from 'next';
+import { getToolBySlug } from '@/lib/config/tools';
+import ToolLayout from '@/components/ui/ToolLayout';
+import TargetCompressorTool from '@/components/tools/TargetCompressorTool';
+
+const tool = getToolBySlug('compress-jpg-to-15kb')!;
+
+export const metadata: Metadata = {
+  title: 'Compress JPG to 15KB Online Free - Exact 15 KB Photo Resizer',
+  description: tool.description,
+  keywords: tool.keywords,
+  alternates: {
+    canonical: 'https://jpgeasy.com/compress-jpg-to-15kb',
+  },
+  openGraph: {
+    title: `${tool.name} - JPGEASY Tools`,
+    description: tool.description,
+  },
+};
+
+export default function CompressJpgTo15kbPage() {
+  return (
+    <ToolLayout tool={tool}>
+      <TargetCompressorTool defaultTargetKb={15} fixedTarget={true} />
+    </ToolLayout>
+  );
+}

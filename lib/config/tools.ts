@@ -1596,6 +1596,1734 @@ export const TOOLS: ToolMeta[] = [
       }
     ]
   },
+  {
+    id: 'convert-heic-to-png',
+    name: 'Convert HEIC to PNG',
+    shortName: 'HEIC to PNG',
+    slug: 'convert-heic-to-png',
+    description: 'Convert Apple HEIC and HEIF photos to high-resolution transparent PNG images online. Free, fast, and 100% private in-browser conversion.',
+    longDescription: 'Convert Apple HEIC and HEIF photos to high-resolution transparent PNG images online. Free, fast, and 100% private in-browser conversion. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.heic,.heif,image/heic,image/heif,image/*',
+    keywords: ['convert heic to png', 'heic to png converter', 'iphone heic to png online', 'turn heic into png'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Convert HEIC to PNG tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'convert-heic-to-pdf',
+    name: 'Convert HEIC to PDF',
+    shortName: 'HEIC to PDF',
+    slug: 'convert-heic-to-pdf',
+    description: 'Convert Apple HEIC photos directly into a standardized PDF document online. Combine multiple iPhone pictures into one PDF file free.',
+    longDescription: 'Convert Apple HEIC photos directly into a standardized PDF document online. Combine multiple iPhone pictures into one PDF file free. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'FileText',
+    popular: true,
+    acceptedTypes: '.heic,.heif,image/heic,image/heif,image/*',
+    keywords: ['convert heic to pdf', 'iphone photo to pdf', 'heic to pdf online', 'combine heic into pdf'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Convert HEIC to PDF tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'bmp-to-png',
+    name: 'BMP to PNG Converter',
+    shortName: 'BMP to PNG',
+    slug: 'bmp-to-png',
+    description: 'Convert BMP bitmap images to high-quality compressed PNG files online for free. Reduce file size while keeping crisp lossless quality.',
+    longDescription: 'Convert BMP bitmap images to high-quality compressed PNG files online for free. Reduce file size while keeping crisp lossless quality. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.bmp,image/bmp,image/*',
+    keywords: ['bmp to png', 'convert bmp to png', 'bitmap to png converter', 'bmp to png free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this BMP to PNG Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'tiff-to-png',
+    name: 'TIFF to PNG Converter',
+    shortName: 'TIFF to PNG',
+    slug: 'tiff-to-png',
+    description: 'Convert TIFF and TIF image files into transparent PNG format online for free. Keep full pixel resolution and color fidelity.',
+    longDescription: 'Convert TIFF and TIF image files into transparent PNG format online for free. Keep full pixel resolution and color fidelity. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.tiff,.tif,image/tiff,image/*',
+    keywords: ['tiff to png', 'tif to png', 'convert tiff to png', 'tiff to png online free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this TIFF to PNG Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'gif-to-jpg',
+    name: 'GIF to JPG Converter',
+    shortName: 'GIF to JPG',
+    slug: 'gif-to-jpg',
+    description: 'Convert animated or static GIF files to standard JPG photos online. Extract frames into crisp, universally compatible JPEG images.',
+    longDescription: 'Convert animated or static GIF files to standard JPG photos online. Extract frames into crisp, universally compatible JPEG images. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: 'image/gif,.gif',
+    keywords: ['gif to jpg', 'convert gif to jpg', 'gif to jpeg converter', 'gif to jpg online'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this GIF to JPG Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'gif-to-png',
+    name: 'GIF to PNG Converter',
+    shortName: 'GIF to PNG',
+    slug: 'gif-to-png',
+    description: 'Convert GIF images to transparent high-resolution PNG format online. Keep transparency and enhance image clarity for free.',
+    longDescription: 'Convert GIF images to transparent high-resolution PNG format online. Keep transparency and enhance image clarity for free. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: 'image/gif,.gif',
+    keywords: ['gif to png', 'convert gif to png', 'gif to transparent png', 'gif to png converter'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this GIF to PNG Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'bmp-to-jpg',
+    name: 'BMP to JPG Converter',
+    shortName: 'BMP to JPG',
+    slug: 'bmp-to-jpg',
+    description: 'Convert large BMP bitmap files into lightweight, universally compatible JPG images. Shrink file sizes by up to 90% online free.',
+    longDescription: 'Convert large BMP bitmap files into lightweight, universally compatible JPG images. Shrink file sizes by up to 90% online free. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: '.bmp,image/bmp,image/*',
+    keywords: ['bmp to jpg', 'convert bmp to jpg', 'bitmap to jpeg', 'bmp to jpg free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this BMP to JPG Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'avif-to-webp',
+    name: 'AVIF to WebP Converter',
+    shortName: 'AVIF to WebP',
+    slug: 'avif-to-webp',
+    description: 'Convert next-gen AVIF images to universally supported WebP format online. Optimize web compatibility while keeping high quality.',
+    longDescription: 'Convert next-gen AVIF images to universally supported WebP format online. Optimize web compatibility while keeping high quality. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: 'image/avif,.avif',
+    keywords: ['avif to webp', 'convert avif to webp', 'avif to webp converter free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this AVIF to WebP Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'svg-to-webp',
+    name: 'SVG to WebP Converter',
+    shortName: 'SVG to WebP',
+    slug: 'svg-to-webp',
+    description: 'Convert vector SVG graphics into modern raster WebP images with transparent backgrounds online for free.',
+    longDescription: 'Convert vector SVG graphics into modern raster WebP images with transparent backgrounds online for free. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'convert',
+    badge: 'Specialized',
+    icon: 'FileImage',
+    popular: true,
+    acceptedTypes: 'image/svg+xml,.svg',
+    keywords: ['svg to webp', 'convert svg to webp', 'svg to webp converter online'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this SVG to WebP Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'bmp-to-pdf',
+    name: 'BMP to PDF Converter',
+    shortName: 'BMP to PDF',
+    slug: 'bmp-to-pdf',
+    description: 'Convert BMP bitmap images into a clean, compact PDF document online for free. Combine multiple BMP files into one PDF.',
+    longDescription: 'Convert BMP bitmap images into a clean, compact PDF document online for free. Combine multiple BMP files into one PDF. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'FileText',
+    popular: true,
+    acceptedTypes: '.bmp,image/bmp,image/*',
+    keywords: ['bmp to pdf', 'convert bmp to pdf', 'bitmap to pdf converter'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this BMP to PDF Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'avif-to-pdf',
+    name: 'AVIF to PDF Converter',
+    shortName: 'AVIF to PDF',
+    slug: 'avif-to-pdf',
+    description: 'Convert modern AVIF images into standardized PDF files online. Fast, secure, and preserves full image resolution.',
+    longDescription: 'Convert modern AVIF images into standardized PDF files online. Fast, secure, and preserves full image resolution. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'FileText',
+    popular: true,
+    acceptedTypes: 'image/avif,.avif,image/*',
+    keywords: ['avif to pdf', 'convert avif to pdf', 'avif image to pdf'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this AVIF to PDF Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'gif-to-pdf',
+    name: 'GIF to PDF Converter',
+    shortName: 'GIF to PDF',
+    slug: 'gif-to-pdf',
+    description: 'Convert GIF images into a PDF document online for free. Combine multiple GIFs into a multi-page PDF document easily.',
+    longDescription: 'Convert GIF images into a PDF document online for free. Combine multiple GIFs into a multi-page PDF document easily. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'FileText',
+    popular: true,
+    acceptedTypes: 'image/gif,.gif,image/*',
+    keywords: ['gif to pdf', 'convert gif to pdf', 'gif to pdf document converter'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this GIF to PDF Converter tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-pdf-to-200kb',
+    name: 'Compress PDF to 200KB',
+    shortName: 'PDF to 200KB',
+    slug: 'compress-pdf-to-200kb',
+    description: 'Compress PDF documents to 200KB or less online for free. Ideal for job applications, SSC, UPSC, and government document portals.',
+    longDescription: 'Compress PDF documents to 200KB or less online for free. Ideal for job applications, SSC, UPSC, and government document portals. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: true,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['compress pdf to 200kb', 'reduce pdf to 200kb', 'compress pdf 200 kb online', 'pdf under 200kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PDF to 200KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-pdf-to-300kb',
+    name: 'Compress PDF to 300KB',
+    shortName: 'PDF to 300KB',
+    slug: 'compress-pdf-to-300kb',
+    description: 'Reduce PDF file size to 300KB or less online for free while keeping document text sharp and clear for official submissions.',
+    longDescription: 'Reduce PDF file size to 300KB or less online for free while keeping document text sharp and clear for official submissions. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['compress pdf to 300kb', 'reduce pdf to 300kb', 'pdf compressor 300 kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PDF to 300KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-pdf-to-400kb',
+    name: 'Compress PDF to 400KB',
+    shortName: 'PDF to 400KB',
+    slug: 'compress-pdf-to-400kb',
+    description: 'Quickly shrink PDF files to under 400KB online for free. Keep scanned pages readable while meeting portal file size caps.',
+    longDescription: 'Quickly shrink PDF files to under 400KB online for free. Keep scanned pages readable while meeting portal file size caps. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: true,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['compress pdf to 400kb', 'reduce pdf to 400kb', 'pdf compressor 400 kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PDF to 400KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-pdf-to-500kb',
+    name: 'Compress PDF to 500KB',
+    shortName: 'PDF to 500KB',
+    slug: 'compress-pdf-to-500kb',
+    description: 'Compress PDF files down to 500KB online for free. The perfect size for email attachments, job boards, and scholarship forms.',
+    longDescription: 'Compress PDF files down to 500KB online for free. The perfect size for email attachments, job boards, and scholarship forms. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: true,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['compress pdf to 500kb', 'reduce pdf to 500kb', 'compress pdf under 500kb free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PDF to 500KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-pdf-to-1mb',
+    name: 'Compress PDF to 1MB',
+    shortName: 'PDF to 1MB',
+    slug: 'compress-pdf-to-1mb',
+    description: 'Compress large PDF documents down to 1MB or less online for free. Fast in-browser processing with zero server uploads.',
+    longDescription: 'Compress large PDF documents down to 1MB or less online for free. Fast in-browser processing with zero server uploads. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: true,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['compress pdf to 1mb', 'reduce pdf to 1mb', 'compress pdf under 1 mb free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PDF to 1MB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-pdf-to-100kb',
+    name: 'Reduce PDF to 100KB',
+    shortName: 'Reduce to 100KB',
+    slug: 'reduce-pdf-to-100kb',
+    description: 'Reduce PDF file size to 100KB online for strict document upload portals, government applications, and email limits.',
+    longDescription: 'Reduce PDF file size to 100KB online for strict document upload portals, government applications, and email limits. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['reduce pdf to 100kb', 'compress pdf to 100kb free', 'pdf under 100kb online'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce PDF to 100KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-pdf-to-200kb',
+    name: 'Reduce PDF to 200KB',
+    shortName: 'Reduce to 200KB',
+    slug: 'reduce-pdf-to-200kb',
+    description: 'Reduce PDF document size to 200KB or less online. Meet official upload limits for resumes, applications, and legal forms.',
+    longDescription: 'Reduce PDF document size to 200KB or less online. Meet official upload limits for resumes, applications, and legal forms. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['reduce pdf to 200kb', 'reduce pdf size 200kb', 'make pdf under 200kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce PDF to 200KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-pdf-size-to-500kb',
+    name: 'Reduce PDF Size to 500KB',
+    shortName: 'Reduce to 500KB',
+    slug: 'reduce-pdf-size-to-500kb',
+    description: 'Reduce large PDF document sizes down to 500KB online for free. Instant optimization with zero watermarks.',
+    longDescription: 'Reduce large PDF document sizes down to 500KB online for free. Instant optimization with zero watermarks. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'pdf',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'application/pdf,.pdf',
+    keywords: ['reduce pdf size to 500kb', 'shrink pdf to 500kb', 'pdf size reducer 500kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce PDF Size to 500KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-15kb',
+    name: 'Compress JPG to 15KB',
+    shortName: 'JPG to 15KB',
+    slug: 'compress-jpg-to-15kb',
+    description: 'Compress JPG/JPEG image to 15KB or less for online signatures, passport photos, and government exam upload portals.',
+    longDescription: 'Compress JPG/JPEG image to 15KB or less for online signatures, passport photos, and government exam upload portals. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 15kb', 'jpg to 15kb', 'reduce image size to 15kb', 'signature 15kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 15KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-30kb',
+    name: 'Compress JPG to 30KB',
+    shortName: 'JPG to 30KB',
+    slug: 'compress-jpg-to-30kb',
+    description: 'Compress JPG images to exactly 30KB or less online for job applications, SSC, UPSC, and university admissions.',
+    longDescription: 'Compress JPG images to exactly 30KB or less online for job applications, SSC, UPSC, and university admissions. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 30kb', 'jpg 30kb', 'photo compress 30kb', 'reduce photo size to 30kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 30KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-40kb',
+    name: 'Compress JPG to 40KB',
+    shortName: 'JPG to 40KB',
+    slug: 'compress-jpg-to-40kb',
+    description: 'Reduce JPG file size to 40KB or less without blurring. Ideal for online recruitment portals and official ID verification.',
+    longDescription: 'Reduce JPG file size to 40KB or less without blurring. Ideal for online recruitment portals and official ID verification. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 40kb', 'jpg 40kb', 'compress photo to 40kb', '40kb image compressor'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 40KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-300kb',
+    name: 'Compress JPG to 300KB',
+    shortName: 'JPG to 300KB',
+    slug: 'compress-jpg-to-300kb',
+    description: 'Compress JPG images down to 300KB online for free. Keep maximum sharpness and color depth for web sharing and documents.',
+    longDescription: 'Compress JPG images down to 300KB online for free. Keep maximum sharpness and color depth for web sharing and documents. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 300kb', 'jpg 300kb', 'shrink image to 300kb', 'photo compressor 300kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 300KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-1mb',
+    name: 'Compress JPG to 1MB',
+    shortName: 'JPG to 1MB',
+    slug: 'compress-jpg-to-1mb',
+    description: 'Compress high-resolution photos and DSLR images down to 1MB or less online. Fast in-browser processing with zero quality loss.',
+    longDescription: 'Compress high-resolution photos and DSLR images down to 1MB or less online. Fast in-browser processing with zero quality loss. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 1mb', 'jpg to 1mb', 'compress photo under 1mb', 'reduce image to 1mb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 1MB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-jpg-to-2mb',
+    name: 'Compress JPG to 2MB',
+    shortName: 'JPG to 2MB',
+    slug: 'compress-jpg-to-2mb',
+    description: 'Compress large 10MB+ images down to exactly 2MB or less online for email attachments and portal upload limits.',
+    longDescription: 'Compress large 10MB+ images down to exactly 2MB or less online for email attachments and portal upload limits. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress jpg to 2mb', 'jpg to 2mb', 'compress photo to 2mb online free'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress JPG to 2MB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-10kb',
+    name: 'Compress PNG to 10KB',
+    shortName: 'PNG to 10KB',
+    slug: 'compress-png-to-10kb',
+    description: 'Compress PNG images to 10KB or less online for signatures, icons, and strict online portal limits.',
+    longDescription: 'Compress PNG images to 10KB or less online for signatures, icons, and strict online portal limits. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 10kb', 'png to 10kb', 'reduce png size to 10kb', 'png 10kb compressor'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 10KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-20kb',
+    name: 'Compress PNG to 20KB',
+    shortName: 'PNG to 20KB',
+    slug: 'compress-png-to-20kb',
+    description: 'Reduce PNG image size to 20KB or less online. Keep transparency and crisp lines for logos and digital signatures.',
+    longDescription: 'Reduce PNG image size to 20KB or less online. Keep transparency and crisp lines for logos and digital signatures. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 20kb', 'png to 20kb', 'reduce png to 20kb', 'png 20kb compressor'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-30kb',
+    name: 'Compress PNG to 30KB',
+    shortName: 'PNG to 30KB',
+    slug: 'compress-png-to-30kb',
+    description: 'Compress PNG photos and graphics to 30KB or less online for free. Ideal for online application forms and web assets.',
+    longDescription: 'Compress PNG photos and graphics to 30KB or less online for free. Ideal for online application forms and web assets. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 30kb', 'png to 30kb', 'reduce png size to 30kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 30KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-50kb',
+    name: 'Compress PNG to 50KB',
+    shortName: 'PNG to 50KB',
+    slug: 'compress-png-to-50kb',
+    description: 'Compress PNG images down to 50KB online for free. Preserve transparency and high fidelity for web graphics and avatars.',
+    longDescription: 'Compress PNG images down to 50KB online for free. Preserve transparency and high fidelity for web graphics and avatars. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 50kb', 'png to 50kb', 'reduce png to 50kb', 'png 50kb compressor'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 50KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-100kb',
+    name: 'Compress PNG to 100KB',
+    shortName: 'PNG to 100KB',
+    slug: 'compress-png-to-100kb',
+    description: 'Reduce PNG file size to 100KB or less online for free. Great for website images, email templates, and app icons.',
+    longDescription: 'Reduce PNG file size to 100KB or less online for free. Great for website images, email templates, and app icons. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 100kb', 'png to 100kb', 'reduce png to 100kb', 'png 100kb compressor'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 100KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-200kb',
+    name: 'Compress PNG to 200KB',
+    shortName: 'PNG to 200KB',
+    slug: 'compress-png-to-200kb',
+    description: 'Compress PNG images to 200KB or less online. Keep transparency and clear details for professional web use.',
+    longDescription: 'Compress PNG images to 200KB or less online. Keep transparency and clear details for professional web use. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 200kb', 'png to 200kb', 'reduce png to 200kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 200KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-500kb',
+    name: 'Compress PNG to 500KB',
+    shortName: 'PNG to 500KB',
+    slug: 'compress-png-to-500kb',
+    description: 'Compress large multi-megabyte PNG files down to 500KB online for free. Fast in-browser compression with zero server upload.',
+    longDescription: 'Compress large multi-megabyte PNG files down to 500KB online for free. Fast in-browser compression with zero server upload. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 500kb', 'png to 500kb', 'shrink png to 500kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 500KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-png-to-1mb',
+    name: 'Compress PNG to 1MB',
+    shortName: 'PNG to 1MB',
+    slug: 'compress-png-to-1mb',
+    description: 'Compress heavy PNG images down to 1MB or less online for free. 100% private, client-side processing.',
+    longDescription: 'Compress heavy PNG images down to 1MB or less online for free. 100% private, client-side processing. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Minimize2',
+    popular: false,
+    acceptedTypes: 'image/png,image/jpeg,image/webp',
+    keywords: ['compress png to 1mb', 'png to 1mb', 'shrink png to 1mb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress PNG to 1MB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-image-to-20kb',
+    name: 'Compress Image to 20KB',
+    shortName: 'Image to 20KB',
+    slug: 'compress-image-to-20kb',
+    description: 'Compress image to 20KB or less online for free. Designed for government exam portals, signatures, and ID cards.',
+    longDescription: 'Compress image to 20KB or less online for free. Designed for government exam portals, signatures, and ID cards. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: true,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress image to 20kb', 'image to 20kb', 'reduce image size to 20kb online', 'photo 20kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Image to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-image-to-50kb',
+    name: 'Compress Image to 50KB',
+    shortName: 'Image to 50KB',
+    slug: 'compress-image-to-50kb',
+    description: 'Compress image to 50KB online for free. Perfect for passport photos, visa application portals, and job applications.',
+    longDescription: 'Compress image to 50KB online for free. Perfect for passport photos, visa application portals, and job applications. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: true,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress image to 50kb', 'image to 50kb', 'photo compress 50kb', 'reduce image to 50kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Image to 50KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-image-to-100kb',
+    name: 'Compress Image to 100KB',
+    shortName: 'Image to 100KB',
+    slug: 'compress-image-to-100kb',
+    description: 'Compress image to 100KB or less online for free. Keep sharp details while ensuring easy email attachments and web uploads.',
+    longDescription: 'Compress image to 100KB or less online for free. Keep sharp details while ensuring easy email attachments and web uploads. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: true,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress image to 100kb', 'image to 100kb', 'reduce image to 100kb', 'photo 100kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Image to 100KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-image-to-200kb',
+    name: 'Compress Image to 200KB',
+    shortName: 'Image to 200KB',
+    slug: 'compress-image-to-200kb',
+    description: 'Compress image to 200KB or less online for free. Great balance of visual quality and small file size for document submissions.',
+    longDescription: 'Compress image to 200KB or less online for free. Great balance of visual quality and small file size for document submissions. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress image to 200kb', 'image to 200kb', 'reduce image size 200kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Image to 200KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-image-to-500kb',
+    name: 'Compress Image to 500KB',
+    shortName: 'Image to 500KB',
+    slug: 'compress-image-to-500kb',
+    description: 'Compress image down to 500KB online for free. Shrink large camera photos with zero visible loss.',
+    longDescription: 'Compress image down to 500KB online for free. Shrink large camera photos with zero visible loss. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress image to 500kb', 'image to 500kb', 'shrink image to 500kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Image to 500KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-photo-to-20kb',
+    name: 'Compress Photo to 20KB',
+    shortName: 'Photo to 20KB',
+    slug: 'compress-photo-to-20kb',
+    description: 'Compress photo to 20KB online for free. Formatted for SSC, UPSC, state exams, and passport signatures.',
+    longDescription: 'Compress photo to 20KB online for free. Formatted for SSC, UPSC, state exams, and passport signatures. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress photo to 20kb', 'photo to 20kb', 'reduce photo size to 20kb online'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Photo to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-photo-to-50kb',
+    name: 'Compress Photo to 50KB',
+    shortName: 'Photo to 50KB',
+    slug: 'compress-photo-to-50kb',
+    description: 'Compress photo to 50KB online for free. Meet exact visa and passport application photo size requirements.',
+    longDescription: 'Compress photo to 50KB online for free. Meet exact visa and passport application photo size requirements. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress photo to 50kb', 'photo to 50kb', 'reduce photo to 50kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Photo to 50KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'compress-photo-to-100kb',
+    name: 'Compress Photo to 100KB',
+    shortName: 'Photo to 100KB',
+    slug: 'compress-photo-to-100kb',
+    description: 'Compress photo to 100KB or less online for free. Keep facial clarity and colors vibrant for resume and profile uploads.',
+    longDescription: 'Compress photo to 100KB or less online for free. Keep facial clarity and colors vibrant for resume and profile uploads. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['compress photo to 100kb', 'photo to 100kb', 'reduce photo to 100kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Compress Photo to 100KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-image-size-to-20kb',
+    name: 'Reduce Image Size to 20KB',
+    shortName: 'Reduce to 20KB',
+    slug: 'reduce-image-size-to-20kb',
+    description: 'Reduce image size to 20KB online for free. The easiest way to get your image under 20 KB for online portals.',
+    longDescription: 'Reduce image size to 20KB online for free. The easiest way to get your image under 20 KB for online portals. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['reduce image size to 20kb', 'reduce image to 20kb', 'make image 20kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce Image Size to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-image-size-to-50kb',
+    name: 'Reduce Image Size to 50KB',
+    shortName: 'Reduce to 50KB',
+    slug: 'reduce-image-size-to-50kb',
+    description: 'Reduce image size to 50KB online for free. Optimized for US visa, Schengen visa, and government portals.',
+    longDescription: 'Reduce image size to 50KB online for free. Optimized for US visa, Schengen visa, and government portals. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['reduce image size to 50kb', 'reduce image to 50kb', 'make image 50kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce Image Size to 50KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'reduce-photo-size-to-20kb',
+    name: 'Reduce Photo Size to 20KB',
+    shortName: 'Reduce Photo 20KB',
+    slug: 'reduce-photo-size-to-20kb',
+    description: 'Reduce photo size to 20KB or less online for free. Never get your photo or signature rejected by upload forms.',
+    longDescription: 'Reduce photo size to 20KB or less online for free. Never get your photo or signature rejected by upload forms. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['reduce photo size to 20kb', 'reduce photo to 20kb', 'photo under 20kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Reduce Photo Size to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'resize-image-to-20kb',
+    name: 'Resize Image to 20KB',
+    shortName: 'Resize to 20KB',
+    slug: 'resize-image-to-20kb',
+    description: 'Resize image to 20KB online for free. Adjusts resolution and compression to guarantee file size under 20 KB.',
+    longDescription: 'Resize image to 20KB online for free. Adjusts resolution and compression to guarantee file size under 20 KB. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: true,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['resize image to 20kb', 'resize photo to 20kb', 'resize image 20 kb online'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Resize Image to 20KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'resize-image-to-50kb',
+    name: 'Resize Image to 50KB',
+    shortName: 'Resize to 50KB',
+    slug: 'resize-image-to-50kb',
+    description: 'Resize image to 50KB online for free. Perfect for passport and identity card submissions.',
+    longDescription: 'Resize image to 50KB online for free. Perfect for passport and identity card submissions. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: false,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['resize image to 50kb', 'resize photo to 50kb', 'image resizer 50kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Resize Image to 50KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
+  {
+    id: 'resize-image-to-100kb',
+    name: 'Resize Image to 100KB',
+    shortName: 'Resize to 100KB',
+    slug: 'resize-image-to-100kb',
+    description: 'Resize image to 100KB online for free. Keep sharp photo clarity while meeting file size limits.',
+    longDescription: 'Resize image to 100KB online for free. Keep sharp photo clarity while meeting file size limits. Fast, free, and 100% private in-browser tool with zero server uploads.',
+    category: 'compress',
+    badge: 'Specialized',
+    icon: 'Sparkles',
+    popular: true,
+    acceptedTypes: 'image/jpeg,image/jpg,image/png,image/webp',
+    keywords: ['resize image to 100kb', 'resize photo to 100kb', 'resize image under 100kb'],
+    features: [
+      'Instant in-browser processing with zero server uploads',
+      'Lossless visual quality and clarity preservation',
+      'No registration, watermarks, or file limits',
+      '100% Free with instant one-click download'
+    ],
+    howTo: [
+      { step: '1', text: 'Select or drag & drop your file into the upload zone.' },
+      { step: '2', text: 'The tool is pre-configured with optimal settings for this task.' },
+      { step: '3', text: 'Click the action button to process your file in seconds.' },
+      { step: '4', text: 'Download your finalized file directly to your device.' }
+    ],
+    faqs: [
+      {
+        q: 'Is this Resize Image to 100KB tool free to use?',
+        a: 'Yes, JPGEASY provides completely free tools with no hidden subscription fees, watermarks, or sign-up requirements.'
+      },
+      {
+        q: 'Are my files kept private and secure?',
+        a: 'Absolutely. Your files are processed locally inside your web browser memory. No data is stored or transferred to any remote database.'
+      }
+    ]
+  },
 ];
 
 export const CATEGORIES = [
