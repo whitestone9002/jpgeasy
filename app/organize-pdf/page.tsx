@@ -5,10 +5,26 @@ import ToolLayout from '@/components/ui/ToolLayout';
 import { TOOLS } from '@/lib/config/tools';
 
 export const metadata: Metadata = {
-  title: 'Organize PDF Pages Online - Visual Reorder, Delete & Rotate',
-  description: 'View real-time page previews of your PDF to visually reorder, rotate, delete, or organize pages with zero uploads stored.',
+  title: 'Organize PDF Pages Online Free - Visual Reorder, Delete & Rotate',
+  description:
+    'Visually reorder, rotate, sort, and delete pages in your PDF document for free. Interactive thumbnail previews with 100% private in-browser processing and zero server uploads.',
+  keywords: [
+    'organize pdf',
+    'reorder pdf pages',
+    'delete pages from pdf',
+    'how to delete a page in pdf',
+    'sort pdf',
+    'rotate pdf pages',
+    'delete page from pdf',
+    'organize pdf pages online free',
+  ],
   alternates: {
     canonical: 'https://jpgeasy.com/organize-pdf',
+  },
+  openGraph: {
+    title: 'Organize PDF Pages Online Free - Visual Reorder, Delete & Rotate',
+    description:
+      'Visually reorder, rotate, sort, and delete pages in your PDF document for free with live thumbnail previews.',
   },
 };
 
@@ -22,7 +38,7 @@ export default function OrganizePdfPage() {
     category: 'pdf' as const,
     icon: 'Layers',
     acceptedTypes: 'application/pdf',
-    keywords: ['organize pdf', 'reorder pdf pages', 'sort pdf', 'rotate pdf pages'],
+    keywords: ['organize pdf', 'reorder pdf pages', 'delete pages from pdf', 'sort pdf', 'rotate pdf pages'],
     features: [
       'Live interactive thumbnail previews of all pages',
       'One-click multi-page rotation and deletion',
@@ -33,24 +49,24 @@ export default function OrganizePdfPage() {
     howTo: [
       { step: '1', text: 'Upload your PDF document.' },
       { step: '2', text: 'View all rendered page previews in the interactive workspace.' },
-      { step: '3', text: 'Reorder, rotate, or delete pages as desired.' },
-      { step: '4', text: 'Click "Finish" and download your organized PDF.' }
+      { step: '3', text: 'Drag pages to reorder, rotate with the rotate button, or click trash to remove.' },
+      { step: '4', text: 'Click "Save & Download" to export your organized PDF.' }
     ],
     faqs: [
       {
-        q: 'Can I reorder pages in my PDF visually?',
-        a: 'Yes! The visual organizer generates real-time thumbnails for each page, allowing you to move, rotate, and delete pages seamlessly.'
+        q: 'Can I remove specific pages from my PDF?',
+        a: 'Yes! Simply click the trash can icon on any page thumbnail to delete it from the final document.'
       },
       {
-        q: 'Is my document private and secure?',
-        a: 'Yes, page thumbnails are rendered on the client side in your browser, and file reorganization runs 100% in volatile memory.'
+        q: 'Are my pages uploaded to an external server?',
+        a: 'No! All page extraction, thumbnail rendering, and PDF restructuring are computed client-side in your browser memory.'
       }
     ]
   };
 
   return (
     <ToolLayout tool={tool}>
-      <VisualPdfOrganizerTool initialMode="organize" />
+      <VisualPdfOrganizerTool />
     </ToolLayout>
   );
 }

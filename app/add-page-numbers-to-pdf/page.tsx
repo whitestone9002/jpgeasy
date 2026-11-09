@@ -4,10 +4,26 @@ import PageNumbererTool from '@/components/tools/PageNumbererTool';
 import ToolLayout from '@/components/ui/ToolLayout';
 
 export const metadata: Metadata = {
-  title: 'Add Page Numbers to PDF - Online PDF Numbering Tool',
-  description: 'Easily insert page numbers into your PDF with custom placement, typography, and numbering formats.',
+  title: 'Add Page Numbers to PDF Online Free - Paginate PDF Instantly',
+  description:
+    'Free online tool to add page numbers to PDF documents. Customize numbering format (Page X of Y), placement, font size, and start offset. Fast, 100% private client-side pagination.',
+  keywords: [
+    'add page numbers to pdf online',
+    'paginate pdf',
+    'add page numbers to pdf free',
+    'add page numbers to pdf',
+    'insert page numbers in pdf',
+    'pdf page numbering',
+    'pdf page number add',
+    'pdf pagination online',
+  ],
   alternates: {
     canonical: 'https://jpgeasy.com/add-page-numbers-to-pdf',
+  },
+  openGraph: {
+    title: 'Add Page Numbers to PDF Online Free - Paginate PDF Instantly',
+    description:
+      'Free online tool to add page numbers to PDF documents. Customize numbering format, placement, and start offset with client-side privacy.',
   },
 };
 
@@ -21,7 +37,7 @@ export default function AddPageNumbersPage() {
     category: 'pdf' as const,
     icon: 'Hash',
     acceptedTypes: 'application/pdf',
-    keywords: ['add page numbers to pdf', 'number pdf pages', 'pdf pagination', 'page numbering online'],
+    keywords: ['add page numbers to pdf online', 'paginate pdf', 'add page numbers to pdf free', 'pdf pagination', 'page numbering online'],
     features: [
       '6 Visual placement positions: Top/Bottom, Left/Center/Right',
       'Flexible numbering styles: "Page X of Y", "X of Y", or "1, 2, 3..."',

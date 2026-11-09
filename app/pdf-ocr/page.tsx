@@ -14,7 +14,7 @@ const tool = getToolBySlug('pdf-ocr') || {
   badge: 'OCR',
   icon: 'ScanText',
   acceptedTypes: 'application/pdf,image/*',
-  keywords: ['pdf ocr', 'scanned pdf to text', 'searchable pdf', 'extract text from pdf', 'make pdf searchable'],
+  keywords: ['pdf ocr', 'ocr pdf', 'ocr document scanning', 'scanned pdf to text', 'searchable pdf', 'extract text from pdf', 'make pdf searchable', 'free pdf ocr online'],
   features: [
     'Converts scanned picture PDFs into 100% searchable, selectable PDFs',
     'Extracts editable, machine-readable text with word & character counts',
@@ -41,10 +41,26 @@ const tool = getToolBySlug('pdf-ocr') || {
 };
 
 export const metadata: Metadata = {
-  title: 'PDF OCR & Text Extractor - Convert Scanned PDF to Searchable Text',
-  description: 'Turn image-based and scanned PDFs into searchable, selectable, and editable machine-readable text online for free.',
+  title: 'Free PDF OCR Online - Convert Scanned PDF to Searchable Text',
+  description:
+    'Turn image-based and scanned PDFs into 100% searchable, selectable, and editable machine-readable text online for free. Fast in-browser OCR with zero server uploads.',
+  keywords: [
+    'pdf ocr',
+    'ocr pdf',
+    'ocr document scanning',
+    'scanned pdf to text',
+    'searchable pdf',
+    'extract text from pdf',
+    'make pdf searchable',
+    'free pdf ocr online',
+  ],
   alternates: {
     canonical: 'https://jpgeasy.com/pdf-ocr',
+  },
+  openGraph: {
+    title: 'Free PDF OCR Online - Convert Scanned PDF to Searchable Text',
+    description:
+      'Turn image-based and scanned PDFs into searchable, selectable text online for free with client-side privacy.',
   },
 };
 
