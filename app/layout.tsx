@@ -193,6 +193,14 @@ export default function RootLayout({
                   document.documentElement.setAttribute('lang', savedLang);
                   document.documentElement.setAttribute('dir', savedLang === 'ar' ? 'rtl' : 'ltr');
                 }
+                // Automatically suppress Netlify floating badge
+                var badgeObserver = new MutationObserver(function() {
+                  var b = document.getElementById('nl-badge-frame') || document.getElementById('nl-hud-frame');
+                  if (b) {
+                    b.remove();
+                  }
+                });
+                badgeObserver.observe(document.documentElement, { childList: true, subtree: true });
               } catch (_) {}
             `,
           }}
