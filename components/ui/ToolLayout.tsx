@@ -10,7 +10,6 @@ import AdSlot from './AdSlot';
 import ToolCard from './ToolCard';
 import SocialShareBar from './SocialShareBar';
 import TargetSizeNavbar from './TargetSizeNavbar';
-import FeaturedToolsBar from './FeaturedToolsBar';
 import { useLanguage, getToolTranslationKey } from '@/lib/i18n/LanguageContext';
 
 interface ToolLayoutProps {
@@ -144,9 +143,6 @@ export default function ToolLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
       )}
-
-      {/* Cross-Promotion Featured Tools Ribbon */}
-      <FeaturedToolsBar currentSlug={tool.slug} />
 
       <div className={`w-full ${isWide ? 'max-w-[1500px] px-1 sm:px-4 md:px-6 py-2 sm:py-6 space-y-2.5 sm:space-y-6' : 'max-w-5xl px-3 sm:px-6 py-6 sm:py-12 space-y-6 sm:space-y-8'} mx-auto`}>
         {/* Tool Header */}
